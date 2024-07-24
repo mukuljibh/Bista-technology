@@ -1,7 +1,7 @@
 export default function NewsLetter() {
     return (
 
-        <div className="flex justify-center  relative mt-10">
+        <div className="flex justify-center relative mt-10">
             <img className="w-5/6 basis-1/2 h-auto rounded-lg" src="https://www.bistatechnologies.com/static/Banner.gif" />
 
 

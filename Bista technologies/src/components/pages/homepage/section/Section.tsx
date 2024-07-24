@@ -2,6 +2,8 @@
 import { useState } from "react"
 import Cards from "./service-cards/ServiceCards"
 import NewsLetter from "./newsletter/NewsLetter"
+import { Typewriter } from 'react-simple-typewriter'
+
 export default function Section() {
 
     const [cards] = useState([
@@ -12,13 +14,31 @@ export default function Section() {
     ])
     return (
         <div >
-            <video
-                loop
-                autoPlay
-                muted
-            >
-                <source src="https://www.bistatechnologies.com/static/vid2.mp4" type="video/mp4" />
-            </video>
+            <div className="relative ">
+                <div className="absolute  mb-24 inset-0 z-10 lg:font-normal  font-semibold self-center text-center space-y-5 text-green-500 lg:text-6xl text-lg" >
+                    <div className=" inset-0 z-10 self-center text-center lg:text-6xl text-lg text-indigo-900 transition-colors duration-300 hover:text-white cursor-pointer">
+                        Your Vision, Our Talent Solutions
+                    </div>
+                    <div>
+                        <Typewriter
+                            words={["A Global Staffing Company"]}
+                            loop={5}
+                            cursor
+                            typeSpeed={100}
+                        />
+                    </div>
+                </div>
+                <video
+                    className="contrast-75"
+                    autoPlay
+                    muted
+                    loop
+                >
+                    <source src="https://www.bistatechnologies.com/static/vid2.mp4" type="video/mp4" />
+                </video>
+
+            </div>
+
 
             <div className="flex lg:text-3xl text-xs h-32 items-center pl-10 text-white border-2 border-green-500 gap-8 text-center bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  ">
                 <div>
@@ -55,7 +75,7 @@ export default function Section() {
 
 
             <NewsLetter />
-        </div>
+        </div >
 
 
     )

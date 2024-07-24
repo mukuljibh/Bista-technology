@@ -1,20 +1,17 @@
 import NavElements from "./NavElements"
-import MobileNavBar from "./MobileNavBar";
+import MobileNavBar from "./mobile-nav-bar/MobileNavBar";
 import { useScreenSize } from "../../../../contexts/ScreenSizeProvider";
 
+export const submenuData = [
+    { label: "About Us", submenu: ['Mission and Vision', 'Our Story Line', 'Our Leaders'] },
+    { label: "Solutions", submenu: ['Staffing Solution', 'Lead Generation', 'Training and Development', 'Staff Augementation', 'Market Research'] },
+    { label: "Services", submenu: ['Enginnering Services', 'Healthcare Staffing', 'IT Staffing', 'Non IT Staffing'] },
+    { label: "Carriers", submenu: ['Job Posting', 'Employee Login', 'Employer Login'] },
+];
 export default function NavBar() {
     const screenSize = useScreenSize();
-
-    const submenuData = [
-        { label: "About Us", submenu: ['Mission and Vision', 'Our Story Line', 'Our Leaders'] },
-        { label: "Solutions", submenu: ['Staffing Solution', 'Lead Generation', 'Training and Development', 'Staff Augementation', 'Market Research'] },
-        { label: "Services", submenu: ['Enginnering Services', 'Healthcare Staffing', 'IT Staffing', 'Non IT Staffing'] },
-        { label: "Carriers", submenu: ['Job Posting', 'Employee Login', 'Employer Login'] },
-    ];
-
     //below z index make sure nav bar always stays on the top
     return (
-
         <div className='flex border-2 justify-between text-gray-600 z-50  sticky top-0 bg-white '>
             <ul className='flex items-center'>
                 <div>
@@ -23,15 +20,18 @@ export default function NavBar() {
                 <li className="border p-3 bg-zinc-200 cursor-pointer hidden lg:block ">
                     home
                 </li>
+                {(screenSize.isExtraLargeDevice || screenSize.isLargeDevice) &&
+                    <div className="flex"> {submenuData.map((menu, index) => {
+                        return (
+                            <NavElements key={index}
+                                label={menu.label}
+                                submenu={menu.submenu}
+                            />
+                        )
+                    })}</div>}
 
-                {submenuData.map((menu, index) => {
-                    return (
-                        <NavElements key={index}
-                            label={menu.label}
-                            submenu={menu.submenu}
-                        />
-                    )
-                })}
+
+
                 <li className=" p-3 hover:text-black hidden lg:block">
                     <a href="#">Contact Us</a>
                 </li>
