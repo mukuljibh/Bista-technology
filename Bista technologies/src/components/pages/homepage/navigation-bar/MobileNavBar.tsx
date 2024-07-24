@@ -1,13 +1,26 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 export default function MobileNavBar() {
     const [isVisible, setIsvisible] = useState(false)
+    const [isAnimation, setIsAnimation] = useState(false)
 
+    useEffect(() => {
+        if (isVisible) {
+            setIsAnimation(() => true)
+        }
+
+    }, [isVisible])
     function handleMenu() {
-        setIsvisible((prev) => {
-            return !prev
-        })
+        if (!isVisible) {
+            setIsvisible(() => true)
+        }
+        else if (isVisible && isAnimation) {
+            setIsAnimation(() => false)
+            setTimeout(() => {
+                setIsvisible(false)
+            }, 300)
+        }
     }
 
     return (
@@ -20,16 +33,18 @@ export default function MobileNavBar() {
                     <path d="M4 18l16 0" />
                 </svg>
             </button>
-            < div
-                className={`pt-5 right-0 border  bg-white pl-9 space-y-7 transition-all duration-500  lg:hidden absolute w-full  ${isVisible ? " top-12 h-72 opacity-100" : " top-12 h-0 opacity-50   "}`
-                }
-            >
-                <h1 className="text-lg">Services Offered</h1>
-                <h1 className="text-lg">Solutions</h1>
-                <h1 className="text-lg">Career</h1>
-                <h1 className="text-lg">Contact Us</h1>
-                <h1 className="text-lg">About</h1>
-            </div >
+            {
+                isVisible && < div
+                    className={`pt-5 right-0 border absolute bg-white pl-9 space-y-7 transition-all duration-500  absolute w-full  ${isAnimation ? "top-12 h-72 opacity-100" : " top-12 h-0 opacity-0"}`}
+                >
+                    <h1 className="text-lg">Services Offered</h1>
+                    <h1 className="text-lg">Solutions</h1>
+                    <h1 className="text-lg">Career</h1>
+                    <h1 className="text-lg">Contact Us</h1>
+                    <h1 className="text-lg">About</h1>
+                </div >
+            }
+
         </div>
 
 

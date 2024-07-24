@@ -45,11 +45,7 @@ export default function NavBar() {
                 <button className='text-lg w-32 h-12 '>Apply Here</button>
             </div>
             {/*mobile nav menu */}
-            <div >
-                {(!screenSize.isExtraLargeDevice && !screenSize.isLargeDevice) && <MobileNavBar />}
-            </div>
-
-
+            {(!screenSize.isExtraLargeDevice && !screenSize.isLargeDevice) && <MobileNavBar />}
 
         </div>
     )
