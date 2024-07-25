@@ -1,6 +1,5 @@
-
 import { useState } from "react"
-import Cards from "./service-cards/ServiceCards"
+import ServiceCards from "./service-cards/ServiceCards"
 import NewsLetter from "./newsletter/NewsLetter"
 import { Typewriter } from 'react-simple-typewriter'
 
@@ -40,7 +39,7 @@ export default function Section() {
             </div>
 
 
-            <div className="flex lg:text-3xl text-xs h-32 items-center pl-10 text-white border-2 border-green-500 gap-8 text-center bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  ">
+            <div className="flex lg:text-3xl text-xs h-32 items-center pl-10 text-white gap-8 text-center bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  ">
                 <div>
                     <h1>Quick To Hire</h1>
                 </div>
@@ -55,13 +54,13 @@ export default function Section() {
                 </div>
             </div>
 
-            <div className="pt-3  space-y-10">
+            <div className="mt-20 space-y-10">
                 <h1 className="lg:text-4xl text-2xl  text-blue-800 text-center ">OUR SERVICES</h1>
                 <p className="lg:text-xl text-md text-center">By leveraging cutting-edge technology, we continuously innovate our IT services, IT staffing services in USA, and workforce management solutions to assist clients in achieving their business objectives.</p>
             </div>
             <div className="flex flex-wrap gap-10 justify-center pt-5">
                 {cards.map((info, index) => {
-                    return <Cards key={index} heading={info.heading} description={info.description} imgSrc={info.imageSrc} />
+                    return <ServiceCards key={index} heading={info.heading} description={info.description} imgSrc={info.imageSrc} />
                 })}
             </div>
 

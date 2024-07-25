@@ -1,7 +1,12 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
+type submenu = {
+    text: string
+    link: string
+}
 type NavElementsProps = {
     label: string
-    submenu?: string[]
+    submenu: submenu[]
 }
 export default function MobileNavElements({ label, submenu }: NavElementsProps) {
     const [isOpen, setisOpen] = useState(false)
@@ -20,9 +25,11 @@ export default function MobileNavElements({ label, submenu }: NavElementsProps) 
             </div>
             <div className=" bg-white space-y-2 mt-2">
                 {isOpen ? submenu?.map((menu, ind) => {
+
                     return (
-                        <h1 key={ind}><a href="#">{menu}</a></h1>
-                    )
+                        < div key={ind} >
+                            <Link to={menu.link}>{menu.text} </Link>
+                        </div>)
                 }) : null}
             </div>
 

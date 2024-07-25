@@ -34,9 +34,10 @@ export default function MobileNavBar() {
                     <path d="M4 18l16 0" />
                 </svg>
             </button>
+            {/*adding animation her*/}
             {
                 isVisible && < div
-                    className={`mt-1 border  right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500  absolute w-full  ${isAnimation ? "top-12 h-72 opacity-100" : " top-12 h-0 opacity-0"}`}
+                    className={`mt-1 border  right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500  absolute w-full  ${isAnimation ? "top-24 h-72 opacity-100" : " top-24 h-0 opacity-0"}`}
                 >
                     {submenuData.map((menu, index) => {
                         return (
