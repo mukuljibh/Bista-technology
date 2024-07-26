@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
+import useAnimation from "../../../../../shared/hooks/useAnimation"
 type submenu = {
     text: string
     link: string
@@ -9,29 +9,9 @@ type NavElementsProps = {
     submenu?: submenu[]
 }
 export default function NavElements({ label, submenu }: NavElementsProps) {
-    const [isOpen, setisOpen] = useState(false)
-    const [isAnimating, SetIsAnimating] = useState(false)
-
-    useEffect(() => {
-        if (isOpen) {
-            SetIsAnimating(() => true)
-        }
-
-    }, [isOpen])
-    function handleMenu() {
-        if (!isOpen) {
-            setisOpen(() => true)
-        }
-        else {
-            SetIsAnimating(() => false)
-            setTimeout(() => {
-                setisOpen(false)
-            }, 150)
-        }
-    }
-
+    const { isOpen, isAnimating, handleAnimation } = useAnimation(false);
     return (
-        <div className="p-3 hover:text-black" onMouseEnter={handleMenu} onMouseLeave={handleMenu}>
+        <div className="p-3 hover:text-black" onMouseEnter={handleAnimation} onMouseLeave={handleAnimation}>
             <div className="flex relative " >
                 <div className="flex">
                     <h1 className="cursor-pointer">{label}</h1>
@@ -43,7 +23,7 @@ export default function NavElements({ label, submenu }: NavElementsProps) {
                 {
                     isOpen && <div className={`absolute rounded-lg w-56 ${isAnimating ? 'opacity-95 transform scale-100' : 'opacity-0 transform scale-95'} top-6 pt-3 pb-4 bg-white transition delay-20  mt-3 text-md space-y-4 transition-all text-nowrap`}>
                         <div className="relative flex justify-start items-center border-2 border-green-600">
-                            <div className="w-7 h-3 bg-green-600 ml-3 absolute "></div>
+                            <div className="w-7 h-3 rounded-full bg-green-600 ml-3 absolute "></div>
                         </div>
                         <div>
                             {submenu?.map((menu, ind) => {

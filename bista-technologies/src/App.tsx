@@ -1,4 +1,4 @@
-import NavBar from "./components/pages/homepage/navigation-bar/NavBar";
+import NavBar from "./components/pages/homepage/navigation-bar/general-nav-bar/NavBar";
 import Section from "./components/pages/homepage/section/Section";
 import Footer from "./components/pages/homepage/footer/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -21,12 +21,14 @@ import NonItStaffing from "./components/pages/services/NonItStaffing";
 import JobPostings from "./components/pages/carrer/JobPostings";
 import EmployeeLogin from "./components/pages/carrer/EmployeeLogin";
 import EmployerLogin from "./components/pages/carrer/EmployerLogin";
+import TopNavHeader from "./components/pages/homepage/navigation-bar/general-nav-bar/TopNavHeader";
 function App() {
 
   return (
     <div>
       <NavBar />
       <Routes>
+
         <Route path="/" element={< Section />} />
         <Route path="/aboutUs/mission-vision" element={<MissionVision />} />
         <Route path="/aboutUs/our-storyline" element={<OurStoryLine />} />
