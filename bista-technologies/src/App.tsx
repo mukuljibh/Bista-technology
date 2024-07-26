@@ -21,7 +21,6 @@ import NonItStaffing from "./components/pages/services/NonItStaffing";
 import JobPostings from "./components/pages/carrer/JobPostings";
 import EmployeeLogin from "./components/pages/carrer/EmployeeLogin";
 import EmployerLogin from "./components/pages/carrer/EmployerLogin";
-import TopNavHeader from "./components/pages/homepage/navigation-bar/general-nav-bar/TopNavHeader";
 function App() {
 
   return (
