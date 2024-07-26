@@ -15,12 +15,12 @@ export default function Section() {
     return (
         <div  >
             <div className="relative flex justify-center">
-                <div className="lg:mt-28 mt-20 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5  lg:text-6xl text-lg" >
-                    <div className="lg:text-6xl text-lg font-semibold text-sky-500 transition-colors duration-300 hover:text-white cursor-pointer">
+                <div className="lg:mt-28 mt-20 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5  " >
+                    <div className="2xl:text-6xl md:text-3xl  md:text-3xl text-lg font-semibold text-sky-500 transition-colors duration-300 hover:text-white cursor-pointer">
                         Your Vision, Our Talent Solutions
                     </div>
 
-                    <div className="text-amber-600 font-medium">
+                    <div className="text-amber-600 font-medium 2xl:text-6xl md:text-2xl">
                         <Typewriter
                             words={["A Global Staffing Company", "Connecting Talent Worldwide", "Empowering Global Careers", "Transforming Businesses with Top Talent", "Expertise Across Industries"]}
                             loop={100}
@@ -28,7 +28,7 @@ export default function Section() {
                             typeSpeed={200}
                         />
                     </div>
-                    <div className="lg:text-2xl text-xs text-white font-semi-bold">
+                    <div className="2xl:text-2xl md:text-2xl text-sm text-white font-medium">
                         <h1>Tomorrow's Success Starts with Our Recruitment</h1>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ export default function Section() {
             </div>
 
 
-            <div className="flex lg:text-3xl text-xs h-32 items-center pl-10 text-white gap-8 text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500  ">
+            <div className="flex lg:text-3xl justify-center text-xs h-32 items-center pl-10 text-white gap-8 text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500  ">
                 <div>
                     <h1>Quick To Hire</h1>
                 </div>
