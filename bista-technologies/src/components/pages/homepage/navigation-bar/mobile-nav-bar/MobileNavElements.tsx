@@ -16,7 +16,7 @@ export default function MobileNavElements({ label, submenu }: NavElementsProps) 
     return (
 
         <div className={`mt-5 hover:text-black  ${isOpen ? 'bg-zinc-200' : ''}`} onClick={handleMenu} >
-            <div className="flex  justify-between " >
+            <div className="flex  justify-between pr-3 " >
                 <p className="cursor-pointer">{label}</p>
                 <svg xmlns="http://www.w3.org/2000/svg" width={12} height={24} viewBox="0 0 24 24" fill="currentColor" className="icon icon-tabler icons-tabler-filled icon-tabler-caret-down">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />

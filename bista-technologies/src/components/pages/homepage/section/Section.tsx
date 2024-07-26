@@ -15,7 +15,7 @@ export default function Section() {
     return (
         <div  >
             <div className="relative flex justify-center">
-                <div className="mt-28 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5  lg:text-6xl text-lg" >
+                <div className="lg:mt-28 mt-20 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5  lg:text-6xl text-lg" >
                     <div className="lg:text-6xl text-lg font-semibold text-sky-500 transition-colors duration-300 hover:text-white cursor-pointer">
                         Your Vision, Our Talent Solutions
                     </div>
@@ -62,7 +62,7 @@ export default function Section() {
                 <img className=" w-5/6" src="https://www.opusing.com/images/great-work-to-place-banner-f.png" />
             </div>
 
-            <div className="flex flex-wrap gap-16 justify-center py-20 bg-gray-100  px-20">
+            <div className="flex flex-wrap gap-16 justify-center py-20 bg-gray-100  lg:px-20 px-10">
                 <div className="space-y-10  ">
                     <h1 className="lg:text-4xl text-4xl font-semibold">OUR SERVICES</h1>
                     <p className="lg:text-xl text-md ">By leveraging cutting-edge technology, we continuously innovate our IT services, IT staffing services in USA, and workforce management solutions to assist clients in achieving their business objectives.</p>
@@ -73,10 +73,10 @@ export default function Section() {
             </div>
 
 
-            <div className="py-16 flex justify-center bg-slate-50">
-                <div className=" relative flex justify-center items-center w-5/6 ">
-                    <h1 className="absolute w-full py-3 lg:text-5xl  bg-green-500  text-md text-center text-white opacity-90"> CULTURE | INNOVATION | OPPORTUNITY | TRUST   </h1>
-                    <img src="https://www.bistatechnologies.com/static/1.webp" className="  rounded-lg object-cover lg:h-96 h-42 w-full" />
+            <div className="py-16 flex justify-center bg-slate-50 ">
+                <div className=" relative flex justify-center items-center w-11/12   ">
+                    <h1 className="absolute w-full py-3 lg:text-5xl  bg-green-500   text-md text-center text-white opacity-90"> CULTURE | INNOVATION | OPPORTUNITY | TRUST   </h1>
+                    <img src="https://www.bistatechnologies.com/static/1.webp" className="rounded-lg object-cover lg:h-96 h-42 w-full" />
                 </div>
             </div>
 

@@ -16,7 +16,7 @@ export default function MobileNavBar() {
             {/*adding animation her*/}
             {
                 isOpen && < div
-                    className={`mt-1 border  right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500  absolute w-full  ${isAnimating ? "top-24 h-72 opacity-100" : " top-24 h-0 opacity-0"}`}
+                    className={`mt-1 border  right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500  absolute w-full  ${isAnimating ? "top-16 h-72 opacity-100" : " top-16 h-0 opacity-0"}`}
                 >
                     {submenuData.map((menu, index) => {
                         return (
