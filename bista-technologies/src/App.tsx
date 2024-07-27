@@ -29,25 +29,25 @@ function App() {
       <Routes>
 
         <Route path="/" element={< Section />} />
-        <Route path="/aboutUs/mission-vision" element={<MissionVision />} />
-        <Route path="/aboutUs/our-storyline" element={<OurStoryLine />} />
-        <Route path="/aboutUs/our-leaders" element={<OurLeaders />} />
+        <Route path="aboutUs/mission-vision" element={<MissionVision />} />
+        <Route path="aboutUs/our-storyline" element={<OurStoryLine />} />
+        <Route path="aboutUs/our-leaders" element={<OurLeaders />} />
 
-        <Route path="/solutions/staffing-solutions" element={<StaffingSolutions />} />
-        <Route path="/solutions/lead-generation" element={<LeadGeneration />} />
-        <Route path="/solutions/training&dev" element={< TrainingAndDev />} />
-        <Route path="/solutions/Staff-augmentation" element={<StaffAugmentation />} />
-        <Route path="/solutions/market-research" element={<MarketResearch />} />
+        <Route path="solutions/staffing-solutions" element={<StaffingSolutions />} />
+        <Route path="solutions/lead-generation" element={<LeadGeneration />} />
+        <Route path="solutions/training&dev" element={< TrainingAndDev />} />
+        <Route path="solutions/Staff-augmentation" element={<StaffAugmentation />} />
+        <Route path="solutions/market-research" element={<MarketResearch />} />
 
 
-        <Route path="/services/engineering-services" element={<EngServices />} />
-        <Route path="/services/health-care-services" element={<HealthCareServices />} />
-        <Route path="/services/it-staffing" element={<ItStaffing />} />
+        <Route path="services/engineering-services" element={<EngServices />} />
+        <Route path="services/health-care-services" element={<HealthCareServices />} />
+        <Route path="services/it-staffing" element={<ItStaffing />} />
         <Route path="/services/non-it-staffing" element={<NonItStaffing />} />
 
-        <Route path="/career/job-postings" element={<JobPostings />} />
-        <Route path="/career/employee-login" element={<EmployeeLogin />} />
-        <Route path="/career/employer-login" element={<EmployerLogin />} />
+        <Route path="career/job-postings" element={<JobPostings />} />
+        <Route path="career/employee-login" element={<EmployeeLogin />} />
+        <Route path="career/employer-login" element={<EmployerLogin />} />
 
       </Routes>
 

@@ -11,7 +11,7 @@ type NavElementsProps = {
 export default function NavElements({ label, submenu }: NavElementsProps) {
     const { isOpen, isAnimating, handleAnimation } = useAnimation(false);
     return (
-        <div className="p-3 hover:text-black" onMouseEnter={handleAnimation} onMouseLeave={handleAnimation}>
+        <div className="p-3 hover:text-black" onMouseEnter={handleAnimation} onMouseLeave={handleAnimation} onClick={handleAnimation}>
             <div className="flex relative " >
                 <div className="flex">
                     <h1 className="cursor-pointer">{label}</h1>
