@@ -1,10 +1,11 @@
 import MobileNavElements from "./MobileNavElements"
-import { submenuData } from "../general-nav-bar/NavBar"
+import { submenuData } from "../NavBar"
 import useAnimation from "../../../../../shared/hooks/useAnimation"
 export default function MobileNavBar() {
     const { isOpen, isAnimating, handleAnimation } = useAnimation(false)
     return (
-        <div  >
+        <div className="h-20 sticky top-0 z-50 bg-white top-0 flex justify-between items-center relative " >
+            <img className="w-52 ml-3" src="https://www.bistatechnologies.com/static/logo.png" />
             <button className="p-3  hover:bg-gray-200" onClick={handleAnimation}>
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -13,10 +14,10 @@ export default function MobileNavBar() {
                     <path d="M4 18l16 0" />
                 </svg>
             </button>
-            {/*adding animation her*/}
+            {/*adding animation here*/}
             {
                 isOpen && < div
-                    className={`mt-1 border  right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500  absolute w-full  ${isAnimating ? "top-16 h-72 opacity-100" : " top-16 h-0 opacity-0"}`}
+                    className={`z-50 right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500 absolute w-full ${isAnimating ? "top-16 h-72 opacity-100" : " top-16 h-0 opacity-0"}`}
                 >
                     {submenuData.map((menu, index) => {
                         return (
@@ -32,6 +33,7 @@ export default function MobileNavBar() {
             }
 
         </div >
+
 
 
     )

@@ -1,7 +1,10 @@
+
 export default function OurLeaders() {
+
     return (
         <div>
-            hello form about us
+            <h1>hello form our leaders</h1>
+
         </div>
     )
 }
