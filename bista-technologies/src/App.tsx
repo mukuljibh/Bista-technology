@@ -1,6 +1,6 @@
 
 import { Routes, Route } from "react-router-dom";
-import React, { lazy, Suspense } from "react";
+import { lazy, Suspense } from "react";
 const NavBar = lazy(() => import('./components/pages/homepage/navigation-bar/NavBar'))
 import Section from "./components/pages/homepage/section/Section";
 import Footer from "./components/pages/homepage/footer/Footer";

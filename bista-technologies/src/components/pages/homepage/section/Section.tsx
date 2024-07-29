@@ -1,8 +1,7 @@
-import { Suspense, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import ServiceCards from "./service-cards/ServiceCards"
 import NewsLetter from "./newsletter/NewsLetter"
 import { Typewriter } from 'react-simple-typewriter'
-import { Outlet } from "react-router-dom"
 
 export default function Section() {
     const cards = [

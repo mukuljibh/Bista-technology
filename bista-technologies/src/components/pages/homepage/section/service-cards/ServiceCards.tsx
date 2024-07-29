@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useScreenSize } from "../../../../../contexts/ScreenSizeProvider"
 type CardsProps = {
     heading: string
     description: string

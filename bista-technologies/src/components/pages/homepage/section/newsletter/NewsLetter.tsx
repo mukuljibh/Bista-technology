@@ -1,7 +1,5 @@
-import { useScreenSize } from "../../../../../contexts/ScreenSizeProvider"
 
 export default function NewsLetter() {
-    const ScreenSize = useScreenSize()
 
     return (
         <div className="relative flex justify-center">
