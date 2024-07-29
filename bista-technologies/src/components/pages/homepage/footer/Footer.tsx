@@ -1,24 +1,27 @@
 import FooterElement from "./FooterElement";
 import { submenuData } from "../navigation-bar/NavBar";
+import { Link } from "react-router-dom";
 export default function Footer() {
     return (
         <footer className="space-y-8">
             <div className=" lg:p-0 pl-5 lg:flex gap justify-evenly mt-10">
                 <div className="space-y-3">
                     <div className="space-y-5">
-                        <img className="w-52 h-16" src="https://www.bistatechnologies.com/static/logo.png" />
+                        <Link to="/"> <img className="w-52 h-16" src="https://www.bistatechnologies.com/static/logo.png" /></Link>
                         <h1 className=" text-lg text-orange-500 font-semibold">Headquaters</h1>
                     </div>
 
                     <div className="text-gray-600 font-bold">
-                        <h1 >PO Box 20018</h1>
+                        <h1>PO Box 20018</h1>
                         <h1>Dubai</h1>
                     </div>
                     <div className="text-sm text-gray-600 space-y-3">
-                        <h1> info@bistatechnologies.com</h1>
-                        <h1> info@bistatechnologies.com</h1>
-                        <h1> info@bistatechnologies.com</h1>
-                        <h1> info@bistatechnologies.com</h1>
+                        {["info@bistatechnologies.com", "info@bistatechnologies.com", "info@bistatechnologies.com", "info@bistatechnologies.com"
+                        ].map((email, index) => {
+                            return (
+                                <h1 key={index} className="hover:text-sky-700 cursor-pointer">{email}</h1>
+                            )
+                        })}
                     </div>
                 </div>
                 {submenuData.map((item, index) => {

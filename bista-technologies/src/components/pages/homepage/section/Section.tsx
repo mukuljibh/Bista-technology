@@ -21,11 +21,10 @@ export default function Section() {
                     self.unobserve(entry.target)
                 }
             })
-        }, { threshold: 0.2 })
+        }, { threshold: 0.5 })
 
         const target = document.querySelectorAll(".section")
         target.forEach(item => observer.observe(item))
-
     }, [])
 
     return (
@@ -59,20 +58,14 @@ export default function Section() {
 
             </div>
 
+            <div className="flex lg:text-3xl justify-center text-xs h-32 items-center pl-10 text-white gap-8 text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">
+                {["Quick To Hire", "Best Talented Experts", "360-Degree Recruitment Services", "Connected you with Talented WorldWide"]
+                    .map((item, index) => {
+                        return (
+                            <h1 key={index}>{item}</h1>
+                        )
+                    })}
 
-            <div className="flex lg:text-3xl justify-center text-xs h-32 items-center pl-10 text-white gap-8 text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500  ">
-                <div>
-                    <h1>Quick To Hire</h1>
-                </div>
-                <div>
-                    <h1>Best Talented Experts</h1>
-                </div>
-                <div>
-                    <h1>360-Degree Recruitment Services</h1>
-                </div>
-                <div>
-                    <h1>Connected you with Talented WorldWide</h1>
-                </div>
             </div>
             <div className="flex justify-center py-10">
                 <img className=" w-5/6" src="https://www.opusing.com/images/great-work-to-place-banner-f.png" />

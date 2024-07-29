@@ -20,7 +20,7 @@ export default function MainNavHeader({ submenuData }: MainNavHeaderProps) {
             {/*Nav bar elements*/}
             < div className='flex  py-3 bg-sky-50 justify-around text-gray-600 bg-white transition-all ' >
                 <div className="">
-                    <img className="w-56" src="https://www.bistatechnologies.com/static/logo.png" />
+                    <Link to="/"><img className="w-56" src="https://www.bistatechnologies.com/static/logo.png" /></Link>
                 </div>
                 <ul className='flex items-center'>
                     <li className="border p-3 bg-zinc-200 cursor-pointer text-sky-700 hidden lg:block ">

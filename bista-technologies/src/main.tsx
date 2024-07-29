@@ -4,6 +4,7 @@ import './index.css'
 import { ScreenSizeProvider } from './contexts/ScreenSizeProvider.tsx'
 import { BrowserRouter } from "react-router-dom";
 import ScrollToTop from './ScrollToTop.tsx'
+import React from 'react';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <ScreenSizeProvider>
@@ -11,6 +12,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <ScrollToTop />
       <App />
     </BrowserRouter>
+
   </ScreenSizeProvider>
+
 
 )
