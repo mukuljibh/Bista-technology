@@ -6,7 +6,7 @@ type submenu = {
 }
 type NavElementsProps = {
     label: string
-    submenu: submenu[]
+    submenu?: submenu[]
 }
 export default function MobileNavElements({ label, submenu }: NavElementsProps) {
     const [isOpen, setisOpen] = useState(false)

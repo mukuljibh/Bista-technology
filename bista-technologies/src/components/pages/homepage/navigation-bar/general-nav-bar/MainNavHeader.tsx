@@ -9,7 +9,8 @@ type SubmenuItem = {
 
 type MenuItem = {
     label: string;
-    submenu: SubmenuItem[];
+    submenu?: SubmenuItem[];
+    directPath?: string
 }
 type MainNavHeaderProps = {
     submenuData: MenuItem[];
@@ -18,28 +19,21 @@ export default function MainNavHeader({ submenuData }: MainNavHeaderProps) {
     return (
         <div className="sticky top-0 z-50">
             {/*Nav bar elements*/}
-            < div className='flex  py-3 bg-sky-50 justify-around text-gray-600 bg-white transition-all ' >
+            < div className='flex  py-3 bg-sky-50 justify-around text-gray-600 bg-white transition-all'>
                 <div className="">
                     <Link to="/"><img className="w-56" src="https://www.bistatechnologies.com/static/logo.png" /></Link>
                 </div>
-                <ul className='flex items-center'>
-                    <li className="border p-3 bg-zinc-200 cursor-pointer text-sky-700 hidden lg:block ">
-                        <Link to="/">Home</Link>
-                    </li>
 
-                    <div className="flex"> {submenuData.map((menu, index) => {
-                        return (
-                            <NavElements key={index}
-                                label={menu.label}
-                                submenu={menu.submenu}
-                            />
-                        )
-                    })}</div>
-
-                    <li className=" p-3 hover:text-black hidden lg:block">
-                        <a href="#">Contact Us</a>
-                    </li>
-                </ul>
+                <div className="flex items-center"> {submenuData.map((menu, index) => {
+                    return (
+                        <NavElements key={index}
+                            label={menu.label}
+                            directPath={menu.directPath}
+                            submenu={menu.submenu}
+                        />
+                    )
+                })}
+                </div>
 
                 <div>
                     <button className='flex items-center text-lg w-36 h-12 border-2 border-sky-700 rounded-lg  text-sky-700 hover:text-white hover:bg-sky-700 hidden lg:flex  transition-all '>

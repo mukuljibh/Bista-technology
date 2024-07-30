@@ -11,11 +11,23 @@
   },
   "dependencies": {
     "@uidotdev/usehooks": "^2.4.1",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "formik": "^2.4.6",
+    "mailgen": "^2.0.28",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.9.14",
+    "nodemon": "^3.1.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.25.1",
     "react-simple-typewriter": "^5.0.1",
-    "typewriter-effect": "^2.21.0"
+    "typewriter-effect": "^2.21.0",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

@@ -23,8 +23,7 @@ const NonItStaffing = lazy(() => import('./components/pages/services/NonItStaffi
 const JobPostings = lazy(() => import('./components/pages/carrer/JobPostings'));
 const EmployeeLogin = lazy(() => import('./components/pages/carrer/EmployeeLogin'));
 const EmployerLogin = lazy(() => import('./components/pages/carrer/EmployerLogin'));
-
-
+const ContactUs = lazy(() => import('./components/pages/contactUs/ContactUs'))
 function wait(time: number) {
   return new Promise(resolve => {
     setTimeout(resolve, time)
@@ -68,6 +67,8 @@ function App() {
           <Route path="career/job-postings" element={<JobPostings />} />
           <Route path="career/employee-login" element={<EmployeeLogin />} />
           <Route path="career/employer-login" element={<EmployerLogin />} />
+
+          <Route path="/Contact-us" element={<ContactUs />} />
         </Routes>
       </Suspense >
       <Footer />
