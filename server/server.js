@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import sequelize from './db/db.js';
 import cookieParser from 'cookie-parser';
 import messageRoutes from './api/routes/messageRoutes.js';
 dotenv.config();
@@ -26,7 +27,14 @@ app.get('/', (req, res) => {
 
 app.use('/api/v1', messageRoutes);
 
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+sequelize.sync().then(() => {
+   try{
+     app.listen(PORT, () => {
+       console.log(`Server is running on port ${PORT}`);
+     });
+   }
+   catch(err){
+     console.log(err);
+   }
+})
+.catch(err => console.log(err));
