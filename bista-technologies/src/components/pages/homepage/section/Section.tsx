@@ -29,7 +29,7 @@ export default function Section() {
 
     return (
         <div>
-            <div className="relative flex justify-center">
+            <div className="relative flex justify-center w-full min-h-screen ">
                 <div className="lg:mt-28 mt-20 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5  " >
                     <div className="2xl:text-6xl md:text-3xl  md:text-3xl text-lg font-semibold text-sky-500 transition-colors duration-300 hover:text-white cursor-pointer">
                         Your Vision, Our Talent Solutions
@@ -48,7 +48,7 @@ export default function Section() {
                     </div>
                 </div>
                 <video
-                    className="contrast-75"
+                    className="absolute contrast-75 w-full h-full object-cover"
                     autoPlay
                     muted
                     loop
@@ -58,7 +58,7 @@ export default function Section() {
 
             </div>
 
-            <div className="flex lg:text-3xl justify-center text-xs h-32 items-center pl-10 text-white gap-8 text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">
+            <div className="flex lg:text-3xl justify-center text-xs h-32 items-center pl-5 text-white gap-8 text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">
                 {["Quick To Hire", "Best Talented Experts", "360-Degree Recruitment Services", "Connected you with Talented WorldWide"]
                     .map((item, index) => {
                         return (

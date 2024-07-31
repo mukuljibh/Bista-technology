@@ -43,9 +43,9 @@ export default function ContactForm() {
                 .then(() => {
                     setisLoading(false)
                     alert("Message sent Succesfull")
-
                 })
                 .catch((err) => {
+                    setisLoading(false)
                     console.log(err)
                 })
         }

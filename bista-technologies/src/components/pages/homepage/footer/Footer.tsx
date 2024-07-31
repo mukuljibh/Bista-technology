@@ -24,7 +24,7 @@ export default function Footer() {
                         })}
                     </div>
                 </div>
-                {submenuData.map((item, index) => {
+                {submenuData.slice(1, 5).map((item, index) => {
                     return (
                         <FooterElement key={index} label={item.label} submenu={item.submenu} />
                     )
