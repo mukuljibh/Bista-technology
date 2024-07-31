@@ -2,11 +2,11 @@ import MobileNavElements from "./MobileNavElements"
 import { submenuData } from "../NavBar"
 import useAnimation from "../../../../../shared/hooks/useAnimation"
 export default function MobileNavBar() {
-    const { isOpen, isAnimating, handleAnimation } = useAnimation(false)
+    const { isOpen, isAnimating, toggleAnimation } = useAnimation()
     return (
         <div className="h-20 sticky top-0 z-50 bg-white top-0 flex justify-between items-center relative " >
             <img className="w-52 ml-3" src="https://www.bistatechnologies.com/static/logo.png" />
-            <button className="p-3  hover:bg-gray-200" onClick={handleAnimation}>
+            <button className="p-3  hover:bg-gray-200" onClick={toggleAnimation} >
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M4 6l16 0" />

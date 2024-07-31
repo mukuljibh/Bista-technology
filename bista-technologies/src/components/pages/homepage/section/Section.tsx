@@ -29,13 +29,13 @@ export default function Section() {
 
     return (
         <div>
-            <div className="relative flex justify-center w-full min-h-screen ">
-                <div className="lg:mt-28 mt-20 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5  " >
-                    <div className="2xl:text-6xl md:text-3xl  md:text-3xl text-lg font-semibold text-sky-500 transition-colors duration-300 hover:text-white cursor-pointer">
+            <div className="relative flex justify-center items-center  w-full min-h-screen ">
+                <div className="lg:mt-28 mt-20 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5 space-y-2 " >
+                    <div className="2xl:text-6xl md:text-3xl  md:text-3xl text-3xl font-semibold text-white transition-colors duration-300 cursor-pointer">
                         Your Vision, Our Talent Solutions
                     </div>
 
-                    <div className="text-amber-600 font-medium 2xl:text-6xl md:text-2xl">
+                    <div className="text-green-600 font-semibold 2xl:text-6xl md:text-2xl text-3xl">
                         <Typewriter
                             words={["A Global Staffing Company", "Connecting Talent Worldwide", "Empowering Global Careers", "Transforming Businesses with Top Talent", "Expertise Across Industries"]}
                             loop={100}
@@ -43,7 +43,7 @@ export default function Section() {
                             typeSpeed={200}
                         />
                     </div>
-                    <div className="2xl:text-2xl md:text-2xl text-sm text-white font-medium">
+                    <div className="2xl:text-2xl md:text-2xl text-lg text-gray-100 font-medium">
                         <h1>Tomorrow's Success Starts with Our Recruitment</h1>
                     </div>
                 </div>
@@ -58,11 +58,14 @@ export default function Section() {
 
             </div>
 
-            <div className="flex lg:text-3xl justify-center text-xs h-32 items-center pl-5 text-white gap-8 text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">
+            <div className="flex text-3xl justify-center text-xs h-32 items-center pl-5 text-white gap-8 text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">
                 {["Quick To Hire", "Best Talented Experts", "360-Degree Recruitment Services", "Connected you with Talented WorldWide"]
                     .map((item, index) => {
                         return (
-                            <h1 key={index}>{item}</h1>
+                            <div key={index}>
+                                <h1>{item}</h1>
+                            </div>
+
                         )
                     })}
 

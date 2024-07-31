@@ -1,27 +1,27 @@
 import { useEffect, useState } from "react"
 
-export default function useAnimation(setIntialFlag: boolean) {
-    const [isOpen, setisOpen] = useState(setIntialFlag)
-    const [isAnimating, setIsAnimating] = useState(setIntialFlag)
+export default function useAnimation() {
+    const [isOpen, setisOpen] = useState(false)
+    const [isAnimating, setIsAnimating] = useState(false)
     useEffect(() => {
-        if (isOpen) {
-            setIsAnimating(() => true)
-        }
-
+        if (isOpen) setTimeout(() => setIsAnimating(true), 100)
     }, [isOpen])
 
+    function handleAnimationOn() {
+        if (!isOpen) setisOpen(true)
+    }
 
-    function handleAnimation() {
-        if (!isOpen) {
-            setisOpen(() => true)
-        }
-        else {
-            setIsAnimating(() => false)
-            setTimeout(() => {
-                setisOpen(false)
-            }, 150)
+    function handleAnimationOff() {
+        setIsAnimating(false)
+        setTimeout(() => setisOpen(() => false), 200)
+    }
+    function toggleAnimation() {
+        if (isOpen) {
+            handleAnimationOff();
+        } else {
+            handleAnimationOn();
         }
     }
-    return { isOpen, isAnimating, handleAnimation }
+    return { isOpen, isAnimating, handleAnimationOff, handleAnimationOn, toggleAnimation }
 
 }

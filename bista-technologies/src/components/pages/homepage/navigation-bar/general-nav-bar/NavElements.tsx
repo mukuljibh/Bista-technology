@@ -10,9 +10,9 @@ type NavElementsProps = {
     directPath?: string
 }
 export default function NavElements({ label, submenu, directPath }: NavElementsProps) {
-    const { isOpen, isAnimating, handleAnimation } = useAnimation(false);
+    const { isOpen, isAnimating, handleAnimationOff, handleAnimationOn } = useAnimation();
     return (
-        <div className="p-3 hover:text-black" onMouseEnter={handleAnimation} onMouseLeave={handleAnimation} onClick={handleAnimation}>
+        <div className="p-3 hover:text-black" onMouseEnter={handleAnimationOn} onMouseLeave={handleAnimationOff} onClick={handleAnimationOff}>
             <div className="flex relative">
                 <div className="flex">
                     {submenu ? <h1 className="cursor-pointer">{label}</h1> : <Link to={directPath || '#'}>{label}</Link>}
@@ -22,12 +22,12 @@ export default function NavElements({ label, submenu, directPath }: NavElementsP
                     </svg>}
                 </div>
                 {
-                    (isOpen && submenu) && <div className={`absolute rounded-lg w-56 ${isAnimating ? 'opacity-95 transform scale-100' : 'opacity-0 transform scale-95'} top-6 pt-3 pb-4 bg-white transition delay-20  mt-3 text-md space-y-4 transition-all text-nowrap`}>
+                    (isOpen && submenu) && <div className={`absolute rounded-lg w-56 ${isAnimating ? 'opacity-95 transform scale-100' : 'opacity-0 transform scale-95'} top-6 pt-3 pb-4 bg-white transition  duration-200 mt-3 text-md space-y-4 transition-all text-nowrap`}>
                         <div className="relative flex justify-start items-center border-2 border-green-600">
                             <div className="w-7 h-3 rounded-full bg-green-600 ml-3 absolute "></div>
                         </div>
                         <div>
-                            {submenu?.map((menu, ind) => {
+                            {submenu.map((menu, ind) => {
                                 return (
                                     <div className="pl-6 mb-2 text-zinc-700  hover:text-sky-700 hover:font-medium" key={ind} >
                                         <Link to={menu.link}>{menu.text} </Link>
