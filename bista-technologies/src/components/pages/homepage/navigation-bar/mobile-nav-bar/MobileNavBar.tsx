@@ -17,13 +17,15 @@ export default function MobileNavBar() {
             {/*adding animation here*/}
             {
                 isOpen && < div
-                    className={`z-50 right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500 absolute w-full ${isAnimating ? "top-16 h-72 opacity-100" : " top-16 h-0 opacity-0"}`}
+                    className={`z-50 right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500 absolute w-full ${isAnimating ? "top-20 h-72 opacity-100" : "top-20 h-0 opacity-0"}`}
                 >
                     {submenuData.map((menu, index) => {
                         return (
                             <MobileNavElements key={index}
                                 label={menu.label}
                                 submenu={menu.submenu}
+                                directPath={menu.directPath}
+                                toggleAnimation={toggleAnimation}
                             />
                         )
                     })}
