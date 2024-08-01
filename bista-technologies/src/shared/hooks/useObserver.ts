@@ -5,6 +5,7 @@ export default function useObserver(className: string, threshold: number) {
     const [isCardVisible, setIsCardVisible] = useState(false)
     useEffect(() => {
         const observer = new IntersectionObserver((entries, self) => {
+
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('opacity-100')
@@ -12,6 +13,7 @@ export default function useObserver(className: string, threshold: number) {
                     self.unobserve(entry.target)
                 }
             })
+
         }, { threshold: threshold })
 
         const target = document.querySelectorAll(`.${className}`)

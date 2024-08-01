@@ -2,7 +2,7 @@ import useObserver from "../../../../shared/hooks/useObserver"
 import ServiceCards from "../../homepage/section/service-cards/ServiceCards"
 import { healthCareConfig, healthcareCardsConfig } from "./config/healthCareConfig"
 export default function HealthCareServices() {
-    useObserver('healthCareCards', 1)
+    useObserver('healthCareCards', 0.5)
     const { isCardVisible } = useObserver('ex', 0.5)
     return (
         <div className="space-y-10 bg-gray-100">

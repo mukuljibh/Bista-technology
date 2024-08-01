@@ -14,7 +14,6 @@ export default function ServiceCards({ heading, description, imgSrc, animationTi
             isAnimating(() => true)
         }, 800 + animationTime)
     })
-    console.log(css)
     return (
         <div className={` bg-white  ${css} ${animating ? 'opacity-1 ' : 'opacity-0 -translate-x-7 '}  duration-500  transition-all rounded-xl lg:w-72  shadow-2xl `}>
             <div className={`p-5`}>
