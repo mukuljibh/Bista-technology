@@ -1,32 +1,16 @@
-import { useEffect, useState } from "react"
 import ServiceCards from "./service-cards/ServiceCards"
 import NewsLetter from "./newsletter/NewsLetter"
 import { Typewriter } from 'react-simple-typewriter'
+import useObserver from "../../../../shared/hooks/useObserver"
 
 export default function Section() {
     const cards = [
-        { heading: "Healthcare Staffing", description: "We specialize in recruiting healthcare professionals, including doctors, nurses, allied health staff, and administrative personnel. Our focus is on delivering candidates who are not only qualified but also committed to providing high-quality patient care.", imageSrc: "https://www.bistatechnologies.com/static/healthcarelogo.png", animationTime: 0 },
-        { heading: "IT Staffing", description: "From software developers to cybersecurity experts, we provide IT professionals who are at the forefront of technology. Our candidates are selected for their technical skills, industry knowledge, and ability to adapt to your business environment.", imageSrc: "https://www.bistatechnologies.com/static/itlogo.png", animationTime: 200 },
-        { heading: "Engineering Staffing", description: "From mechanical engineers to civil engineers, we connect you with skilled engineering professionals who possess the expertise to tackle complex projects and drive innovation in your field.", imageSrc: "https://www.bistatechnologies.com/static/engineeringlogo.png", animationTime: 300 },
-        { heading: "Non-IT Staffing", description: "Our Non-IT staffing services cover a wide range of industries, including finance, marketing, human resources, and more. We find the right talent to support your business operations and drive growth.", imageSrc: "https://www.bistatechnologies.com/static/nonitlogo.png", animationTime: 400 }
+        { heading: "Healthcare Staffing", description: "We specialize in recruiting healthcare professionals, including doctors, nurses, allied health staff, and administrative personnel. Our focus is on delivering candidates who are not only qualified but also committed to providing high-quality patient care.", imageSrc: "https://www.bistatechnologies.com/static/healthcarelogo.png", css: "border-2 hover:border-blue-400", animationTime: 0 },
+        { heading: "IT Staffing", description: "From software developers to cybersecurity experts, we provide IT professionals who are at the forefront of technology. Our candidates are selected for their technical skills, industry knowledge, and ability to adapt to your business environment.", imageSrc: "https://www.bistatechnologies.com/static/itlogo.png", css: "border-2 hover:border-gray-500", animationTime: 200 },
+        { heading: "Engineering Staffing", description: "From mechanical engineers to civil engineers, we connect you with skilled engineering professionals who possess the expertise to tackle complex projects and drive innovation in your field.", imageSrc: "https://www.bistatechnologies.com/static/engineeringlogo.png", animationTime: 300, css: "border-2 hover:border-orange-700" },
+        { heading: "Non-IT Staffing", description: "Our Non-IT staffing services cover a wide range of industries, including finance, marketing, human resources, and more. We find the right talent to support your business operations and drive growth.", imageSrc: "https://www.bistatechnologies.com/static/nonitlogo.png", animationTime: 400, css: "border-2 hover:border-green-700" }
     ]
-    const [isCardVisible, setIsCardVisible] = useState(false)
-
-    useEffect(() => {
-
-        const observer = new IntersectionObserver((entries, self) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setIsCardVisible(() => true)
-                    self.unobserve(entry.target)
-                }
-            })
-        }, { threshold: 0.5 })
-
-        const target = document.querySelectorAll(".section")
-        target.forEach(item => observer.observe(item))
-    }, [])
-
+    const { isCardVisible } = useObserver('homePageCards', 0.5)
     return (
         <div>
             <div className="relative flex justify-center items-center  w-full min-h-screen ">
@@ -74,13 +58,19 @@ export default function Section() {
                 <img className=" w-5/6" src="https://www.opusing.com/images/great-work-to-place-banner-f.png" />
             </div>
 
-            <div className="section flex flex-wrap gap-16 justify-center py-20 bg-gray-100 lg:px-20 px-10">
+            <div className="homePageCards flex flex-wrap gap-16 justify-center py-20 bg-gray-100 lg:px-20 px-10">
                 <div className="space-y-10  ">
                     <h1 className="lg:text-4xl text-4xl font-semibold">OUR SERVICES</h1>
                     <p className="lg:text-xl text-md ">By leveraging cutting-edge technology, we continuously innovate our IT services, IT staffing services in USA, and workforce management solutions to assist clients in achieving their business objectives.</p>
                 </div>
                 {isCardVisible && cards.map((info, index) => {
-                    return <ServiceCards key={index} heading={info.heading} description={info.description} imgSrc={info.imageSrc} animationTime={info.animationTime} />
+                    return <ServiceCards
+                        key={index}
+                        heading={info.heading}
+                        description={info.description}
+                        imgSrc={info.imageSrc}
+                        css={info.css}
+                        animationTime={info.animationTime} />
                 })}
 
             </div>

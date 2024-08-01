@@ -15,7 +15,7 @@ const StaffingSolutions = lazy(() => import('./components/pages/solutions/Staffi
 const TrainingAndDev = lazy(() => import('./components/pages/solutions/TrainingAndDev'));
 
 const EngServices = lazy(() => import('./components/pages/services/EngServices'));
-const HealthCareServices = lazy(() => import('./components/pages/services/HealthCareServices'));
+const HealthCareServices = lazy(() => import('./components/pages/services/health-care-services/HealthCareServices'));
 const ItStaffing = lazy(() => import('./components/pages/services/ItStaffing'));
 const NonItStaffing = lazy(() => import('./components/pages/services/NonItStaffing'));
 
