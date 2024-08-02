@@ -1,30 +1,31 @@
-
+import { useEffect, useState } from "react"
 type CardsProps = {
     heading: string
     description: string
     imgSrc: string
+    animationTime: number
+    css: string
 }
-/*<div className="border-2 relative border-red-700 w-72 h-72 ">
-                <div className="border-2 absolute w-full bottom-0 h-32  transition-all	 border-black">
 
-                </div>
-            </div> */
-export default function ServiceCards({ heading, description, imgSrc }: CardsProps) {
+export default function ServiceCards({ heading, description, imgSrc, animationTime, css }: CardsProps) {
+    const [animating, isAnimating] = useState(false)
+    useEffect(() => {
+        setTimeout(() => {
+            isAnimating(() => true)
+        }, 800 + animationTime)
+    })
     return (
-
-        <div className="border-2 relative border-indigo-700 rounded-lg w-72 shadow-2xl " >
-
-            <div className="p-5">
-                <div className="flex justify-center " >
-
-                    <img className="lg:w-36 w-28 border-solid border-2 border-black rounded-full" src={imgSrc} />
+        <div className={` bg-white  ${css} ${animating ? 'opacity-1 ' : 'opacity-0 -translate-x-7 '}  duration-500  transition-all rounded-xl lg:w-72  shadow-2xl `}>
+            <div className={`p-5`}>
+                <div className="lg:w-32 lg:h-32 w-20 h-20 ">
+                    <img className="w-full h-full object-cover border border-black  rounded-full" src={imgSrc} />
                 </div>
-                <div >
-                    <h1 className="lg:text-2xl  text-xl font-semibold pt-3 text-center">{heading}</h1>
-                    <p className="lg:text-lg text-center text-md pt-2">{description}</p>
+                <div className="pb-5">
+                    <h1 className="lg:text-2xl  text-xl font-semibold pt-3 ">{heading}</h1>
+                    <p className="lg:text-md text-zinc-700 text-md pt-2">{description}</p>
                 </div>
+
             </div>
-
         </div>
     )
 }

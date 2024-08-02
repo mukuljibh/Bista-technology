@@ -1,32 +1,12 @@
-import { useEffect, useState } from "react"
 import MobileNavElements from "./MobileNavElements"
 import { submenuData } from "../NavBar"
-
+import useAnimation from "../../../../../shared/hooks/useAnimation"
 export default function MobileNavBar() {
-    const [isVisible, setIsvisible] = useState(false)
-    const [isAnimation, setIsAnimation] = useState(false)
-
-    useEffect(() => {
-        if (isVisible) {
-            setIsAnimation(() => true)
-        }
-
-    }, [isVisible])
-    function handleMenu() {
-        if (!isVisible) {
-            setIsvisible(() => true)
-        }
-        else {
-            setIsAnimation(() => false)
-            setTimeout(() => {
-                setIsvisible(false)
-            }, 300)
-        }
-    }
-
+    const { isOpen, isAnimating, toggleAnimation } = useAnimation()
     return (
-        <div  >
-            <button className="p-3  hover:bg-gray-200" onClick={handleMenu}>
+        <div className="h-20 sticky top-0 z-50 bg-white top-0 flex justify-between items-center relative " >
+            <img className="w-52 ml-3" src="https://www.bistatechnologies.com/static/logo.png" />
+            <button className="p-3  hover:bg-gray-200" onClick={toggleAnimation} >
                 <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                     <path d="M4 6l16 0" />
@@ -34,16 +14,18 @@ export default function MobileNavBar() {
                     <path d="M4 18l16 0" />
                 </svg>
             </button>
-            {/*adding animation her*/}
+            {/*adding animation here*/}
             {
-                isVisible && < div
-                    className={`mt-1 border  right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500  absolute w-full  ${isAnimation ? "top-24 h-72 opacity-100" : " top-24 h-0 opacity-0"}`}
+                isOpen && < div
+                    className={`z-50 right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500 absolute w-full ${isAnimating ? "top-20 h-72 opacity-100" : "top-20 h-0 opacity-0"}`}
                 >
                     {submenuData.map((menu, index) => {
                         return (
                             <MobileNavElements key={index}
                                 label={menu.label}
                                 submenu={menu.submenu}
+                                directPath={menu.directPath}
+                                toggleAnimation={toggleAnimation}
                             />
                         )
                     })}
@@ -53,6 +35,7 @@ export default function MobileNavBar() {
             }
 
         </div >
+
 
 
     )

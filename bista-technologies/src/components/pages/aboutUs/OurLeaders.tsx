@@ -1,4 +1,6 @@
+
 export default function OurLeaders() {
+
     return (
         <>
         <div className="bg-white mt-10 text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center">
@@ -36,3 +38,4 @@ export default function OurLeaders() {
         </>
     );
 }
+
