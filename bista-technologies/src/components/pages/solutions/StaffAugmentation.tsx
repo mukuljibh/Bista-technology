@@ -35,14 +35,7 @@ export default function StaffAugmentation() {
                         We offer operational staff augmentation services to help businesses enhance their day-to-day operations. From administrative support to customer service, our professionals are ready to step in and ensure your operations run smoothly.
                         </p>                    </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
-                    <img className="w-full" src="https://www.bistatechnologies.com/static/staffaug(4).jpeg" alt="B2B Lead Generation" />
-                    <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">Market Entry Strategy:</div>
-                        <p className="text-gray-700 text-base">
-                        Our market entry strategy services help businesses navigate new markets. We provide comprehensive market assessments, entry barriers analysis, and strategic recommendations to ensure a successful market entry.
-                        </p>                    </div>
-                </div>
+                
                 <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/staffaug(5).jpeg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
