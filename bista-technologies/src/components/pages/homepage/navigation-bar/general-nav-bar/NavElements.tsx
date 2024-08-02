@@ -10,9 +10,9 @@ type NavElementsProps = {
     directPath?: string
 }
 export default function NavElements({ label, submenu, directPath }: NavElementsProps) {
-    const { isOpen, isAnimating, handleAnimationOff, handleAnimationOn } = useAnimation();
+    const { isOpen, isAnimating, handleAnimationOff, handleAnimationOn, toggleAnimation } = useAnimation();
     return (
-        <div className="p-3 hover:text-black" onMouseEnter={handleAnimationOn} onMouseLeave={handleAnimationOff} onClick={handleAnimationOff}>
+        <div className="p-3 hover:text-black" onMouseEnter={handleAnimationOn} onMouseLeave={handleAnimationOff} onClick={toggleAnimation}>
             <div className="flex relative">
                 <div className="flex">
                     {submenu ? <h1 className="cursor-pointer">{label}</h1> : <Link to={directPath || '#'}>{label}</Link>}
