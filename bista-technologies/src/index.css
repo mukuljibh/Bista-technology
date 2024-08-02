@@ -85,6 +85,19 @@
     left: -15px;
     border-right: 15px solid #7FA1C3;
 }
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
 @media screen and (max-width: 600px){
 
     .timeline{
