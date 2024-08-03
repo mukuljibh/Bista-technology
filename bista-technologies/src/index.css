@@ -1,3 +1,130 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes movedown{
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container1 {
+    opacity: 0;
+    animation: fadeInUp 1s forwards; 
+    transition: opacity 1s, transform 1s;
+}
+
+.container1:nth-child(1) {
+    animation-delay: 2s;
+}
+
+.container1:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.container1:nth-child(3) {
+    animation-delay: 4s;
+}
+
+.container1:nth-child(4) {
+    animation-delay: 5s;
+}
+
+.container1:nth-child(5) {
+    animation-delay: 6s;
+}
+
+.container1:nth-child(6) {
+    animation-delay: 7s;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 1px;
+    background: #6482AD; 
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    animation: movedown 6s linear forwards;
+}
+
+.right-containerarrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    right: -15px;
+    border-left: 15px solid #7FA1C3;
+}
+
+.left-containerarrow {
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    left: -15px;
+    border-right: 15px solid #7FA1C3;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+@media screen and (max-width: 600px){
+
+    .timeline{
+        margin:50px auto;
+    }
+    .timelinr:after{
+        left:31px;
+    }
+    .container1{
+        width:100%;
+        padding-left: 80px;
+        padding-left: 25px;
+        border: 10px black;
+
+    }
+    .timeline-line{
+        width: 2px;
+    }
+    .left-containerarrow{
+        border-top: 0;
+    border-bottom: 0;
+
+    }
+    .right-containerarrow{
+        border-top: 0;
+        border-bottom: 0;
+    
+
+    }
+}
