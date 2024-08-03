@@ -1,5 +1,5 @@
 import useObserver from "../../../../shared/hooks/useObserver"
-import ServiceCards from "../../homepage/section/service-cards/ServiceCards"
+import ServiceCards from "../../../../ui/merged_components/service-cards/Card"
 import { healthCareConfig, healthcareCardsConfig } from "./config/healthCareConfig"
 export default function HealthCareServices() {
     useObserver('healthCareCards', 0.5)
