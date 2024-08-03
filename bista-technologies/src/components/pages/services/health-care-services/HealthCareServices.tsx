@@ -5,15 +5,15 @@ export default function HealthCareServices() {
     useObserver('healthCareCards', 0.5)
     const { isCardVisible } = useObserver('ex', 0.5)
     return (
-        <div className="space-y-10 bg-gray-100">
+        <div className="space-y-10 bg-gray-100 mt-10">
             <div className="space-y-20 mb-16">
                 <img className="w-full" src="https://www.bistatechnologies.com/static/10.jpg" />
                 <h1 className="text-4xl  font-semibold text-center text-gray-700">Welcome to HealthCare Staffing</h1>
             </div>
             {healthCareConfig.map((item, index) => {
-                return (<div key={index} className={`${item.css} healthCareCards opacity-0 duration-1000 delay-100 items-center justify-evenly  px-3 space-y-4 lg:h-96 transition-all`}>
+                return (<div key={index} className={`${item.css} py-4 healthCareCards opacity-0 duration-1000 delay-100 items-center justify-evenly  px-5 space-y-4 lg:h-96 transition-all`}>
                     <div className="lg:w-2/5 h-full px-3">
-                        <img className="w-full lg:h-full object-cover rounded-lg" src={item.imageSrc} />
+                        <img className="w-full lg:h-full object-cover rounded-lg " src={item.imageSrc} />
                     </div>
                     <div className=" max-w-2xl space-y-3">
                         <h1 className="text-2xl text-sky-700 font-bold">{item.label}</h1>

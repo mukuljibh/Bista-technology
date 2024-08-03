@@ -3,12 +3,9 @@ import NewsLetter from "./newsletter/NewsLetter"
 import { Typewriter } from 'react-simple-typewriter'
 import useObserver from "../../../shared/hooks/useObserver"
 import { homePage_cards_data } from "./config/home_page.config"
-import { useScreenSize } from "../../../contexts/ScreenSizeProvider"
 
 export default function HomePage() {
     const { isCardVisible } = useObserver('homePageCards', 0.5)
-    const screenSize = useScreenSize()
-    console.log(screenSize)
     return (
         <div>
             <div className="relative flex justify-center items-center  w-full min-h-screen ">
@@ -40,15 +37,14 @@ export default function HomePage() {
 
             </div>
 
-            <div className="xl:flex md:flex pointer-events-none	select-none	  lg:text-lg text-sm justify-evenly  lg:space-y-0 space-y-5 text-white font-bold lg:h-32 items-center pl-5 py-8  gap-8 lg:text-center bg-gradient-to-r from-blue-500 via-teal-500 to-green-500">
-                {[{ label: "Quick To Hire", imgSrc: "./hire.png" }, { label: "Best Talented Experts", imgSrc: "expert.png" }, { label: "360-Degree Recruitment Services", imgSrc: "recruitment.png" }, { label: "Connected you with Talented WorldWide", imgSrc: "talent.png" }]
+            <div className="xl:flex md:flex pointer-events-none	select-none	  lg:text-lg text-sm justify-evenly  lg:space-y-0 space-y-5 text-white font-bold lg:h-32 items-center pl-5 py-8  gap-8 lg:text-center bg-gradient-to-r from-sky-700 via-teal-600 to-green-600">
+                {[{ label: "Quick To Hire", imgSrc: "/homepage/bulb.svg" }, { label: "Best Talented Experts", imgSrc: "./homepage/bolt.svg" }, { label: "360-Degree Recruitment Services", imgSrc: "./homepage/user.svg" }, { label: "Connected you with Talented WorldWide", imgSrc: "./homepage/globe.svg" }]
                     .map((item, index) => {
                         return (
                             <div className=" flex flex-col items-center  gap-2 pr-3" key={index}>
                                 <img className="lg:w-10 w-8" src={item.imgSrc} />
                                 <h1>{item.label}</h1>
                             </div>
-
                         )
                     })}
             </div>
