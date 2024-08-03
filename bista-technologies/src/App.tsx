@@ -1,39 +1,14 @@
 
 import { Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
-const NavBar = lazy(() => import('./components/pages/homepage/navigation-bar/NavBar'))
-import Section from "./components/pages/homepage/section/Section";
-import Footer from "./components/pages/homepage/footer/Footer";
-const OurLeaders = lazy(() => import('./components/pages/aboutUs/OurLeaders'))
-const OurStoryLine = lazy(() => import('./components/pages/aboutUs/OurStoryLine'));
-const MissionVision = lazy(() => wait(2000).then(() => import('./components/pages/aboutUs/MissionVision')));
-
-const LeadGeneration = lazy(() => import('./components/pages/solutions/LeadGeneration'));
-const MarketResearch = lazy(() => import('./components/pages/solutions/MarketResearch'));
-const StaffAugmentation = lazy(() => import('./components/pages/solutions/StaffAugmentation'));
-const StaffingSolutions = lazy(() => import('./components/pages/solutions/StaffingSolutions'));
-const TrainingAndDev = lazy(() => import('./components/pages/solutions/TrainingAndDev'));
-
-const EngServices = lazy(() => import('./components/pages/services/EngServices'));
-const HealthCareServices = lazy(() => import('./components/pages/services/health-care-services/HealthCareServices'));
-const ItStaffing = lazy(() => import('./components/pages/services/ItStaffing'));
-const NonItStaffing = lazy(() => import('./components/pages/services/NonItStaffing'));
+import { routes } from "./app_routing.config";
+import { Suspense } from "react";
+import NavBar from "./components/pages/navigation-bar/NavBar";
+import Footer from "./components/pages/footer/Footer";
 
 
-const JobPostings = lazy(() => import('./components/pages/carrer/JobPostings'));
-const EmployeeLogin = lazy(() => import('./components/pages/carrer/EmployeeLogin'));
-const EmployerLogin = lazy(() => import('./components/pages/carrer/EmployerLogin'));
-const ContactUs = lazy(() => import('./components/pages/contactUs/ContactUs'))
-function wait(time: number) {
-  return new Promise(resolve => {
-    setTimeout(resolve, time)
-  })
-}
 function App() {
-
-
   return (
-    <div>
+    <>
       <NavBar />
       <Suspense fallback={<div className="w-full h-screen bg-black opacity-40 border-2 flex justify-center items-center">
         <div role="status">
@@ -43,36 +18,15 @@ function App() {
           </svg>
           <span className="sr-only">Loading...</span>
         </div>
-
       </div>}>
-
         <Routes>
-          <Route path="/" element={< Section />} />
-          <Route path="aboutUs/mission-vision" element={<MissionVision />} />
-          <Route path="aboutUs/our-storyline" element={<OurStoryLine />} />
-          <Route path="aboutUs/our-leaders" element={<OurLeaders />} />
-
-          <Route path="solutions/staffing-solutions" element={<StaffingSolutions />} />
-          <Route path="solutions/lead-generation" element={<LeadGeneration />} />
-          <Route path="solutions/training&dev" element={< TrainingAndDev />} />
-          <Route path="solutions/Staff-augmentation" element={<StaffAugmentation />} />
-          <Route path="solutions/market-research" element={<MarketResearch />} />
-
-
-          <Route path="services/engineering-services" element={<EngServices />} />
-          <Route path="services/health-care-services" element={<HealthCareServices />} />
-          <Route path="services/it-staffing" element={<ItStaffing />} />
-          <Route path="/services/non-it-staffing" element={<NonItStaffing />} />
-
-          <Route path="career/job-postings" element={<JobPostings />} />
-          <Route path="career/employee-login" element={<EmployeeLogin />} />
-          <Route path="career/employer-login" element={<EmployerLogin />} />
-
-          <Route path="/Contact-us" element={<ContactUs />} />
+          {routes.map((item, index) => {
+            return <Route key={index} path={item.path} element={<item.component />} />
+          })}
         </Routes>
       </Suspense >
       <Footer />
-    </div >
+    </>
   );
 }
 
