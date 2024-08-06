@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const data = [
     { id: "email", label: "Email ID", placeholder: "Enter registered email ID" },
     { id: "password", label: "Password", placeholder: "Enter password" },
@@ -5,7 +7,7 @@ const data = [
 
 export default function LoginForm() {
     return (
-        <>
+        <div>
             <header>
                 <h1 className="text-md font-semibold text-center p-3 border-b border-gray-400">Login/Register</h1>
             </header>
@@ -36,11 +38,12 @@ export default function LoginForm() {
                         <p>Or</p>
                         <legend>Don't have a registered email ID?</legend>
                         <button className="transition-all border border-blue-700 w-full h-12 text-blue-500 font-semibold rounded-lg hover:bg-blue-100" type="button">
-                            Create account
+                            <Link to="/client-registration-form"> Create account</Link>
                         </button>
                     </div>
                 </form>
             </main>
-        </>
+        </div>
+
     );
 }
