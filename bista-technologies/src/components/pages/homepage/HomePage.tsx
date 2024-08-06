@@ -3,7 +3,6 @@ import NewsLetter from "./newsletter/NewsLetter"
 import { Typewriter } from 'react-simple-typewriter'
 import useObserver from "../../../shared/hooks/useObserver"
 import { homePage_cards_data } from "./config/home_page.config"
-
 export default function HomePage() {
     const { isCardVisible } = useObserver('homePageCards', 0.5)
     return (
@@ -57,14 +56,14 @@ export default function HomePage() {
                     <h1 className="lg:text-4xl text-4xl font-semibold">OUR SERVICES</h1>
                     <p className="lg:text-xl text-md ">By leveraging cutting-edge technology, we continuously innovate our IT services, IT staffing services in USA, and workforce management solutions to assist clients in achieving their business objectives.</p>
                 </div>
-                {isCardVisible && homePage_cards_data.map((info, index) => {
+                {isCardVisible && homePage_cards_data.map((data, index) => {
                     return <Card
                         key={index}
-                        heading={info.heading}
-                        description={info.description}
-                        imgSrc={info.imageSrc}
-                        css={info.css}
-                        animationTime={info.animationTime} />
+                        heading={data.heading}
+                        description={data.description}
+                        imgSrc={data.imageSrc}
+                        css={data.css}
+                        animationTime={data.animationTime} />
                 })}
 
             </div>

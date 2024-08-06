@@ -13,12 +13,13 @@ const TrainingAndDev = lazy(() => import('./components/pages/solutions/TrainingA
 
 const EngServices = lazy(() => import('./components/pages/services/EngServices'));
 const HealthCareServices = lazy(() => import('./components/pages/services/health-care-services/HealthCareServices'));
-const ItStaffing = lazy(() => import('./components/pages/services/ItStaffing'));
+const ItStaffing = lazy(() => import('./components/pages/services/it-staffing/ItStaffing'));
 const NonItStaffing = lazy(() => import('./components/pages/services/NonItStaffing'));
 
 const JobPostings = lazy(() => import('./components/pages/career/JobPostings'));
 const EmployeeLogin = lazy(() => import('./components/pages/career/EmployeeLogin'));
-const EmployerLogin = lazy(() => import('./components/pages/career/EmployerLogin'));
+const EmployerLogin = lazy(() => import('./components/pages/career/Employer/EmployerLogin'));
+
 const ContactUs = lazy(() => import('./components/pages/contactUs/ContactUs'))
 
 export const routes = [
