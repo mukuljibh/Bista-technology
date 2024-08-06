@@ -10,7 +10,7 @@ export default function ContactUs() {
             <img className="w-full" src="contact-us.jpg" alt="contact"></img>
             <Cards data={data} />
             <ContactForm />
-            <img className="w-full rounded-lg" src="https://www.bistatechnologies.com/static/Banner.gif" />
+            <img className="h-96 w-full" src="/banner.gif" />
         </div>
     )
 }
