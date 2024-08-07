@@ -2,12 +2,7 @@ import { Sequelize,DataTypes } from "sequelize";
 import sequelize from '../../db/db.js';
 
 const Employer = sequelize.define('Employer', {
-    id: {
-        type: DataTypes.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
-    },
-    username: {
+    userName: {
         type: DataTypes.STRING,
         allowNull: false
     },
@@ -53,6 +48,10 @@ const Employer = sequelize.define('Employer', {
     zip: {
         type: DataTypes.STRING,
         allowNull: true
+    },
+    isVerified: {
+        type: DataTypes.BOOLEAN,
+        defaultValue: false
     },
     createdAt: {
         type: DataTypes.DATE,
