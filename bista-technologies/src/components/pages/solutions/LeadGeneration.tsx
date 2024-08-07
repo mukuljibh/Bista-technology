@@ -1,7 +1,13 @@
+import { motion } from 'framer-motion'
 
 export default function LeadGeneration() {
     return (
-        <>
+        <motion.div
+            initial={{ translateX: '-100vw' }}
+            animate={{ translateX: '0vh', }}
+            exit={{ transition: { duration: 0.2 } }}
+            transition={{ duration: 0.6 }}
+        >
             <div>
                 <img className="w-full mt-5 fade-in-up" src="https://www.bistatechnologies.com/static/leadgen(1).jpg" alt="Lead Generation Banner" />
             </div>
@@ -39,6 +45,6 @@ export default function LeadGeneration() {
                     </div>
                 </div>
             </div>
-        </>
+        </motion.div>
     );
 }

@@ -1,8 +1,14 @@
-
+import { motion } from 'framer-motion'
 export default function EmployerRegister() {
 
     return (
-        <div className="h-screen lg:bg-slate-100 ">
+        <motion.div
+            initial={{ translateX: '-100vw' }}
+            animate={{ translateX: '0vh', }}
+            exit={{ transition: { duration: 0.2 } }}
+            transition={{ duration: 0.6 }}
+
+            className="h-screen lg:bg-slate-100 ">
             <div className="flex justify-center gap-20 lg:pt-20 ">
                 <div className="self-center space-y-4 lg:block hidden">
                     <h1 className="text-5xl font-semibold">Find & hire the <br />right talent with us</h1>
@@ -21,7 +27,6 @@ export default function EmployerRegister() {
                     <button className="text-white h-12 rounded-lg w-full bg-blue-600">Send OTP</button>
                 </div>
             </div>
-
-        </div>
+        </motion.div>
     )
 }

@@ -1,13 +1,19 @@
-
+import { motion } from 'framer-motion'
 export default function OurLeaders() {
 
     return (
-        <>
-        <div className="bg-white mt-10 text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center">
-                    <h1 className="text-center font-sans text-5xl font-semibold leading-tight tracking-normal text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text">
-                        About Us
-                    </h1>
-                </div>
+        <motion.div
+            initial={{ translateX: '-100vw' }}
+            animate={{ translateX: '0vh', }}
+            exit={{ transition: { duration: 0.2 } }}
+            transition={{ duration: 0.6 }}
+        >
+
+            <div className="bg-white mt-10 text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center">
+                <h1 className="text-center font-sans text-5xl font-semibold leading-tight tracking-normal text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text">
+                    About Us
+                </h1>
+            </div>
             <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
                 <div className="rounded overflow-hidden flex flex-col max-w-xl mx-auto">
                     <a href="#">
@@ -35,7 +41,7 @@ export default function OurLeaders() {
                     </div>
                 </div>
             </div>
-        </>
+        </motion.div>
     );
 }
 

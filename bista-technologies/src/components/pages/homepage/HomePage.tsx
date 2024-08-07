@@ -3,10 +3,18 @@ import NewsLetter from "./newsletter/NewsLetter"
 import { Typewriter } from 'react-simple-typewriter'
 import useObserver from "../../../shared/hooks/useObserver"
 import { homePage_cards_data } from "./config/home_page.config"
+import { motion } from "framer-motion"
+
 export default function HomePage() {
     const { isCardVisible } = useObserver('homePageCards', 0.5)
     return (
-        <div>
+        <motion.div
+            initial={{ translateX: '-100vw' }}
+            animate={{ translateX: '0vh', }}
+            exit={{ transition: { duration: 0.2 } }
+            }
+            transition={{ duration: 0.6 }}
+        >
             <div className="relative flex justify-center items-center  w-full min-h-screen ">
                 <div className="lg:mt-28 mt-20 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5 space-y-2 " >
                     <div className="2xl:text-6xl md:text-3xl  md:text-3xl text-3xl font-semibold text-white transition-colors duration-300 cursor-pointer">
@@ -31,7 +39,7 @@ export default function HomePage() {
                     muted
                     loop
                 >
-                    <source src="https://www.bistatechnologies.com/static/vid2.mp4" type="video/mp4" />
+                    <source src="/homepage/bista-video.mp4" type="video/mp4" />
                 </video>
 
             </div>
@@ -77,7 +85,7 @@ export default function HomePage() {
             </div>
 
             <NewsLetter />
-        </div >
+        </motion.div >
 
 
     )

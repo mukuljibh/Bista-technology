@@ -4,12 +4,13 @@ import { routes } from "./app_routing.config";
 import { Suspense } from "react";
 import NavBar from "./components/pages/navigation-bar/NavBar";
 import Footer from "./components/pages/footer/Footer";
-
+import { useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion"
 
 function App() {
+  const location = useLocation()
   return (
     <>
-      <NavBar />
       <Suspense fallback={<div className="w-full h-screen bg-black opacity-40 border-2 flex justify-center items-center">
         <div role="status">
           <svg aria-hidden="true" className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,13 +20,17 @@ function App() {
           <span className="sr-only">Loading...</span>
         </div>
       </div>}>
-        <Routes>
-          {routes.map((item, index) => {
-            return <Route key={index} path={item.path} element={<item.component />} />
-          })}
-        </Routes>
+        <NavBar />
+        <AnimatePresence mode='wait'>
+
+          <Routes location={location} key={location.pathname}>
+            {routes.map((item, index) => {
+              return <Route key={index} path={item.path} element={<item.component />} />
+            })}
+          </Routes>
+          <Footer />
+        </AnimatePresence>
       </Suspense >
-      <Footer />
     </>
   );
 }

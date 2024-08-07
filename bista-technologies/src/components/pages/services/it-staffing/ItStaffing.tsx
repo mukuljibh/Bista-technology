@@ -1,11 +1,18 @@
 import { itStaffingConfig, itCardsConfig } from "./config/itStaffingConfig"
 import useObserver from "../../../../shared/hooks/useObserver"
 import Card from "../../../../ui/merged_components/service-cards/Card"
+import { motion } from 'framer-motion'
+
 export default function ItStaffing() {
     useObserver('itStaffingCards', 0.5)
     const { isCardVisible } = useObserver('itCards', 0.5)
     return (
-        <div className="space-y-10 bg-slate-50 ">
+        <motion.div
+            initial={{ translateX: '-100vw' }}
+            animate={{ translateX: '0vh', }}
+            exit={{ transition: { duration: 0.2 } }}
+            transition={{ duration: 0.6 }}
+            className="space-y-10 bg-slate-50 ">
 
             <div className="space-y-20 mb-16">
                 <img className="w-full " src="https://www.bistatechnologies.com/static/banner-it-staffing.jpg" />
@@ -51,6 +58,6 @@ export default function ItStaffing() {
                 </div>)
             })}
             <img className="h-96 w-full" src="/banner.gif" />
-        </div>
+        </motion.div>
     )
 }

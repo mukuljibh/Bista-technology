@@ -1,7 +1,12 @@
-
+import { motion } from "framer-motion"
 export default function MissionVision() {
     return (<>
-        <div className="page-body mt-10">
+        <motion.div
+            initial={{ translateX: '-100vw' }}
+            animate={{ translateX: '0vh' }}
+            exit={{ transition: { duration: 0.2 } }}
+            transition={{ duration: 0.6 }}
+            className="page-body mt-10">
             <div className="img-container flex-col items-center pb-10">
                 <img
                     src="https://www.bistatechnologies.com/static/1.jpg"
@@ -86,6 +91,6 @@ export default function MissionVision() {
             </div>
 
 
-        </div>
+        </motion.div >
     </>)
 }

@@ -1,8 +1,12 @@
-
+import { motion } from 'framer-motion'
 export default function OurStoryLine() {
     return (
-
-        <div className="container">
+        <motion.div
+            initial={{ translateX: '-100vw' }}
+            animate={{ translateX: '0vh', }}
+            exit={{ transition: { duration: 0.2 } }}
+            transition={{ duration: 0.6 }}
+            className="container">
             <div className="bg-white mt-10 text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center">
                 <h1 className="text-center font-sans text-5xl font-semibold leading-tight tracking-normal text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text">
                     Our Story
@@ -102,6 +106,6 @@ export default function OurStoryLine() {
                     </div>
                 </a>
             </div>
-        </div>
+        </motion.div>
     );
 }

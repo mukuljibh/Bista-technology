@@ -1,9 +1,15 @@
 import { useScreenSize } from "../../../../contexts/ScreenSizeProvider"
 import LoginForm from "./login-form/LoginForm"
+import { motion } from 'framer-motion'
 export default function EmployerLogin() {
     const screenSize = useScreenSize()
     return (
-        <div className="flex justify-center mt-10 lg:space-x-5  ">
+        <motion.div
+            initial={{ translateX: '-100vw' }}
+            animate={{ translateX: '0vh', }}
+            exit={{ transition: { duration: 0.2 } }}
+            transition={{ duration: 0.6 }}
+            className="flex justify-center mt-10 lg:space-x-5  ">
             {!screenSize.isSmallDevice && <div className="flex flex-col items-center space-y-2 ">
                 <div className="text-center space-y-2 ">
                     <p className="text-sm font-semibold text-sky-700">BISTA TECHNOLOGIES HIRING SUITE FOR EMPLOYERS</p>
@@ -21,6 +27,6 @@ export default function EmployerLogin() {
             <div className="border rounded-lg lg:w-1/4 ">
                 <LoginForm />
             </div>
-        </div>
+        </motion.div>
     )
 }

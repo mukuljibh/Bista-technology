@@ -1,10 +1,11 @@
 
+import { motion } from 'framer-motion'
 
 export default function EngServices() {
 
     return (
-        <div>
+        <motion.div>
             welcome to engineering service
-        </div>
+        </motion.div>
     )
 }
