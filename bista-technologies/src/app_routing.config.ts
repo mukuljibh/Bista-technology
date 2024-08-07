@@ -21,7 +21,9 @@ const EmployeeLogin = lazy(() => import('./components/pages/career/EmployeeLogin
 const EmployerLogin = lazy(() => import('./components/pages/career/Employer/EmployerLogin'));
 
 const ContactUs = lazy(() => import('./components/pages/contactUs/ContactUs'))
+
 const EmployerRegister = lazy(() => import("./components/pages/career/Employer/EmployerRegister"))
+
 export const routes = [
     { path: "/", component: Section },
     { path: "aboutUs/mission-vision", component: MissionVision },
@@ -39,9 +41,10 @@ export const routes = [
     { path: "services/it-staffing", component: ItStaffing },
     { path: "/services/non-it-staffing", component: NonItStaffing },
 
-    { path: "services/health-care-services", component: JobPostings },
+    { path: "career/job-postings", component: JobPostings },
     { path: "career/employee-login", component: EmployeeLogin },
     { path: "career/employer-login", component: EmployerLogin },
     { path: "/client-registration-form", component: EmployerRegister },
+
     { path: "/Contact-us", component: ContactUs }
 ]

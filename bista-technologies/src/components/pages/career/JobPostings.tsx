@@ -1,7 +1,7 @@
 export default function JobPostings() {
     return (
         <div>
-            hello from Job Postings
+            hello from Job Posting
         </div>
     )
 }
