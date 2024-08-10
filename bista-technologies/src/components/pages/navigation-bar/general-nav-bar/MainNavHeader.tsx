@@ -3,14 +3,15 @@ import NavElements from "./NavElements";
 import { submenuData } from "../config/nav_bar.config";
 import TopNavHeader from "./TopNavHeader";
 
-export default function MainNavHeader() {
+
+function MainNavHeader() {
     return (
         <>
             <TopNavHeader />
-            <div className="sticky top-0 z-50 drop-shadow-md">
+            <div className={`sticky top-0 z-50 drop-shadow-md`}>
                 {/*Nav bar elements*/}
-                < div className='flex  py-3 bg-sky-50 justify-around text-gray-600 bg-white transition-all'>
-                    <div className="">
+                < div className='flex py-3 bg-sky-50 justify-around text-gray-600 bg-white transition-all'>
+                    <div >
                         <Link to="/"><img className="w-56" src="https://www.bistatechnologies.com/static/logo.png" /></Link>
                     </div>
 
@@ -40,4 +41,6 @@ export default function MainNavHeader() {
             </div >
         </>
     )
-}   
+}
+
+export default MainNavHeader

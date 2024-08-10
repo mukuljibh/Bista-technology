@@ -1,5 +1,4 @@
 
-
 type data = {
     label: string,
     imageSrc: string,

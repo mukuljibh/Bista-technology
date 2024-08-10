@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom"
 import useAnimation from "../../../../shared/hooks/useAnimation"
 import { navProps } from "../config/nav_bar_types";
+import { memo } from "react";
 
-export default function NavElements({ label, submenu, directPath }: navProps) {
+function NavElements({ label, submenu, directPath }: navProps) {
     const { isOpen, isAnimating, handleAnimationOff, handleAnimationOn, toggleAnimation } = useAnimation();
     return (
-        <div className="p-3 hover:text-black" onMouseEnter={handleAnimationOn} onMouseLeave={handleAnimationOff} onClick={toggleAnimation}>
+        <div className="p-3 hover:text-black" onMouseEnter={handleAnimationOn} onMouseLeave={handleAnimationOff}>
             <div className="flex relative">
                 <div className="flex">
                     {submenu ? <h1 className="cursor-pointer">{label}</h1> : <Link to={directPath || '#'}>{label}</Link>}
@@ -23,7 +24,7 @@ export default function NavElements({ label, submenu, directPath }: navProps) {
                             {submenu.map((menu, ind) => {
                                 return (
                                     <div className="pl-6 mb-2 text-zinc-700  hover:text-sky-700 hover:font-medium" key={ind} >
-                                        <Link to={menu.link}>{menu.text} </Link>
+                                        <Link onClick={toggleAnimation} to={menu.link}>{menu.text} </Link>
                                     </div>
                                 )
                             })}
@@ -37,3 +38,5 @@ export default function NavElements({ label, submenu, directPath }: navProps) {
 
     )
 }
+
+export default memo(NavElements)

@@ -9,16 +9,16 @@ export default function Footer() {
             <div className=" lg:p-0 pl-5 lg:flex gap justify-evenly mt-10">
                 <div className="space-y-3">
                     <div className="space-y-5">
-                        <Link to="/"> <img className="w-52 h-16" src="https://www.bistatechnologies.com/static/logo.png" /></Link>
+                        <Link to="/"> <img className="w-56" src="https://www.bistatechnologies.com/static/logo.png" /></Link>
                         <h1 className=" text-lg text-orange-500 font-semibold">Headquaters</h1>
                     </div>
 
                     <div className="text-gray-600 font-bold">
                         <h1>PO Box 20018</h1>
-                        <h1>Dubai</h1>
+                        <h1>Dubai, UAE</h1>
                     </div>
                     <div className="text-sm text-gray-600 space-y-3">
-                        {["info@bistatechnologies.com", "info@bistatechnologies.com", "info@bistatechnologies.com", "info@bistatechnologies.com"
+                        {["info@bistatechnologies.com", "support@bistatechnologies.com", "hr@bistatechnologies.com", "operations@bistatechnologies.com"
                         ].map((email, index) => {
                             return (
                                 <h1 key={index} className="hover:text-sky-700 cursor-pointer">{email}</h1>

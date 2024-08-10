@@ -7,7 +7,7 @@ export default function ContactUs() {
     { label: "Email", imageSrc: "mail.png", text: ["hr@bistatechnologies.com", "hr@bistatechnologies.com", "hr@bistatechnologies.com", "hr@bistatechnologies.com"] },
     ]
     return (
-        <motion.div
+        <motion.div className="h-max"
             initial={{ translateX: '-100vw' }}
             animate={{ translateX: '0vh', }}
             exit={{ transition: { duration: 0.2 } }}
@@ -16,7 +16,8 @@ export default function ContactUs() {
             <img className="w-full" src="contact-us.jpg" alt="contact"></img>
             <Cards data={data} />
             <ContactForm />
-            <img className="h-96 w-full" src="/banner.gif" />
+            <img className="lg:h-[32rem] w-full" src="/banner.gif" />
+
         </motion.div>
     )
 }
