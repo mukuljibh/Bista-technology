@@ -2,25 +2,23 @@ import MobileNavElements from "./MobileNavElements"
 import { submenuData } from "../config/nav_bar.config"
 import useAnimation from "../../../../shared/hooks/useAnimation"
 import TopNavHeader from "../general-nav-bar/TopNavHeader"
+import Hamburger from 'hamburger-react'
+
 export default function MobileNavBar() {
     const { isOpen, isAnimating, toggleAnimation } = useAnimation()
     return (
         <>
             <TopNavHeader />
-            <div className="h-20 sticky top-0 z-50 bg-white top-0 flex justify-between items-center relative " >
-                <img className="w-52 ml-3" src="https://www.bistatechnologies.com/static/logo.png" />
-                <button className="p-3  hover:bg-gray-200" onClick={toggleAnimation} >
-                    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M4 6l16 0" />
-                        <path d="M4 12l16 0" />
-                        <path d="M4 18l16 0" />
-                    </svg>
+            <div className="relative h-20 border-b sticky top-0 z-50 bg-white flex justify-center items-center  " >
+                <img className="w-52 mr-auto pl-2" src="https://www.bistatechnologies.com/static/logo.png" />
+                <button className="mr-2 hover:bg-gray-200" onClick={toggleAnimation} >
+                    <Hamburger toggled={isOpen} size={20} />
                 </button>
+
                 {/*adding animation here*/}
                 {
                     isOpen && < div
-                        className={`z-50 right-0 overflow-auto bg-white pl-9 space-y-7 transition-all duration-500 absolute w-full ${isAnimating ? "top-20 h-72 opacity-100" : "top-20 h-0 opacity-0"}`}
+                        className={`absolute overflow-y-auto bg-white pl-3 space-y-5 transition-all duration-500  w-11/12  ${isAnimating ? "top-20 h-96 opacity-100" : "top-20 h-0 opacity-0"}`}
                     >
                         {submenuData.map((menu, index) => {
                             return (
@@ -32,7 +30,7 @@ export default function MobileNavBar() {
                                 />
                             )
                         })}
-                        <button className=' hover:text-black border-2 border-black rounded-lg'>Apply Here</button>
+                        <button className='hover:text-black border-2 border-black rounded-lg'>Apply Here</button>
 
                     </div >
                 }

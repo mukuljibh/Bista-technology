@@ -20,6 +20,7 @@
     "express": "^4.19.2",
     "formik": "^2.4.6",
     "framer-motion": "^11.3.21",
+    "hamburger-react": "^2.5.1",
     "lodash": "^4.17.21",
     "mailgen": "^2.0.28",
     "morgan": "^1.10.0",
