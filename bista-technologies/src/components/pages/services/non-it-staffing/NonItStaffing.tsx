@@ -1,11 +1,11 @@
-import { itStaffingConfig, itCardsConfig } from "./config/itStaffingConfig"
+import { nonItStaffingConfig, nonItCardsConfig } from "./config/nonItStaffingConfig"
 import useObserver from "../../../../shared/hooks/useObserver"
 import Card from "../../../../ui/merged_components/service-cards/Card"
 import MainCard from "../../../../ui/merged_components/service-cards/mainCard/MainCard"
 import { motion } from 'framer-motion'
 import { Helmet } from "react-helmet";
 
-export default function ItStaffing() {
+export default function NonItStaffing() {
     useObserver('ITStaffingCards', 0.5)
     const { isCardVisible } = useObserver('ITCards', 0.5)
     return (
@@ -17,14 +17,15 @@ export default function ItStaffing() {
             className="space-y-10 bg-slate-50 ">
             <Helmet>
                 <title>
-                    IT Staffing Solution
+                    Non-IT Staffing Solution
                 </title>
             </Helmet>
             <div className="space-y-20 mb-16">
-                <img className="w-full " src="https://www.bistatechnologies.com/static/banner-it-staffing.jpg" />
-                <h1 className="text-4xl  font-semibold text-center text-gray-700">IT Resource Augmentation</h1>
+                <img className="w-full " src="https://www.bistatechnologies.com/static/12.jpg" />
+                <h1 className="text-4xl  font-semibold text-center text-gray-700">Innovative Staffing for the Future of Your Business
+                </h1>
             </div>
-            {itStaffingConfig.slice(0, 3).map(({ heading1, heading2, imageSrc, description, cardCss, headingCss }, index) => {
+            {nonItStaffingConfig.slice(0, 3).map(({ heading1, heading2, imageSrc, description, cardCss, headingCss }, index) => {
                 return (
                     <MainCard
                         key={index}
@@ -39,9 +40,13 @@ export default function ItStaffing() {
                 )
             })}
             <div className="bg-purple-50 py-20 space-y-10">
-                <h1 className="text-3xl text-gray-700 text-center font-semibold">Scale Up Your Team The Way You Want</h1>
+                <div className="space-y-2">
+                    <h1 className="text-3xl text-gray-700 text-center font-semibold">Measuring and Enhancing Team Performance </h1>
+                    <h1 className="text-lg text-gray-700 text-center">Enjoy seamless access to a vast pool of qualified Non-IT professionals with our expert staff augmentation services.</h1>
+                </div>
+
                 <div className="ITCards  flex flex-wrap justify-evenly gap-5 lg:px-15 px-10 lg:space-y-0 space-y-10">
-                    {isCardVisible && itCardsConfig.map((item, index) => {
+                    {isCardVisible && nonItCardsConfig.map((item, index) => {
                         return <Card
                             key={index}
                             heading={item.heading}
@@ -53,7 +58,7 @@ export default function ItStaffing() {
                 </div>
             </div>
 
-            {itStaffingConfig.slice(3).map(({ heading1, heading2, imageSrc, description, cardCss, headingCss }, index) => {
+            {nonItStaffingConfig.slice(3).map(({ heading1, heading2, imageSrc, description, cardCss, headingCss }, index) => {
                 return (
                     <MainCard
                         key={index}

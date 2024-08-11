@@ -3,7 +3,7 @@ import Card from "../../../../ui/merged_components/service-cards/Card"
 import { healthCareConfig, healthcareCardsConfig } from "./config/healthCareConfig"
 import { motion } from 'framer-motion'
 import MainCard from "../../../../ui/merged_components/service-cards/mainCard/MainCard"
-
+import { Helmet } from "react-helmet"
 export default function HealthCareServices() {
     useObserver('healthCareCards', 0.5)
     const { isCardVisible } = useObserver('ex', 0.5)
@@ -14,6 +14,11 @@ export default function HealthCareServices() {
             exit={{ transition: { duration: 0.2 } }}
             transition={{ duration: 0.6 }}
             className="space-y-10 bg-slate-50 ">
+            <Helmet>
+                <title>
+                    Healthcare Staffing Solution
+                </title>
+            </Helmet>
             <div className="space-y-20 mb-16">
                 <img className="w-full " src="https://www.bistatechnologies.com/static/10.jpg" />
                 <h1 className="text-4xl font-semibold text-center text-gray-700">Welcome to HealthCare Staffing</h1>

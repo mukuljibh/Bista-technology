@@ -11,10 +11,10 @@ const StaffAugmentation = lazy(() => import('./components/pages/solutions/StaffA
 const StaffingSolutions = lazy(() => import('./components/pages/solutions/StaffingSolutions'));
 const TrainingAndDev = lazy(() => import('./components/pages/solutions/TrainingAndDev'));
 
-const EngServices = lazy(() => import('./components/pages/services/EngServices'));
+const EngServices = lazy(() => import('./components/pages/services/eng-services/EngServices'));
 const HealthCareServices = lazy(() => import('./components/pages/services/health-care-services/HealthCareServices'));
 const ItStaffing = lazy(() => import('./components/pages/services/it-staffing/ItStaffing'));
-const NonItStaffing = lazy(() => import('./components/pages/services/NonItStaffing'));
+const NonItStaffing = lazy(() => import('./components/pages/services/non-it-staffing/NonItStaffing'));
 
 const JobPostings = lazy(() => import('./components/pages/career/JobPostings'));
 const EmployeeLogin = lazy(() => import('./components/pages/career/EmployeeLogin'));
