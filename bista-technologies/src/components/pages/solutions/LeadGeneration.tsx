@@ -17,7 +17,7 @@ export default function LeadGeneration() {
                 </h1>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/leadgen(2).jpg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">B2B Lead Generation:</div>
@@ -26,7 +26,7 @@ export default function LeadGeneration() {
                         </p>
                     </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/leadgen(4).jpg" alt="Market Research" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Market Research:</div>
@@ -35,7 +35,7 @@ export default function LeadGeneration() {
                         </p>
                     </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/leadgen(2).jpg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">B2B Lead Generation:</div>

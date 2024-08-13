@@ -19,42 +19,38 @@ export default function TrainingAndDev() {
                 <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/training(2).jpg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">IT Staff Augmentation:</div>
+                        <div className="font-bold text-xl mb-2">Employee Onboarding:</div>
                         <p className="text-gray-700 text-base">
-                            We provide businesses with highly skilled IT professionals who can seamlessly integrate into existing teams to support projects, fill skill gaps, and enhance productivity. Whether you need developers, system analysts, or project managers, we have the talent to meet your needs.
-                        </p>                    </div>
+                        We provide comprehensive onboarding programs that help new hires integrate seamlessly into your organization. Our onboarding solutions ensure that new employees are equipped with the knowledge and tools they need to succeed from day one.                        </p>                    </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/training(3).jpg" alt="Market Research" />
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">Technical Staff Augmentation:</div>
+                        <div className="font-bold text-xl mb-2">Skills Development:</div>
                         <p className="text-gray-700 text-base">
-                            Our technical staff augmentation services supply experts in engineering, data analysis, and other technical fields. These professionals can be brought on board to assist with specific projects, manage peak workloads, or provide specialized knowledge.
-                        </p>                    </div>
+                        Our training programs are designed to enhance the skills of your workforce, covering a wide range of areas including technical skills, soft skills, leadership development, and more. We tailor our training solutions to meet the specific needs of your organization.                        </p>                    </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/training(4).jpg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">Operational Staff Augmentation:</div>
+                        <div className="font-bold text-xl mb-2">Leadership Training:</div>
                         <p className="text-gray-700 text-base">
-                            We offer operational staff augmentation services to help businesses enhance their day-to-day operations. From administrative support to customer service, our professionals are ready to step in and ensure your operations run smoothly.
-                        </p>                    </div>
+                        We offer specialized leadership training programs aimed at developing the next generation of leaders within your organization. Our programs focus on building essential leadership qualities, strategic thinking, and effective management skills.                        </p>                    </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/training(5).jpg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">Market Entry Strategy:</div>
+                        <div className="font-bold text-xl mb-2">Compliance Training:</div>
                         <p className="text-gray-700 text-base">
-                            Our market entry strategy services help businesses navigate new markets. We provide comprehensive market assessments, entry barriers analysis, and strategic recommendations to ensure a successful market entry.
-                        </p>                    </div>
+                        We provide compliance training solutions to ensure that your employees are aware of and adhere to relevant laws and regulations. Our training programs cover areas such as workplace safety, data protection, and industry-specific regulations.                        </p>                    </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/training(6).jpg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
-                        <div className="font-bold text-xl mb-2">Strategic Staff Augmentation:</div>
+                        <div className="font-bold text-xl mb-2">Continuous Learning: </div>
                         <p className="text-gray-700 text-base">
-                            Our strategic staff augmentation solutions are designed to provide senior-level professionals and consultants who can offer strategic insights and drive business initiatives. These experts can help with strategic planning, change management, and other high-level functions.                        </p>                    </div>
-                </div>
+                        Our continuous learning programs are designed to foster a culture of ongoing professional development within your organization. We offer a variety of training formats, including workshops, online courses, and seminars, to keep your employees engaged and up-to-date with the latest industry trends.
+                        </p></div>                </div>
             </div>
         </motion.div>
     );
