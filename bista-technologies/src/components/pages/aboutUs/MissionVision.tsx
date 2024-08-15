@@ -12,7 +12,7 @@ export default function MissionVision() {
                 <div className="img-container flex-col items-center pb-10">
                     <img
                         src="https://www.bistatechnologies.com/static/1.jpg"
-                        className="mx-auto w-full  transition-transform duration-300 ease-in-out transform hover:scale-110"
+                        className="mx-auto w-full  "
                         style={{ maxHeight: '500px' }} 
                     />
                 </div>
