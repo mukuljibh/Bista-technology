@@ -96,14 +96,14 @@ export default function OurStoryLine() {
                             index % 2 === 0 ? 'left-container' : 'right-container'
                         } rounded-md border-0 relative w-1/3 bg-white mb-10 ${
                             index % 2 === 0 ? 'ml-0' : 'ml-auto'
-                        } shadow-md transition-transform transform hover:scale-105 hover:shadow-xl`}
+                        } shadow-md transition-transform transform hover:scale-110 hover:shadow-xl`}
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.4 }}
                     >
                         <div className="text-box p-6 relative rounded-lg text-base">
-                            <h2>{item.month}</h2>
-                            <small>{item.year}</small>
+                            <h2 className='text-sky-600'>{item.month}</h2>
+                            <small className='text-sky-400'>{item.year}</small>
                             <p>{item.text}</p>
                             <span
                                 className={`${
