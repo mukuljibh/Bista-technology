@@ -1,9 +1,9 @@
 
 import { lazy } from "react";
 import Section from "./components/pages/homepage/HomePage";
-const OurLeaders = lazy(() => import('./components/pages/aboutUs/OurLeaders'))
+const OurLeaders = lazy(() => import('./components/pages/aboutUs/OurLeaders/OurLeaders'))
 const OurStoryLine = lazy(() => import('./components/pages/aboutUs/OurStoryLine'));
-const MissionVision = lazy(() => import('./components/pages/aboutUs/MissionVision'))
+const MissionVision = lazy(() => import('./components/pages/aboutUs/MissionVision/MissionVision'))
 
 const LeadGeneration = lazy(() => import('./components/pages/solutions/LeadGeneration'));
 const MarketResearch = lazy(() => import('./components/pages/solutions/MarketResearch'));

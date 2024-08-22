@@ -17,7 +17,7 @@ export default function StaffAugmentation() {
                 </h1>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/staffaug(2).jpg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">IT Staff Augmentation:</div>
@@ -25,7 +25,7 @@ export default function StaffAugmentation() {
                             We provide businesses with highly skilled IT professionals who can seamlessly integrate into existing teams to support projects, fill skill gaps, and enhance productivity. Whether you need developers, system analysts, or project managers, we have the talent to meet your needs.
                         </p>                    </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/staffaug(3).jpg" alt="Market Research" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Technical Staff Augmentation:</div>
@@ -33,7 +33,7 @@ export default function StaffAugmentation() {
                             Our technical staff augmentation services supply experts in engineering, data analysis, and other technical fields. These professionals can be brought on board to assist with specific projects, manage peak workloads, or provide specialized knowledge.
                         </p>                    </div>
                 </div>
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/staffaug(4).jpeg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Operational Staff Augmentation:</div>
@@ -42,7 +42,7 @@ export default function StaffAugmentation() {
                         </p>                    </div>
                 </div>
 
-                <div className="max-w-sm rounded overflow-hidden shadow-lg card fade-in-up">
+                <div className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up">
                     <img className="w-full" src="https://www.bistatechnologies.com/static/staffaug(5).jpeg" alt="B2B Lead Generation" />
                     <div className="px-6 py-4">
                         <div className="font-bold text-xl mb-2">Strategic Staff Augmentation:</div>
