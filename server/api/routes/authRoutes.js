@@ -3,7 +3,7 @@ import { generateOTP,localVariables,verifyOTP } from '../controllers/authControl
 import { verifyToken } from '../middlewares/verifyToken.js';
 const router = Express.Router();
 
-router.get('/generateOTP',localVariables,generateOTP);
+router.get('/generateOTP',verifyToken,localVariables,generateOTP);
 router.get('/verifyOTP',verifyToken,verifyOTP);
 
 export default router;

@@ -1,6 +1,7 @@
 import otpGenerator from 'otp-generator';
 import Employer from '../models/Employer.model.js';
-
+import sendMail from '../services/sendMail.js';
+import Mailgen from 'mailgen';
 export function localVariables(req, res, next) {
     req.app.locals = {
         OTP: null,
@@ -11,7 +12,10 @@ export function localVariables(req, res, next) {
 export async function generateOTP(req, res) {
     req.app.locals.OTP = otpGenerator.generate(6, { specialChars: false, lowerCaseAlphabets: false, upperCaseAlphabets: false });
     req.app.locals.otpTimestamp = Date.now();
-    res.status(201).send({ code: req.app.locals.OTP });
+    const id=req.user.id;
+    const user=await Employer.findOne({where:{id}});
+    const email=user.email;
+    await sendMailOTP(email,req.app.locals.OTP,req,res);
 }
 
 export async function verifyOTP(req, res) {
@@ -34,4 +38,31 @@ export async function verifyOTP(req, res) {
         return res.status(200).send({ message: "OTP Verified", });
     }
     return res.status(400).send({ error: "Invalid OTP" });
+}
+
+export async function sendMailOTP(email, otp,req,res){
+    const year = new Date().getFullYear();
+     const mailGenerator = new Mailgen({
+        theme: 'default',
+        product: {
+            name: 'Bista Technologies Inc.',
+            link: 'https://bistatechnologies.com/'
+        },  
+        copyright: `Copyright © ${year} Bista Technologies Inc. All rights reserved.`,
+    });
+
+    const emailBody = {
+        name: 'Bista Technologies Inc.',
+        body: {
+            intro: `Your OTP is ${otp}`,
+            outro: `Enter this OTP to verify your account`
+        }
+    };
+    const emailTemplate = mailGenerator.generate(emailBody);
+    try { 
+        const mail=await sendMail(emailTemplate, 'Bista Technologies Inc.',email);
+        return res.status(201).send({ code: req.app.locals.OTP,message: 'OTP sent' });
+    } catch (error) {
+        return res.status(500).send({message:"Internal Server Error",error: error.toString() });
+    }
 }
