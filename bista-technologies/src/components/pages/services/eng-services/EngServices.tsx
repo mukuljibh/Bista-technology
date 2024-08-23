@@ -9,8 +9,9 @@ import { Helmet } from "react-helmet";
 
 export default function EngServices() {
 
-    useObserver('ITStaffingCards', 0.5)
+    useObserver('EngServicesCards', 0.5)
     const { isCardVisible } = useObserver('ITCards', 0.5)
+
     return (
         <motion.div
             initial={{ translateX: '-100vw' }}
@@ -33,7 +34,7 @@ export default function EngServices() {
                         description={description}
                         cardCss={cardCss}
                         headingCss={headingCss}
-                        observingClass={"ITStaffingCards"}
+                        observingClass={"EngServicesCards"}
                     />
                 )
             })}
