@@ -26,42 +26,61 @@ export default function MissionVision() {
             <div className="info-container w-full">
                 <div className="info-cards">
                     {MissionVisionconfig.map(({ heading1, heading2, imageSrc, description, cardCss, headingCss }, index) => (
-                        <MainCard
+                        <motion.div
                             key={index}
-                            heading1={heading1}
-                            heading2={heading2}
-                            imageSrc={imageSrc}
-                            description={description}
-                            cardCss={cardCss}
-                            headingCss={headingCss}
-                            observingClass={"ITStaffingCards"}
-                        />
+                            initial={{ opacity: 0, translateY: -20 }}
+                            animate={{ opacity: 1, translateY: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                        >
+                            <MainCard
+                                heading1={heading1}
+                                heading2={heading2}
+                                imageSrc={imageSrc}
+                                description={description}
+                                cardCss={cardCss}
+                                headingCss={headingCss}
+                                observingClass={"ITStaffingCards"}
+                            />
+                        </motion.div>
                     ))}
                 </div>
             </div>
 
             <div className="mission-vision-cards flex flex-col md:flex-row gap-4">
                 {Missionandvision.map(({ heading, imgsrc, description }, index) => (
-                    <a
+                    <motion.a
                         key={index}
+                        initial={{ opacity: 0, translateY: -20 }}
+                        animate={{ opacity: 1, translateY: 0 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
                         className="flex flex-col md:flex-row items-center bg-white border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 transition-colors duration-300 m-2 w-full md:w-1/2"
                     >
-                        <div className="flex-shrink-0">
+                        <motion.div
+                            initial={{ scale: 0.8 }}
+                            animate={{ scale: 1 }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                            className="flex-shrink-0"
+                        >
                             <img
                                 className="w-32 h-32 rounded-full md:ml-4"
                                 src={imgsrc}
                                 alt={heading}
                             />
-                        </div>
-                        <div className="flex flex-col justify-center p-4 leading-normal text-center md:text-left">
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: index * 0.3 }}
+                            className="flex flex-col justify-center p-4 leading-normal text-center md:text-left"
+                        >
                             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                                 {heading}
                             </h5>
                             <p className="mb-3 font-normal text-gray-700">
                                 {description}
                             </p>
-                        </div>
-                    </a>
+                        </motion.div>
+                    </motion.a>
                 ))}
             </div>
 
@@ -74,20 +93,28 @@ export default function MissionVision() {
 
                 <div className="flex flex-row flex-wrap justify-center gap-4">
                     {WhyChooseUs.map(({ heading, description, color }, index) => (
-                        <a
+                        <motion.a
                             key={index}
+                            initial={{ opacity: 0, translateY: -20 }}
+                            animate={{ opacity: 1, translateY: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                             href="#"
                             className={`flex flex-col items-center ${color} border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 transition-colors duration-300 m-2 w-full md:w-1/5`}
                         >
-                            <div className="flex flex-col justify-between p-4 leading-normal">
+                            <motion.div
+                                initial={{ scale: 0.8 }}
+                                animate={{ scale: 1 }}
+                                transition={{ duration: 0.5, delay: index * 0.2 }}
+                                className="flex flex-col justify-between p-4 leading-normal"
+                            >
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
                                     {heading}
                                 </h5>
                                 <p className="mb-3 font-normal text-gray-700">
                                     {description}
                                 </p>
-                            </div>
-                        </a>
+                            </motion.div>
+                        </motion.a>
                     ))}
                 </div>
             </div>
