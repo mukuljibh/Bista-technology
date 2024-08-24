@@ -55,8 +55,8 @@ export default function HomePage() {
                         )
                     })}
             </div>
-            <div className="flex relative justify-center py-10 items-center">
-                <img className="  w-5/6" src="homepage/sme.jpeg" />
+            <div className="flex relative justify-center pt-5 items-center">
+                <img className="w-5/6" src="homepage/sme.png" />
             </div>
 
             <div className="homePageCards flex flex-wrap gap-16 justify-center py-20 bg-gray-100 lg:px-20 px-10">

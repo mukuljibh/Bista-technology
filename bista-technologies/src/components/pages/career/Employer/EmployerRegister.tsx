@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import RegisterForm1 from './login-form/employer-registeration/RegisterForm1';
-import RegisterForm2 from './login-form/employer-registeration/RegisterForm2';
+import RegisterForm1 from './registeration-form/RegisterForm1';
+import RegisterForm2 from './registeration-form/RegisterForm2';
 import { useState } from 'react';
 export default function EmployerRegister() {
     const [handle, setHandle] = useState(true)
