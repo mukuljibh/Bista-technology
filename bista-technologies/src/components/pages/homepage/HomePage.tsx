@@ -2,11 +2,13 @@ import Card from "../../../ui/merged_components/service-cards/Card"
 import NewsLetter from "./newsletter/NewsLetter"
 import { Typewriter } from 'react-simple-typewriter'
 import useObserver from "../../../shared/hooks/useObserver"
-import { homePage_cards_data } from "./config/home_page.config"
+import { homePage_cards_data, job_posting_data } from "./config/home_page.config"
 import { motion } from "framer-motion"
+import ResumePosting from './resume-posting/ResumePosting'
 
 export default function HomePage() {
     const { isCardVisible } = useObserver('homePageCards', 0.5)
+    const { isCardVisible: resumePostingVisible } = useObserver("posting", 0.5)
     return (
         <motion.div
             initial={{ translateX: '-100vw' }}
@@ -59,11 +61,12 @@ export default function HomePage() {
                 <img className="w-5/6" src="homepage/sme.png" />
             </div>
 
-            <div className="homePageCards flex flex-wrap gap-16 justify-center py-20 bg-gray-100 lg:px-20 px-10">
-                <div className="space-y-10  ">
+            <div className="homePageCards flex flex-wrap gap-16 justify-center  py-20 bg-gray-100 lg:px-20 px-10 ">
+                <div className="space-y-10 z-10">
                     <h1 className="lg:text-4xl text-4xl font-semibold">OUR SERVICES</h1>
                     <p className="lg:text-xl text-md ">By leveraging cutting-edge technology, we continuously innovate our IT services, IT staffing services in USA, and workforce management solutions to assist clients in achieving their business objectives.</p>
                 </div>
+
                 {isCardVisible && homePage_cards_data.map((data, index) => {
                     return <Card
                         key={index}
@@ -75,7 +78,17 @@ export default function HomePage() {
                 })}
 
             </div>
+            <div className="posting lg:py-20 px-10 my-10">
+                {resumePostingVisible && <div className="lg:flex lg:space-y-0 justify-center gap-10 space-y-10">
+                    {job_posting_data.map((item, index) => {
+                        return (
+                            <ResumePosting item={item} key={index} />
+                        )
+                    })}
 
+                </div>}
+
+            </div>
 
             <div className="py-16 flex justify-center bg-slate-50 ">
                 <div className=" relative flex justify-center items-center w-11/12   ">
