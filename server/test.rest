@@ -1,0 +1,9 @@
+POST  http://localhost:5500/api/v1/leave-message
+Content-Type: application/json
+
+{
+    "name":"mukul",
+    "companyName":"test",
+    "email":"mukulbhardwaj966@gmail.com",
+    "message":"hello"
+}

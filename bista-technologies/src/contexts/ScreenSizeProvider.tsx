@@ -19,8 +19,7 @@ function useScreenSize(): ScreenSizeProps {
     return context;
 }
 interface Props {
-    children?: React.ReactNode
-    // any props that come into the component
+    children: React.ReactNode
 }
 function ScreenSizeProvider({ children }: Props) {
     const isSmallDevice = useMediaQuery("only screen and (max-width : 768px)");
@@ -35,7 +34,6 @@ function ScreenSizeProvider({ children }: Props) {
     );
 
     return (
-
         <screenSizeContext.Provider value={{ isSmallDevice: isSmallDevice, isMediumDevice: isMediumDevice, isLargeDevice: isLargeDevice, isExtraLargeDevice: isExtraLargeDevice }}>
             {children}
         </screenSizeContext.Provider>
