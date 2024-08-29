@@ -17,7 +17,6 @@ const sendMail = async (emailTemplate, name,email) => {
         subject: `${name} left a message`,
         html: emailTemplate
     };
-
     return new Promise((resolve, reject) => {
         transporter.sendMail(mailOptions, (error, info) => {
             if (error) {
