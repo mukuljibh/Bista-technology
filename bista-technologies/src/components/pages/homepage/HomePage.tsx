@@ -57,14 +57,16 @@ export default function HomePage() {
                         )
                     })}
             </div>
-            <div className="flex relative justify-center pt-5 items-center">
+            <div className="flex relative justify-center pt-5 items-center z-30  bg-white ">
                 <img className="w-5/6" src="homepage/sme.png" />
             </div>
 
-            <div className="homePageCards flex flex-wrap gap-16 justify-center  py-20 bg-gray-100 lg:px-20 px-10 ">
-                <div className="space-y-10 z-10">
-                    <h1 className="lg:text-4xl text-4xl font-semibold">OUR SERVICES</h1>
-                    <p className="lg:text-xl text-md ">By leveraging cutting-edge technology, we continuously innovate our IT services, IT staffing services in USA, and workforce management solutions to assist clients in achieving their business objectives.</p>
+            <div className="homePageCards relative flex flex-wrap gap-16 justify-center  py-32 bg-purple-50 lg:px-20 px-10 ">
+                <div className="lg:block hidden absolute w-2/5 h-3/5 rounded-full  -top-32  -left-32 bg-gradient-to-r from-pink-50 to-white"></div>
+
+                <div className="space-y-4 z-10 ">
+                    <h1 className="lg:text-3xl text-4xl font-semibold">OUR SERVICES</h1>
+                    <p className="lg:text-md text-md text-slate-600">By leveraging cutting-edge technology, we continuously innovate our IT services, IT staffing services in USA, and workforce management solutions to assist clients in achieving their business objectives.</p>
                 </div>
 
                 {isCardVisible && homePage_cards_data.map((data, index) => {
