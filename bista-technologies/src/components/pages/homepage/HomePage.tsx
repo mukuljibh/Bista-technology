@@ -80,21 +80,21 @@ export default function HomePage() {
                 })}
 
             </div>
-            <div className="posting lg:py-20 px-10 my-10">
-                {resumePostingVisible && <div className="lg:flex lg:space-y-0 justify-center gap-10 space-y-10">
-                    {job_posting_data.map((item, index) => {
-                        return (
-                            <ResumePosting item={item} key={index} />
-                        )
-                    })}
 
-                </div>}
-
+            <div className="posting lg:py-20 px-10 my-10 lg:flex  lg:space-y-0 justify-center gap-10 space-y-10">
+                {resumePostingVisible && job_posting_data.map((item, index) => {
+                    return (
+                        <ResumePosting item={item} key={index} />
+                    )
+                })}
             </div>
 
+
             <div className="py-16 flex justify-center bg-slate-50 ">
-                <div className=" relative flex justify-center items-center w-11/12   ">
-                    <h1 className="absolute w-full py-3 lg:text-5xl  bg-green-500   text-md text-center text-white opacity-90"> CULTURE | INNOVATION | OPPORTUNITY | TRUST   </h1>
+                <div className=" relative flex justify-center items-center w-11/12">
+                    <h1 className="absolute w-full py-3 lg:text-5xl bg-green-500 text-md text-center text-white" style={{ backgroundColor: 'rgba(34,197,94,0.6 )', opacity: 1 }}>
+                        CULTURE | INNOVATION | OPPORTUNITY | TRUST
+                    </h1>
                     <img src="https://www.bistatechnologies.com/static/1.webp" className="rounded-lg object-cover lg:h-96 h-42 w-full" />
                 </div>
             </div>
