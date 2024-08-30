@@ -6,7 +6,7 @@ export default function ResumePosting({ item }: any) {
     useEffect(() => {
         setTimeout(() => {
             isAnimating(() => true)
-        }, 800 + item.styles.animationTime
+        }, 250 + item.styles.animationTime
         )
     })
     return (
