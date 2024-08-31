@@ -40,4 +40,5 @@ function ScreenSizeProvider({ children }: Props) {
     )
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export { useScreenSize, ScreenSizeProvider }

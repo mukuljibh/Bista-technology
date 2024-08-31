@@ -1,8 +1,25 @@
 import CountUp from 'react-countup';
 import { useState, useEffect } from 'react';
-export default function ResumePosting({ item }: any) {
-    const [animating, isAnimating] = useState(false)
 
+interface stylesProps {
+    extras?: string,
+    imageBG: string,
+    text: string,
+    hover: string,
+    animationTime: number
+}
+
+interface resumePostingProps {
+    item: {
+        label: string
+        counting: number
+        imgSrc: string
+        styles: stylesProps
+    }
+}
+
+export default function ResumePosting({ item }: resumePostingProps) {
+    const [animating, isAnimating] = useState(false)
     useEffect(() => {
         setTimeout(() => {
             isAnimating(() => true)
