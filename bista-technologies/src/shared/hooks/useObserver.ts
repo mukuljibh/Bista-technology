@@ -18,7 +18,7 @@ export default function useObserver(className: string, threshold: number) {
 
         const target = document.querySelectorAll(`.${className}`)
         target.forEach(item => observer.observe(item))
-    }, [])
+    }, [className, threshold])
 
     return { isCardVisible }
 }

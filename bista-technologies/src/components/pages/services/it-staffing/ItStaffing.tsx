@@ -38,7 +38,7 @@ export default function ItStaffing() {
             })}
             <div className="bg-purple-50 py-20 space-y-10">
                 <h1 className="text-3xl text-gray-700 text-center font-semibold">Scale Up Your Team The Way You Want</h1>
-                <div className="ITCards  flex flex-wrap justify-evenly gap-5 lg:px-15 px-10 lg:space-y-0 space-y-10">
+                <div className="ITCards flex flex-wrap justify-evenly gap-5 lg:px-15 px-10 lg:space-y-0 space-y-10">
                     {isCardVisible && itCardsConfig.map((item, index) => {
                         return <Card
                             key={index}

@@ -6,12 +6,12 @@ import NavBar from "./components/pages/navigation-bar/NavBar";
 import Footer from "./components/pages/footer/Footer";
 import { useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion"
+import ScrollToTop from './ScrollToTop.tsx'
 
 function App() {
   const location = useLocation()
   return (
     <>
-
       <NavBar />
       <Suspense fallback={<div className="w-full h-screen bg-black opacity-30 flex justify-center items-center">
         <div role="status">
@@ -22,14 +22,18 @@ function App() {
           <span className="sr-only">Loading...</span>
         </div>
       </div>}>
-        <AnimatePresence mode='wait'>
 
-          <Routes location={location} key={location.pathname}>
-            {routes.map((item, index) => {
-              return <Route key={index} path={item.path} element={<item.component />} />
-            })}
-          </Routes>
+        <AnimatePresence mode='wait'>
+          <ScrollToTop>
+            <Routes location={location} key={location.pathname}>
+
+              {routes.map((item, index) => {
+                return <Route key={index} path={item.path} element={<item.component />} />
+              })}
+            </Routes>
+          </ScrollToTop >
         </AnimatePresence>
+
       </Suspense >
       <Footer />
 

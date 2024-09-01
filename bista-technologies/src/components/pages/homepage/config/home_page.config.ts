@@ -10,7 +10,8 @@ export const job_posting_data = [{
     styles: {
         imageBG: "bg-sky-700",
         text: "text-sky-700",
-        hover: "border-sky-700"
+        hover: "border-sky-700",
+        animationTime: 200
     }
 },
 {
@@ -19,7 +20,9 @@ export const job_posting_data = [{
         extras: "lg:translate-y-5",
         imageBG: "bg-orange-500",
         text: "text-orange-500",
-        hover: "border-orange-700"
+        hover: "border-orange-500",
+        animationTime: 500
+
     }
 },
 {
@@ -27,7 +30,9 @@ export const job_posting_data = [{
     styles: {
         imageBG: "bg-green-500",
         text: "text-green-500",
-        hover: "border-green-700"
+        hover: "border-green-700",
+        animationTime: 800
+
     }
 }
 ]
