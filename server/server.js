@@ -8,6 +8,7 @@ import cookieParser from 'cookie-parser';
 import messageRoutes from './api/routes/messageRoutes.js';
 import employerRoutes from './api/routes/EmployerRoutes.js';
 import authRoutes from './api/routes/authRoutes.js';
+import userRoutes from './api/routes/userRoutes.js';
 dotenv.config();
 
 const app = express();
@@ -30,6 +31,7 @@ app.get('/', (req, res) => {
 app.use('/api/v1', messageRoutes);
 app.use('/api/v1/employer', employerRoutes);
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/user', userRoutes);
 
 connect()
 .then(() => {
