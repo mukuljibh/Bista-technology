@@ -1,68 +1,53 @@
-import { Sequelize,DataTypes } from "sequelize";
-import sequelize from '../../db/db.js';
+import mongoose from 'mongoose';
 
-const Employer = sequelize.define('Employer', {
+const EmployerSchema = new mongoose.Schema({
     userName: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: String,
+        required: true
     },
-    Name:{
-        type: DataTypes.STRING,
+    Name: {
+        type: String,
     },
     email: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: String,
+        required: true
     },
     password: {
-        type: DataTypes.STRING,
-        allowNull: false
+        type: String,
+        required: true
     },
     companyName: {
-        type: DataTypes.STRING,
-        allowNull: true
+        type: String,
     },
     companyType: {
-        type: DataTypes.STRING,
-        allowNull: true
+        type: String,
     },
     designation: {
-        type: DataTypes.STRING,
-        allowNull: true
+        type: String,
     },
     phone: {
-        type: DataTypes.STRING,
-        allowNull: true
+        type: String,
     },
     address: {
-        type: DataTypes.STRING,
-        allowNull: true
+        type: String,
     },
     city: {
-        type: DataTypes.STRING,
-        allowNull: true
+        type: String,
     },
     state: {
-        type: DataTypes.STRING,
-        allowNull: true
+        type: String,
     },
     zip: {
-        type: DataTypes.STRING,
-        allowNull: true
+        type: String,
     },
     isVerified: {
-        type: DataTypes.BOOLEAN,
-        defaultValue: false
-    },
-    createdAt: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
-    },
-    updatedAt: {
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP')
+        type: Boolean,
+        default: false
     }
+}, {
+    timestamps: true 
 });
+
+const Employer = mongoose.model('Employer', EmployerSchema);
 
 export default Employer;
