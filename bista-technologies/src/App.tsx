@@ -13,6 +13,7 @@ function App() {
   return (
     <>
       <NavBar />
+
       <Suspense fallback={<div className="w-full h-screen bg-black opacity-30 flex justify-center items-center">
         <div role="status">
           <svg aria-hidden="true" className="w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,19 +23,17 @@ function App() {
           <span className="sr-only">Loading...</span>
         </div>
       </div>}>
-
-        <AnimatePresence mode='wait'>
-          <ScrollToTop>
+        <ScrollToTop>
+          <AnimatePresence mode='wait'>
             <Routes location={location} key={location.pathname}>
-
               {routes.map((item, index) => {
                 return <Route key={index} path={item.path} element={<item.component />} />
               })}
             </Routes>
-          </ScrollToTop >
-        </AnimatePresence>
-
+          </AnimatePresence>
+        </ScrollToTop >
       </Suspense >
+
       <Footer />
 
 

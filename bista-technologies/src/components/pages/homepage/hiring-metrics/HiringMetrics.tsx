@@ -9,7 +9,7 @@ interface stylesProps {
     animationTime: number
 }
 
-interface resumePostingProps {
+interface HiringMetricsProps {
     item: {
         label: string
         counting: number
@@ -18,7 +18,7 @@ interface resumePostingProps {
     }
 }
 
-export default function ResumePosting({ item }: resumePostingProps) {
+export default function HiringMetrics({ item }: HiringMetricsProps) {
     const [animating, isAnimating] = useState(false)
     useEffect(() => {
         setTimeout(() => {
