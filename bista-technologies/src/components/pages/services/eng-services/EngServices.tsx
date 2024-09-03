@@ -45,6 +45,7 @@ export default function EngServices() {
                             heading={item.heading}
                             description={item.description}
                             imgSrc={item.imageSrc}
+                            alt="engineering services logo"
                             css={item.css}
                             animationTime={item.animationTime} />
                     })}

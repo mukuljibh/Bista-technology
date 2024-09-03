@@ -52,6 +52,8 @@ export default function NonItStaffing() {
                             heading={item.heading}
                             description={item.description}
                             imgSrc={item.imageSrc}
+                            alt="non IT staffing logo"
+
                             css={item.css}
                             animationTime={item.animationTime} />
                     })}
