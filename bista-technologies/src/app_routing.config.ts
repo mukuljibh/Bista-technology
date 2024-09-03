@@ -1,6 +1,6 @@
 
 import { lazy } from "react";
-import Section from "./components/pages/homepage/HomePage";
+const HomePage = lazy(() => import("./components/pages/homepage/HomePage"))
 const OurLeaders = lazy(() => import('./components/pages/aboutUs/OurLeaders/OurLeaders'))
 const OurStoryLine = lazy(() => import('./components/pages/aboutUs/OurStoryLine'));
 const MissionVision = lazy(() => import('./components/pages/aboutUs/MissionVision/MissionVision'))
@@ -25,7 +25,7 @@ const ContactUs = lazy(() => import('./components/pages/contactUs/ContactUs'))
 const EmployerRegister = lazy(() => import("./components/pages/career/Employer/EmployerRegister"))
 
 export const routes = [
-    { path: "/", component: Section },
+    { path: "/", component: HomePage },
     { path: "aboutUs/mission-vision", component: MissionVision },
     { path: "aboutUs/our-storyline", component: OurStoryLine },
     { path: "aboutUs/our-leaders", component: OurLeaders },

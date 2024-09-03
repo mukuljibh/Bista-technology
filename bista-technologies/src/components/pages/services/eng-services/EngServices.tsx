@@ -1,5 +1,3 @@
-
-
 import { engServicesConfig, engServicesCardsConfig } from "./config/engServicesConfig"
 import useObserver from "../../../../shared/hooks/useObserver"
 import Card from "../../../../ui/merged_components/service-cards/Card"
@@ -18,7 +16,7 @@ export default function EngServices() {
             animate={{ translateX: '0vh', }}
             exit={{ transition: { duration: 0.2 } }}
             transition={{ duration: 0.6 }}
-            className="space-y-10 bg-slate-50 ">
+            className="space-y-10 bg-slate-50   ">
             <Helmet><title>Engineering Staffing Solutions</title></Helmet>
             <div className="space-y-20 mb-16">
                 <img className="w-full " src="https://www.bistatechnologies.com/static/9.jpg" />
@@ -47,6 +45,7 @@ export default function EngServices() {
                             heading={item.heading}
                             description={item.description}
                             imgSrc={item.imageSrc}
+                            alt="engineering services logo"
                             css={item.css}
                             animationTime={item.animationTime} />
                     })}

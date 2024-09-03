@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { cardsProps } from "./config/cards.type"
 
-export default function Card({ heading, description, imgSrc, animationTime, css }: cardsProps) {
+export default function Card({ heading, description, imgSrc, animationTime, css, alt }: cardsProps) {
     const [animating, isAnimating] = useState(false)
     useEffect(() => {
         setTimeout(() => {
@@ -9,16 +9,20 @@ export default function Card({ heading, description, imgSrc, animationTime, css 
         }, 800 + animationTime)
     })
     return (
-        <div className={` bg-white  ${css} ${animating ? 'opacity-1 ' : 'opacity-0 -translate-x-7 '}  duration-500  transition-all rounded-xl lg:w-72  shadow-2xl `}>
+        <div className={` z-30 bg-white  ${css} ${animating ? 'opacity-1 ' : 'opacity-0 -translate-x-7 '} shadow-md	 duration-300 transition-all rounded-xl lg:w-72  border-white `}>
             <div className={`p-5`}>
                 <div className="lg:w-32 lg:h-32 w-20 h-20 ">
-                    <img className="w-full h-full object-cover border border-black  rounded-full" src={imgSrc} />
+                    <img className="w-full h-full object-cover border border-black rounded-full"
+                        src={imgSrc}
+                        alt={alt}
+                        width="128"
+                        height="128"
+                    />
                 </div>
                 <div className="pb-5">
                     <h1 className="lg:text-2xl  text-xl font-semibold pt-3 ">{heading}</h1>
                     <p className="lg:text-md text-zinc-700 text-md pt-2">{description}</p>
                 </div>
-
             </div>
         </div>
     )

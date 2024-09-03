@@ -48,6 +48,8 @@ export default function HealthCareServices() {
                             heading={item.heading}
                             description={item.description}
                             imgSrc={item.imageSrc}
+                            alt="healthcare services logo"
+
                             css={item.css}
                             animationTime={item.animationTime} />
                     })}

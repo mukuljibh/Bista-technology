@@ -3,11 +3,12 @@ import bodyParser from 'body-parser';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
 import cors from 'cors';
-import sequelize from './db/db.js';
+import connect from './db/db.js';
 import cookieParser from 'cookie-parser';
 import messageRoutes from './api/routes/messageRoutes.js';
 import employerRoutes from './api/routes/EmployerRoutes.js';
 import authRoutes from './api/routes/authRoutes.js';
+import userRoutes from './api/routes/userRoutes.js';
 dotenv.config();
 
 const app = express();
@@ -30,8 +31,10 @@ app.get('/', (req, res) => {
 app.use('/api/v1', messageRoutes);
 app.use('/api/v1/employer', employerRoutes);
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1/user', userRoutes);
 
-sequelize.sync().then(() => {
+connect()
+.then(() => {
    try{
      app.listen(PORT, () => {
        console.log(`Server is running on port ${PORT}`);
