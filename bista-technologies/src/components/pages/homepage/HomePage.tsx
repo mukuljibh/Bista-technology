@@ -8,7 +8,7 @@ import HiringMetrics from './hiring-metrics/HiringMetrics'
 import CoreValuesBanner from "./core-values-banner/CoreValuesBanner"
 import OurServices from "./our-services/OurServices"
 import QuickServicesBar from "./quick-service-bar/QuickServicesBar"
-import CleintSay from "./cleint-say/CleintSay"
+import TeamBuildingBanner from "./team-building-banner/TeamBuildingBanner"
 export default function HomePage() {
     const { isCardVisible: HiringMetricsVisible } = useObserver("hiringMetrics", 0.5)
     return (
@@ -22,18 +22,17 @@ export default function HomePage() {
             <QuickServicesBar />
             <MsmeBanner />
             <OurServices />
-            <div className="hiringMetrics  lg:py-20 px-10 my-10 lg:flex lg:space-y-0 justify-center gap-10 space-y-10">
+
+            <div className="hiringMetrics z-30 relative lg:py-20 px-5 my-10 lg:flex lg:space-y-0 justify-center gap-10 space-y-10">
                 {HiringMetricsVisible && hiringData.map((item, index) => {
                     return (
                         <HiringMetrics item={item} key={index} />
                     )
                 })}
             </div>
-            <CleintSay />
+            <TeamBuildingBanner />
             <CoreValuesBanner />
             <NewsLetter />
         </motion.div >
-
-
     )
 }
