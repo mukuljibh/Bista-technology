@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://main--bistatest.netlify.app/sitemap.xml
