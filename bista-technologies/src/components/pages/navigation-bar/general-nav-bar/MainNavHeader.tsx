@@ -12,7 +12,10 @@ function MainNavHeader() {
                 {/*Nav bar elements*/}
                 < div className='flex py-3 bg-sky-50 justify-around text-gray-600  transition-all'>
                     <div >
-                        <Link to="/"><img src="/logo.png" width="224" height="56" alt="bista technologies logo" /></Link>
+                        <Link to="/">
+                            <link rel="preload" href="/logo.png" as="image" />
+                            <img src="/logo.png" width="224" height="56" alt="bista technologies logo" />
+                        </Link>
                     </div>
 
                     <div className="flex items-center"> {submenuData.map((menu, index) => {
