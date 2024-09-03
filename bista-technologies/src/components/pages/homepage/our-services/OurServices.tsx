@@ -17,7 +17,6 @@ export default function OurServices() {
                 <li></li>
                 <li></li>
             </ul>
-
             <div className="lg:block hidden absolute w-2/5 h-3/5 rounded-full  -top-32  -left-32 bg-gradient-to-r from-pink-50 to-white"></div>
             <div className="space-y-4 z-10 ">
                 <h1 className="lg:text-3xl text-4xl font-semibold">OUR SERVICES</h1>
@@ -28,7 +27,8 @@ export default function OurServices() {
                     key={index}
                     heading={data.heading}
                     description={data.description}
-                    imgSrc={data.imageSrc}
+                    imgSrc={data.image.imageSrc}
+                    alt={data.image.alt}
                     css={data.css}
                     animationTime={data.animationTime} />
             })}

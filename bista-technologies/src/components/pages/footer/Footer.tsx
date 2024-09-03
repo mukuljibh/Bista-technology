@@ -9,7 +9,7 @@ export default function Footer() {
             <div className=" lg:p-0 pl-5 lg:flex gap justify-evenly mt-10">
                 <div className="space-y-3">
                     <div className="space-y-5">
-                        <Link to="/"> <img className="w-56" src="https://www.bistatechnologies.com/static/logo.png" /></Link>
+                        <Link to="/"><img src="/logo.png" width="224" height="56" alt="bista technologies logo" /></Link>
                         <h1 className=" text-lg text-orange-500 font-semibold">Headquaters</h1>
                     </div>
 

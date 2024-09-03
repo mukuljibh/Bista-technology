@@ -12,12 +12,17 @@ export default function TeamBuildingBanner() {
 
                 <div className=" lg:w-1/3 space-y-5    ">
                     <h1 className="text-4xl font-bold">  <span className="text-orange-500">Find, Evaluate,</span> Hire The Right People With Us</h1>
-                    <p className="text-sm text-gray-500">In a time of unprecedented change, candidate choice, digital disruption, and quick innovation, Opusing is driven to provide people-centric solutions for acquiring the right talent. Current talent acquisition is more than just employing people with the necessary qualifications, skill sets, and work experience; it also entails identifying employees who can produce outcomes, share the values of the organizations they serve, provide fresh insights, and promote the goals of those organizations. Discover the staffing agency near me, Opusing, for tailored staffing solutions.</p>
+                    <p className="text-sm text-gray-500">At Bista Technologies, we recognize the importance of finding, evaluating, and hiring the right talent to propel your business forward. Our end-to-end recruitment solutions are designed to simplify the hiring process, ensuring you attract top candidates who align with your company's values and goals. We collaborate with your team to create tailored recruitment strategies that meet your specific needs, utilizing advanced assessment tools to thoroughly evaluate candidates' skills, experience, and cultural fit. With our expertise, you can make informed hiring decisions quickly and efficiently, securing the right people to drive your business success.</p>
                 </div>
 
                 <div className="lg:w-2/5 ">
-                    <img className="w-full h-full  rounded-2xl" src="https://www.opusing.com/images/image-4.webp" />
-                </div>
+                    <img
+                        className="rounded-2xl"
+                        src="/homepage/team-building-banner/team-building.webp"
+                        width="1920"
+                        height="1080"
+                        alt="Team Building Banner"
+                    />                </div>
             </div>
         </div>
     )

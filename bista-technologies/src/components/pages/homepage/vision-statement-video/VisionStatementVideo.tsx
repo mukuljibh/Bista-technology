@@ -21,14 +21,16 @@ export default function VisionStatementVideo() {
                 </div>
             </div>
             <video
-                className="absolute contrast-75 w-full h-full object-cover"
+                className="absolute w-full h-full object-cover contrast-75"
                 autoPlay
                 muted
                 loop
+                width="1280"
+                height="720"
             >
-                <source src="/homepage/bista-video.mp4" type="video/mp4" />
+                <source src="/homepage/vision-statement-video/bista-video.mp4" type="video/mp4" />
             </video>
 
-        </div>
+        </div >
     )
 }
