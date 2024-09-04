@@ -3,7 +3,7 @@ import { MissionVisionconfig, Missionandvision, WhyChooseUs } from "./config/Mis
 import useObserver from "../../../../shared/hooks/useObserver";
 import MainCard from "../../../../ui/merged_components/service-cards/mainCard/MainCard";
 import { motion } from "framer-motion";
-import "./homepage/animation.css"
+import "../../homepage/our-services/animation.css";
 
 export default function MissionVision() {
     useObserver('ITStaffingCards', 0.5);
@@ -127,12 +127,13 @@ export default function MissionVision() {
 
             <div className="p-4">
                 <div className="heading mb-4 mt-10">
-                    <h5 className="text-2xl font-bold tracking-tight text-gray-900 text-center">
+                    <h5 className="text-2xl font-bold tracking-tight text-sky-700 text-center">
                         Why Choose Us:
                     </h5>
                 </div>
 
                 <div className="flex flex-row flex-wrap justify-center gap-4">
+                    
                     {WhyChooseUs.map(({ heading, description, color }, index) => (
                         <motion.a
                             key={index}
@@ -144,7 +145,7 @@ export default function MissionVision() {
                                 ease: "easeOut",
                             }}
                             href="#"
-                            className={`flex flex-col items-center ${color} border border-gray-200 rounded-lg shadow-lg hover:bg-gray-100 m-2 w-full md:w-1/5`}
+                            className={`flex flex-col items-center ${color} border border-gray-200 rounded-lg shadow-lg  m-2 w-full md:w-1/5`}
                         >
                             <motion.div
                                 initial={{ scale: 0.8 }}
@@ -156,7 +157,7 @@ export default function MissionVision() {
                                 }}
                                 className="flex flex-col justify-between p-4 leading-normal"
                             >
-                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                                <h5 className="mb-2 text-2xl font-bold tracking-tight ">
                                     {heading}
                                 </h5>
                                 <p className="mb-3 font-normal text-gray-700">

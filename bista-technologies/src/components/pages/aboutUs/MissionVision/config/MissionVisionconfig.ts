@@ -42,17 +42,17 @@ const WhyChooseUs = [
     {
         heading: "Global Reach",
         description: "With a presence in key markets around the world, we have the capacity to source talent internationally, ensuring our clients access the best candidates no matter where they are located.",
-        color: "bg-blue-400 hover:border-2 hover:border-blue-400 ease-in-out transition-colors hover:bg-blue-200 duration-300"
+        color: "bg-blue-400 hover:border-2 hover:border-blue-400 ease-in-out transition-colors hover:bg-blue-200 hover:text-blue-800 duration-300"
     },
     {
         heading: "Industry Expertise",
         description: "Our team comprises seasoned professionals with deep industry knowledge and expertise, allowing us to provide insightful guidance and tailored solutions to our clients across various sectors.",
-        color: "bg-red-400 hover:border-2 hover:border-red-400 ease-in-out transition-colors hover:bg-red-200 duration-300"
+        color: "bg-red-400 hover:text-red-800 hover:border-2 hover:border-red-400 ease-in-out transition-colors hover:bg-red-200 duration-300"
     },
     {
         heading: "Commitment to Quality",
         description: "We are committed to excellence in everything we do, from candidate sourcing to client service. Our dedication to quality ensures that our clients receive the highest standard of staffing solutions, every time.",
-        color: "bg-yellow-400 hover:border-2 hover:border-yellow-400 ease-in-out transition-colors hover:bg-yellow-200 duration-300"
+        color: "bg-yellow-400 hover:text-yellow-800 hover:border-2 hover:border-yellow-400 ease-in-out transition-colors hover:bg-yellow-200 duration-300"
     }
 ];
 
