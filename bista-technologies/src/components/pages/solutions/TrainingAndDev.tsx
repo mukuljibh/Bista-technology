@@ -46,12 +46,12 @@ export default function TrainingAndDev() {
                 ].map((card, index) => (
                     <motion.div
                         key={index}
-                        className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up hover:scale-105 hover:shadow-xl border-b-2 border-transparent hover:border-sky-900"
+                        className="max-w-md rounded hover:bg-sky-50 overflow-hidden shadow-lg card fade-in-up hover:scale-105 hover:shadow-xl border-b-2 border-transparent hover:border-sky-900"
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
-                        whileHover={{ scale: 1.05, transition: { duration: 0.3 } }} // Add hover effect
-                        whileTap={{ scale: 0.95 }} // Add tap effect
+                        whileHover={{ scale: 1.05, transition: { duration: 0.3 } }} 
+                        whileTap={{ scale: 0.95 }} 
                     >
                         <img className="w-full" src={card.imgSrc} alt={card.title} />
                         <div className="px-6 py-4">
