@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-export default function LeadGeneration() {
+export default function MarketResearch() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -26,7 +26,7 @@ export default function LeadGeneration() {
         className="bg-white mt-10 text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center"
       >
         <h1 className="text-center font-sans text-5xl font-semibold leading-tight tracking-normal text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text fade-in-up">
-          Our Lead Generation Solutions
+          Market Research
         </h1>
       </motion.div>
 
@@ -50,38 +50,20 @@ export default function LeadGeneration() {
         ].map((card, index) => (
           <motion.div
             key={index}
-            initial={{ scale: 0.8, opacity: 0, y: 20 }} // Start slightly smaller and below
-            animate={{ scale: 1, opacity: 1, y: 0 }} // End at normal size and position
-            transition={{ duration: 0.6, delay: 0.6 + index * 0.2 }} // Staggered delay based on index
-            className="max-w-md rounded overflow-hidden shadow-lg card fade-in-up"
+            initial={{ scale: 1, opacity: 1 }}
+            whileHover={{ scale: 1.05 }} // Scale up on hover
+            whileTap={{ scale: 0.95 }} // Scale down on tap
+            transition={{ duration: 0.2 }}
+            className="max-w-md rounded overflow-hidden shadow-lg card hover:shadow-xl transition-shadow duration-300 hover:scale-105 hover:shadow-xl border-b-2 border-transparent hover:border-sky-900"
           >
             <img className="w-full" src={card.img} alt={card.title} />
-            <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">{card.title}:</div>
+            <div className="px-6 py-4 bg-white">
+              <div className="font-bold text-xl mb-2">{card.title}</div>
               <p className="text-gray-700 text-base">{card.description}</p>
             </div>
           </motion.div>
         ))}
       </div>
-
-      <motion.div
-        initial={{ opacity: 0, y: '-100%', rotate: 360 }}
-        animate={{ opacity: 1, y: 0, rotate: 0 }}
-        transition={{ duration: 1.2, ease: "easeOut" }}
-        className="design-icon-container flex justify-center mt-10"
-      >
-        <svg
-          className="text-blue-500 text-4xl"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-        >
-          <path
-            fillRule="evenodd"
-            d="M13.379 15.433a3.75 3.75 0 01-1.982 2.276C11.169 17.75 9.5 17.75 7.5 17.75a3.75 3.75 0 01-3.75-3.75v-7.5C3.75 6.25 5.379 4.667 7.5 4.667c1.931 0 3.75 1.58 3.75 3.75v7.5zM12 10a2 2 0 11-4 0 2 2 0 014 0z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </motion.div>
     </motion.div>
   );
 }
