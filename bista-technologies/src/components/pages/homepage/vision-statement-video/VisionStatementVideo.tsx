@@ -22,13 +22,14 @@ export default function VisionStatementVideo() {
             </div>
             <video
                 className="absolute w-full h-full object-cover contrast-75"
+                poster='/homepage/vision-statement-video/poster.jpg'
                 autoPlay
                 muted
                 loop
                 width="1280"
                 height="720"
             >
-                <source src="/homepage/vision-statement-video/bista-video.mp4" type="video/mp4" />
+                <source src="/homepage/vision-statement-video/bista-video-test.webm" type="video/webm" />
             </video>
 
         </div >
