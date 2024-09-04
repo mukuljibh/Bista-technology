@@ -1,16 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-  <loc>https://main--bistatest.netlify.app/</loc>
-  <lastmod>2024-09-03T08:27:27+00:00</lastmod>
+<loc>https://main--bistatest.netlify.app/</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
 </url>
-
-
+<url>
+<loc>https://main--bistatest.netlify.app/aboutUs/mission-vision</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/aboutUs/our-storyline</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/aboutUs/our-leaders</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/solutions/staffing-solutions</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/solutions/lead-generation</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/solutions/Staff-augmentation</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/solutions/market-research</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/services/engineering-services</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/services/health-care-services</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/services/it-staffing</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/services/non-it-staffing</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/career/job-postings</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/career/employee-login</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/career/employer-login</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/client-registration-form</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://main--bistatest.netlify.app/Contact-us</loc>
+<lastmod>2024-09-04T20:05:43+01:00</lastmod>
+<priority>1.0</priority>
+</url>
 </urlset>

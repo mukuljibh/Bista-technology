@@ -16,7 +16,7 @@ export default function EngServices() {
             animate={{ translateX: '0vh', }}
             exit={{ transition: { duration: 0.2 } }}
             transition={{ duration: 0.6 }}
-            className=" bg-slate-50   ">
+            className=" bg-slate-50 ">
 
             <Helmet>
                 <meta name="description" content="Explore our Engineering Staffing Solutions to scale up your team with skilled professionals. We offer customized staffing services to meet your engineering needs. Enhance your workforce today with Bista Technologies." />
