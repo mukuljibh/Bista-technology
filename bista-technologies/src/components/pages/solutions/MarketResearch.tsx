@@ -33,28 +33,38 @@ export default function MarketResearch() {
       <div className="flex flex-wrap justify-center gap-8">
         {[
           {
-            title: 'B2B Lead Generation',
-            img: 'https://www.bistatechnologies.com/static/leadgen(2).jpg',
-            description: 'We provide targeted B2B lead generation services to help businesses identify and connect with potential clients and partners. Our strategic approach ensures high-quality leads that align with your business objectives.'
+            title: 'Industry Analysis:',
+            img: 'https://www.bistatechnologies.com/static/mrktrsrch(2).jpeg',
+            description: 'We conduct thorough industry analysis to help businesses understand market dynamics, identify opportunities, and stay ahead of competitors. Our reports provide insights into industry trends, market size, and growth potential.'
           },
           {
-            title: 'Market Research',
-            img: 'https://www.bistatechnologies.com/static/leadgen(4).jpg',
-            description: 'Our team conducts in-depth market research to identify emerging trends, potential markets, and key decision-makers. This data-driven approach helps us generate leads that are more likely to convert into valuable business opportunities.'
+            title: 'Competitive Analysis:',
+            img: 'https://www.bistatechnologies.com/static/mrktrsrch(3).jpg',
+            description: 'Our competitive analysis services enable businesses to understand their competitions strengths and weaknesses. We provide detailed competitor profiles, market positioning, and strategic insights to help you develop effective business strategies'
           },
           {
-            title: 'Lead Qualification',
-            img: 'https://www.bistatechnologies.com/static/leadgen(2).jpg',
-            description: 'We assess leads based on specific criteria to ensure that your sales team focuses on the most promising prospects, saving time and resources.'
+            title: 'Customer Insights:',
+            img: 'https://www.bistatechnologies.com/static/mrktrsrch(4).jpeg',
+            description: 'We gather and analyze customer data to provide insights into customer behavior, preferences, and needs. Our customer insights help businesses tailor their products, services, and marketing strategies to better meet their target audience’s demands.'
+          },
+          {
+            title: 'Market Entry Strategy:',
+            img: 'https://www.bistatechnologies.com/static/mrktrsrch(5).jpg',
+            description: 'Our market entry strategy services help businesses navigate new markets. We provide comprehensive market assessments, entry barriers analysis, and strategic recommendations to ensure a successful market entry.'
+          },
+          {
+            title: 'Product Research:',
+            img: 'https://www.bistatechnologies.com/static/mrktrsrch(6).jpeg',
+            description: 'We offer product research services to help businesses develop and refine their product offerings. Our research covers product feasibility, market demand, pricing strategy, and more to ensure your product meets market needs.'
           }
         ].map((card, index) => (
           <motion.div
             key={index}
             initial={{ scale: 1, opacity: 1 }}
-            whileHover={{ scale: 1.05 }} // Scale up on hover
-            whileTap={{ scale: 0.95 }} // Scale down on tap
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }} 
             transition={{ duration: 0.2 }}
-            className="max-w-md rounded overflow-hidden shadow-lg card hover:shadow-xl transition-shadow duration-300 hover:scale-105 hover:shadow-xl border-b-2 border-transparent hover:border-sky-900"
+            className="max-w-md rounded overflow-hidden shadow-lg card hover:bg-sky-50 hover:shadow-xl transition-shadow duration-300 hover:scale-105 hover:shadow-xl border-b-2 border-transparent hover:border-sky-900"
           >
             <img className="w-full" src={card.img} alt={card.title} />
             <div className="px-6 py-4 bg-white">
