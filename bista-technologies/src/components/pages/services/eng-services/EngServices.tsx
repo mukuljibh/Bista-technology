@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 export default function EngServices() {
 
-    useObserver('EngServicesCards', 0.4, ['opacity-100', 'gap-0'])
+    useObserver('EngServicesCards', 0.4, ['opacity-100', 'gap-x-1'])
     const { isCardVisible } = useObserver('engCards', 0.4, ['opacity-100'])
 
     return (

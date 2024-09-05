@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import MainCard from "../../../../ui/merged_components/service-cards/mainCard/MainCard"
 import { Helmet } from "react-helmet"
 export default function HealthCareServices() {
-    useObserver('healthCareCards', 0.4, ['opacity-100', 'gap-0'])
+    useObserver('healthCareCards', 0.4, ['opacity-100', 'gap-x-0'])
     const { isCardVisible } = useObserver('ex', 0.5, ['opacity-100', 'gap-0'])
     return (
         <motion.div

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 import { Helmet } from "react-helmet";
 
 export default function ItStaffing() {
-    useObserver('ITStaffingCards', 0.4, ['opacity-100', 'gap-0'])
+    useObserver('ITStaffingCards', 0.4, ['opacity-100', 'gap-x-0'])
     const { isCardVisible } = useObserver('ITCards', 0.5, ['opacity-100', 'gap-0'])
     return (
         <motion.div

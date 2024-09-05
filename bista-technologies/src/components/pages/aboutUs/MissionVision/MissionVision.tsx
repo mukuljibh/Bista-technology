@@ -5,7 +5,7 @@ import useObserver from "../../../../shared/hooks/useObserver";
 import { MissionVisionconfig, Missionandvision } from "./config/MissionVisionconfig";
 
 export default function MissionVision() {
-    useObserver('mission-vision', 0.4, ['opacity-100', 'gap-0'])
+    useObserver('mission-vision', 0.4, ['opacity-100', 'gap-x-0'])
     return (
         <motion.div
             initial={{ translateX: '-100vw' }}
