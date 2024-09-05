@@ -45,6 +45,8 @@ export default function ItStaffing() {
                             heading={item.heading}
                             description={item.description}
                             imgSrc={item.imageSrc}
+                            alt="healthcare services logo"
+
                             css={item.css}
                             animationTime={item.animationTime} />
                     })}

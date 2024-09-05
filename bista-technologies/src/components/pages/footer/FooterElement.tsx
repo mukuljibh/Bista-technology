@@ -18,7 +18,6 @@ export default function FooterElement({ label, submenu }: FooterElementsProps) {
                         <div className="hover:text-sky-600" key={index} >
                             <Link to={menu.link} key={index}>{menu.text}</Link>
                         </div>
-
                     )
                 })}
             </div>

@@ -9,8 +9,8 @@ export default function MobileNavBar() {
     return (
         <>
             <TopNavHeader />
-            <div className="relative h-20 border-b sticky top-0 z-50 bg-white flex justify-center items-center  " >
-                <img className="w-52 mr-auto pl-2" src="https://www.bistatechnologies.com/static/logo.png" />
+            <div className="h-20 border-b sticky -top-1 z-50 bg-white flex justify-center items-center  " >
+                <img className="w-52 mr-auto pl-2" src="/logo.png" />
                 <button className="mr-2 hover:bg-gray-200" onClick={toggleAnimation} >
                     <Hamburger toggled={isOpen} size={20} />
                 </button>

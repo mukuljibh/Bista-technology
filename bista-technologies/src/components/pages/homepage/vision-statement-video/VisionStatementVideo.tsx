@@ -4,7 +4,7 @@ export default function VisionStatementVideo() {
     return (
         <div className="relative flex justify-center items-center  w-full min-h-screen ">
             <div className="lg:mt-28 mt-20 absolute text-center z-10 lg:font-normal font-semibold lg:space-y-5 space-y-2 " >
-                <div className="2xl:text-6xl md:text-3xl  md:text-3xl text-3xl font-semibold text-white transition-colors duration-300 cursor-pointer">
+                <div className="2xl:text-6xl md:text-3xl  text-3xl font-semibold text-white transition-colors duration-300 cursor-pointer">
                     Your Vision, Our Talent Solutions
                 </div>
 
@@ -21,14 +21,17 @@ export default function VisionStatementVideo() {
                 </div>
             </div>
             <video
-                className="absolute contrast-75 w-full h-full object-cover"
+                className="absolute w-full h-full object-cover contrast-75"
+                poster='/homepage/vision-statement-video/poster.jpg'
                 autoPlay
                 muted
                 loop
+                width="1280"
+                height="720"
             >
-                <source src="/homepage/bista-video.mp4" type="video/mp4" />
+                <source src="/homepage/vision-statement-video/bista-video-test.webm" type="video/webm" />
             </video>
 
-        </div>
+        </div >
     )
 }
