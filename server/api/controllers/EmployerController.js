@@ -30,7 +30,7 @@ export const register = async (req, res) => {
         const hashedPassword = await bcrypt.hash(password, 10);
         const createuser = await Employer.create({ userName, email, password: hashedPassword });
         
-        const token = jwt.sign({ id: createuser._id }, process.env.REACT_APP_JWT_SECRET, { expiresIn: "2d" });
+        const token = jwt.sign({ id: createuser._id,role:"Employer" }, process.env.REACT_APP_JWT_SECRET, { expiresIn: "2d" });
         res.status(201).send({ message: "User created successfully", token });
     } catch (err) {
         res.status(500).send({ message: "Internal Server Error" });
@@ -52,7 +52,7 @@ export const login = async (req, res) => {
             return res.status(400).send({ message: "Invalid credentials" });
         }
 
-        const token = jwt.sign({ id: user._id }, process.env.REACT_APP_JWT_SECRET, { expiresIn: "2d" });
+        const token = jwt.sign({ id: user._id,role:"Employer" }, process.env.REACT_APP_JWT_SECRET, { expiresIn: "2d" });
         res.status(200).send({ message: "Login successful", token });
     } catch (err) {
         res.status(500).send({ message: "Internal Server Error" });
