@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { StaffingSolution } from "./config/Staffingsolution";
 export default function StaffingSolutions() {
     return (
         <motion.div
@@ -21,23 +21,7 @@ export default function StaffingSolutions() {
                 </h1>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
-                {[
-                    {
-                        title: "Permanent Staffing",
-                        imgSrc: "https://www.bistatechnologies.com/static/staffsol(2).jpg",
-                        description: "We help businesses build their core teams by providing top-notch candidates for permanent positions. Our extensive network and rigorous vetting process ensure that you find the perfect fit for long-term success.",
-                    },
-                    {
-                        title: "Temporary Staffing",
-                        imgSrc: "https://www.bistatechnologies.com/static/staffsol(3).jpeg",
-                        description: "Our temporary staffing solutions offer the flexibility to meet short-term staffing needs. Whether you require seasonal workers or temporary replacements, we provide qualified candidates who can hit the ground running.",
-                    },
-                    {
-                        title: "Project-Based Staffing",
-                        imgSrc: "https://www.bistatechnologies.com/static/staffsol(4).jpg",
-                        description: "Our project-based staffing services provide you with skilled professionals for specific projects. We ensure that you have the right talent to meet your project's requirements and deliver successful outcomes.",
-                    },
-                ].map((card, index) => (
+                {StaffingSolution.map((card, index) => (
                     <motion.div
                         key={index}
                         className="max-w-md rounded hover-bg-sky-50 overflow-hidden shadow-lg card  hover:shadow-xl transition-shadow duration-300 hover:scale-105 hover:shadow-xl border-b-2 border-transparent hover:border-sky-900"
