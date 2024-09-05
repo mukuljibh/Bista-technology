@@ -60,13 +60,13 @@ export default function NonItStaffing() {
                 </div>
             </div>
 
-            {nonItStaffingConfig.slice(3).map(({ heading1, heading2, imageSrc, description, cardCss, headingCss }, index) => {
+            {nonItStaffingConfig.slice(3).map(({ heading1, heading2, image, description, cardCss, headingCss }, index) => {
                 return (
                     <MainCard
                         key={index}
                         heading1={heading1}
                         heading2={heading2}
-                        imageSrc={imageSrc}
+                        image={image}
                         description={description}
                         cardCss={cardCss}
                         headingCss={headingCss}
