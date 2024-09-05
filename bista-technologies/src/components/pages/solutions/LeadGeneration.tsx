@@ -4,12 +4,10 @@ import { leadGenData } from './config/LeadGeneration';
 export default function LeadGeneration() {
   const [inView, setInView] = useState(false);
 
-  // Check if the component is in the viewport
   useEffect(() => {
     const handleScroll = () => {
       const leadGenElement = document.getElementById('lead-gen-trigger');
 
-      // Check if the element exists
       if (leadGenElement) {
         const position = window.scrollY + window.innerHeight;
         const triggerPosition = leadGenElement.offsetTop;
