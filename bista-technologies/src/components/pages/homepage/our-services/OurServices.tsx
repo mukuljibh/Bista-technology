@@ -3,7 +3,7 @@ import { ourServicesData } from "../config/homepage.config"
 import Card from "../../../../ui/merged_components/service-cards/Card"
 import "./animation.css"
 export default function OurServices() {
-    const { isCardVisible } = useObserver('ourServices', 0.5)
+    const { isCardVisible } = useObserver('ourServices', 0.5, ['opacity-100'])
     return (
         <div className="ourServices relative flex flex-wrap gap-16 justify-center py-32 bg-purple-50 lg:px-20 px-5 ">
             <ul className='circles'>

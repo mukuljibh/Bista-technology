@@ -1,41 +1,36 @@
 const MissionVisionconfig = [
     {
         heading1: "Who We Are",
-        heading2: "Who We Are",
-        imageSrc: "https://www.bistatechnologies.com/static/whoweare.jpg",
-        description: "Established in 2023, Bista Technologies Inc. is a 100% dynamic global staffing organization headquartered in Noida, India, with a mission to connect businesses with top-tier talent worldwide.",
-        cardCss: "lg:flex bg-gradient-to-r from-white to-blue-100 border-2  transition-colors duration-300 ease-in-out hover:border-blue-500",
-        headingCss: "text-sky-600 bg-sky-100"
+        heading2: "Connecting Talent and Opportunity with Expertise and Integrity",
+        image: { imageSrc: "https://www.bistatechnologies.com/static/whoweare.jpg", alt: "" },
+        description: "At Bista Technologies Inc., we are a forward-thinking global staffing organization that is dedicated to bridging the gap between businesses and top-tier talent. Established in 2023 and headquartered in Dubai, UAE, we specialize in delivering tailored staffing solutions across industries such as IT, healthcare, engineering, and more.Our dynamic team of industry experts is committed to understanding the unique needs of our clients, providing personalized services that drive business success. We believe in building strong, long-lasting relationships based on excellence, integrity, and innovation. With a remote-friendly workplace and a culture of flexibility, we empower our employees and clients alike to achieve their goals in an ever-evolving marketplace.",
+        cardCss: "lg:flex bg-slate-50 ", headingCss: "text-sky-600 bg-sky-100 ",
     },
     {
-        heading1: "What We Do:",
-        heading2: "What We Do:",
-        imageSrc: "https://www.bistatechnologies.com/static/whatwedo.jpg",
-        description: "Bista Technologies Inc. specializes in providing comprehensive staffing solutions tailored to the unique needs of businesses across industries and continents. From IT to healthcare, engineering, and beyond, we leverage our expertise to deliver customized staffing solutions that drive success for our clients.",
-        cardCss: "lg:flex flex-row-reverse bg-gradient-to-r from-purple-100 to-white border-2  transition-colors duration-300 ease-in-out hover:border-purple-500",
-        headingCss: "text-orange-500 bg-orange-200"
-    },
-    {
-        heading1: "Our Approaches:",
-        heading2: "Our Approaches:",
-        imageSrc: "https://www.bistatechnologies.com/static/ourapproach.jpg",
-        description: "We believe in the power of personalized service and industry expertise. Our team of dedicated professionals works closely with each client to understand their specific requirements and deliver customized staffing solutions that drive success. With a focus on excellence, integrity, and innovation, we strive to exceed our clients' expectations at every turn.",
-        cardCss: "lg:flex bg-gradient-to-r from-red-100 to-white transition-colors duration-300 ease-in-out border-2 hover:border-red-500",
-        headingCss: "text-green-600 bg-green-100"
+        heading1: "Mission & Vision",
+        heading2: "Leading Workforce Solutions with Purpose and Excellence",
+        image: { imageSrc: "https://www.bistatechnologies.com/static/whatwedo.jpg", alt: "" },
+        description: "At Bista Technologies Inc., we stand as a leading workforce solutions provider with a clear and impactful mission and vision. Our mission is to deliver dynamic and tailored staffing solutions that empower businesses worldwide to achieve their goals and drive success. We are committed to providing exceptional service, fostering strong partnerships, and upholding the highest standards of professionalism and integrity.Our vision is to be recognized globally as the premier provider of staffing solutions, renowned for our ability to connect businesses with top-tier talent in an ever-changing marketplace. We aspire to create a work environment that champions innovation, flexibility, and inclusivity, enabling both our clients and employees to reach their fullest potential and thrive.",
+        cardCss: "lg:flex flex-row-reverse bg-purple-50", headingCss: "text-orange-500 bg-orange-200",
     },
 ];
 
 const Missionandvision = [
     {
-        heading: "Mission",
-        imgsrc: "https://www.bistatechnologies.com/static/mission.png",
-        description: "At Bista Technologies Inc., our mission is to be the premier global partner for workforce solutions, empowering businesses across borders with top-tier talent. Through our commitment to excellence, innovation, and cultural sensitivity, we aim to connect organizations with the right people, at the right time, to drive sustainable growth and success in a dynamic world."
+        heading: "PURPOSE",
+        image: { imageSrc: "https://www.opusing.com/images/icons/Purpose.png", alt: "" },
+        description: "Providing clients with superior services and solutions in a way that generates extraordinary business value."
     },
     {
-        heading: "Vision",
-        imgsrc: "https://www.bistatechnologies.com/static/company-vision-icon-T.png",
-        description: "Bista Technologies Inc. envisions a world where talent knows no boundaries and opportunities abound for individuals and organizations alike. As a leading global staffing organization, we strive to break down barriers, transcend borders, and foster meaningful connections that transcend geographical limitations. By leveraging our international expertise, diverse networks, and unwavering dedication to quality, we aspire to be the trusted partner of choice for businesses seeking to build winning teams on a global scale."
+        heading: "BUSINESS",
+        image: { imageSrc: "https://www.opusing.com/images/icons/Business.png", alt: "" },
+        description: "Staffing in IT and non-IT, Technology consulting, product development, training, integration, staff augmentation, and HR outsourcing."
     },
+    {
+        heading: "VALUE",
+        image: { imageSrc: "https://www.opusing.com/images/icons/Value.png", alt: "" },
+        description: "Establish everlasting partnerships with employees and clientele that stands on the pillar of trust, honesty, professionalism, respect and moral grounds."
+    }
 ];
 
 const WhyChooseUs = [

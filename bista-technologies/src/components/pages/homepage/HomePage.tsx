@@ -10,7 +10,7 @@ import OurServices from "./our-services/OurServices"
 import QuickServicesBar from "./quick-service-bar/QuickServicesBar"
 import TeamBuildingBanner from "./team-building-banner/TeamBuildingBanner"
 export default function HomePage() {
-    const { isCardVisible: HiringMetricsVisible } = useObserver("hiringMetrics", 0.5)
+    const { isCardVisible: HiringMetricsVisible } = useObserver("hiringMetrics", 0.5, ['opacity-100'])
     return (
         <motion.div
             initial={{ translateX: '-100vw' }}
