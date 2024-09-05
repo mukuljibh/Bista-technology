@@ -6,8 +6,8 @@ import { motion } from 'framer-motion'
 import { Helmet } from "react-helmet";
 
 export default function ItStaffing() {
-    useObserver('ITStaffingCards', 0.5)
-    const { isCardVisible } = useObserver('ITCards', 0.5)
+    useObserver('ITStaffingCards', 0.4, ['opacity-100', 'gap-x-0'])
+    const { isCardVisible } = useObserver('ITCards', 0.5, ['opacity-100', 'gap-0'])
     return (
         <motion.div
             initial={{ translateX: '-100vw' }}
@@ -18,17 +18,17 @@ export default function ItStaffing() {
             <Helmet>
                 <title>IT Staffing Solution</title>
             </Helmet>
-            <div className="space-y-20 mb-16">
+            <div className="space-y-10 lg:mb-16">
                 <img className="w-full " src="https://www.bistatechnologies.com/static/banner-it-staffing.jpg" />
                 <h1 className="text-4xl  font-semibold text-center text-gray-700">IT Resource Augmentation</h1>
             </div>
-            {itStaffingConfig.map(({ heading1, heading2, imageSrc, description, cardCss, headingCss }, index) => {
+            {itStaffingConfig.map(({ heading1, heading2, image, description, cardCss, headingCss }, index) => {
                 return (
                     <MainCard
                         key={index}
                         heading1={heading1}
                         heading2={heading2}
-                        imageSrc={imageSrc}
+                        image={image}
                         description={description}
                         cardCss={cardCss}
                         headingCss={headingCss}

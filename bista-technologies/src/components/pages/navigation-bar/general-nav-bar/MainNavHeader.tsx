@@ -4,13 +4,13 @@ import { submenuData } from "../config/nav_bar.config";
 import TopNavHeader from "./TopNavHeader";
 
 
-function MainNavHeader() {
+export default function MainNavHeader() {
     return (
         <>
             <TopNavHeader />
             <div className={`sticky -top-1 z-50 drop-shadow-md`}>
                 {/*Nav bar elements*/}
-                < div className='flex py-3 bg-sky-50 justify-around text-gray-600  transition-all'>
+                < div className='flex py-3 bg-white justify-around text-gray-600'>
                     <div >
                         <Link to="/">
                             <img src="/logo.png" width="224" height="56" alt="bista technologies logo" />
@@ -37,12 +37,9 @@ function MainNavHeader() {
                             <p>Apply Here</p>
                         </button>
                     </div>
-
-
                 </div >
             </div >
         </>
     )
 }
 
-export default MainNavHeader

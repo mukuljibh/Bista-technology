@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react"
 
 
-export default function useObserver(className: string, threshold: number) {
+export default function useObserver(className: string, threshold: number, styles: string[]) {
     const [isCardVisible, setIsCardVisible] = useState(false)
+    console.log(styles)
     useEffect(() => {
         const observer = new IntersectionObserver((entries, self) => {
 
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100')
+                    entry.target.classList.add(...styles)
                     setIsCardVisible(true)
                     self.unobserve(entry.target)
                 }
@@ -18,7 +19,7 @@ export default function useObserver(className: string, threshold: number) {
 
         const target = document.querySelectorAll(`.${className}`)
         target.forEach(item => observer.observe(item))
-    }, [className, threshold])
+    }, [className, threshold, styles])
 
     return { isCardVisible }
 }
