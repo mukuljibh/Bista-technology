@@ -14,10 +14,10 @@ export default function ServicesItems({ item }: ServicesItemsProps) {
     useEffect(() => {
         setTimeout(() => {
             isAnimating(() => true)
-        }, 800 + item.animationTime)
+        }, 200 + item.animationTime)
     }, [item])
     return (
-        <div className={`flex flex-col   ${animating ? ' scale-100 ' : 'scale-0 '} items-center gap-2 pr-3 transition-all duration-700`}>
+        <div className={`flex flex-col  ${animating ? ' scale-100 ' : 'scale-0 '} items-center gap-2 pr-3 transition-all duration-700`}>
             <img
                 className="lg:w-10 w-8"
                 src={item.image.imageSrc}

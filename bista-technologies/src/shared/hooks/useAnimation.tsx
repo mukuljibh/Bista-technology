@@ -5,6 +5,8 @@ export default function useAnimation() {
     const [isAnimating, setIsAnimating] = useState(false)
     useEffect(() => {
         if (isOpen) setTimeout(() => setIsAnimating(true), 100)
+
+        return () => setIsAnimating(false)
     }, [isOpen])
 
     function handleAnimationOn() {
