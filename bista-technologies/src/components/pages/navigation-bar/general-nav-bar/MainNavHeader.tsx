@@ -10,14 +10,14 @@ export default function MainNavHeader() {
             <TopNavHeader />
             <div className={`sticky -top-1 z-50 drop-shadow-md`}>
                 {/*Nav bar elements*/}
-                < div className='flex py-3 bg-white justify-around text-gray-600'>
+                < div className='flex items-center bg-white justify-around text-gray-600'>
                     <div >
                         <Link to="/">
                             <img src="/logo.png" width="224" height="56" alt="bista technologies logo" />
                         </Link>
                     </div>
 
-                    <div className="flex items-center"> {submenuData.map((menu, index) => {
+                    <div className="flex items-center "> {submenuData.map((menu, index) => {
                         return (
                             <NavElements key={index}
                                 label={menu.label}

@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react"
-import { cardsProps } from "./config/cards.type"
 
+export type cardsProps = {
+    heading: string
+    description: string
+    imgSrc: string
+    alt: string
+    animationTime: number
+    css: string
+}
 export default function Card({ heading, description, imgSrc, animationTime, css, alt }: cardsProps) {
     const [animating, isAnimating] = useState(false)
     useEffect(() => {
