@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-
+import { TrainingandDevelopment } from './config/TrainingandDevelopment';
 export default function TrainingAndDev() {
     return (
         <motion.div
@@ -17,33 +17,7 @@ export default function TrainingAndDev() {
                 </h1>
             </div>
             <div className="flex flex-wrap justify-center gap-8">
-                {[
-                    {
-                        title: "Employee Onboarding",
-                        imgSrc: "https://www.bistatechnologies.com/static/training(2).jpg",
-                        description: "We provide comprehensive onboarding programs that help new hires integrate seamlessly into your organization. Our onboarding solutions ensure that new employees are equipped with the knowledge and tools they need to succeed from day one."
-                    },
-                    {
-                        title: "Skills Development",
-                        imgSrc: "https://www.bistatechnologies.com/static/training(3).jpg",
-                        description: "Our training programs are designed to enhance the skills of your workforce, covering a wide range of areas including technical skills, soft skills, leadership development, and more. We tailor our training solutions to meet the specific needs of your organization."
-                    },
-                    {
-                        title: "Leadership Training",
-                        imgSrc: "https://www.bistatechnologies.com/static/training(4).jpg",
-                        description: "We offer specialized leadership training programs aimed at developing the next generation of leaders within your organization. Our programs focus on building essential leadership qualities, strategic thinking, and effective management skills."
-                    },
-                    {
-                        title: "Compliance Training",
-                        imgSrc: "https://www.bistatechnologies.com/static/training(5).jpg",
-                        description: "We provide compliance training solutions to ensure that your employees are aware of and adhere to relevant laws and regulations. Our training programs cover areas such as workplace safety, data protection, and industry-specific regulations."
-                    },
-                    {
-                        title: "Continuous Learning",
-                        imgSrc: "https://www.bistatechnologies.com/static/training(6).jpg",
-                        description: "Our continuous learning programs are designed to foster a culture of ongoing professional development within your organization. We offer a variety of training formats, including workshops, online courses, and seminars, to keep your employees engaged and up-to-date with the latest industry trends."
-                    }
-                ].map((card, index) => (
+                {TrainingandDevelopment.map((card, index) => (
                     <motion.div
                         key={index}
                         className="max-w-md rounded hover:bg-sky-50 overflow-hidden shadow-lg card fade-in-up hover:scale-105 hover:shadow-xl border-b-2 border-transparent hover:border-sky-900"
