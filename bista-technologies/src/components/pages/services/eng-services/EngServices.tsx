@@ -3,7 +3,6 @@ import useObserver from "../../../../shared/hooks/useObserver"
 import Card from "../../../../ui/merged_components/service-cards/Card"
 import MainCard from "../../../../ui/merged_components/service-cards/mainCard/MainCard"
 import { motion } from 'framer-motion'
-import { Helmet } from "react-helmet";
 
 export default function EngServices() {
 
@@ -17,13 +16,6 @@ export default function EngServices() {
             exit={{ transition: { duration: 0.2 } }}
             transition={{ duration: 0.6 }}
             className=" bg-slate-50 ">
-
-            <Helmet>
-                <meta name="description" content="Explore our Engineering Staffing Solutions to scale up your team with skilled professionals. We offer customized staffing services to meet your engineering needs. Enhance your workforce today with Bista Technologies." />
-                <meta name="keywords" content="Engineering Staffing Solutions, Engineering Services, Skilled Professionals, Staffing Services, Workforce Scaling, Bista Technologies, Engineering Team, Staffing Solutions, IT Staffing, Engineering Recruitment" />
-                <title>Engineering Staffing Solutions</title>
-            </Helmet>
-
             <div className="space-y-10 lg:mb-16">
                 <img className="w-full" src="/services/eng-services/1.webp" alt="eng-services banner" width="1920" height="600" />
                 <h1 className="lg:text-4xl text-2xl font-semibold text-center text-gray-700">Welcome to Engineering Staffing Solutions</h1>
