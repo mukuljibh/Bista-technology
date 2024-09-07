@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 
 export default function useObserver(className: string, threshold: number, styles: string[]) {
     const [isCardVisible, setIsCardVisible] = useState(false)
-    console.log(styles)
     useEffect(() => {
         const observer = new IntersectionObserver((entries, self) => {
 

@@ -7,7 +7,7 @@ export default function Card({ heading, description, imgSrc, animationTime, css,
         setTimeout(() => {
             isAnimating(() => true)
         }, 800 + animationTime)
-    })
+    }, [heading, description, imgSrc, animationTime, css, alt])
     return (
         <div className={` z-30 bg-white  ${css} ${animating ? 'opacity-1 ' : 'opacity-0 -translate-x-7 '} shadow-md	 duration-300 transition-all rounded-xl lg:w-72  border-white `}>
             <div className={`p-5`}>
