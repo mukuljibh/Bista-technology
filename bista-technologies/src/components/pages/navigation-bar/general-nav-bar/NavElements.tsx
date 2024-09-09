@@ -6,7 +6,11 @@ import { memo } from "react";
 function NavElements({ label, submenu, directPath }: navProps) {
     const { isOpen, isAnimating, handleAnimationOff, handleAnimationOn, toggleAnimation } = useAnimation();
     return (
-        <div className="px-3 py-6 hover:text-black " onMouseEnter={handleAnimationOn} onMouseLeave={handleAnimationOff}>
+        <div
+            className="px-3 py-6 hover:text-black "
+            onMouseEnter={handleAnimationOn}
+            onMouseLeave={handleAnimationOff}
+        >
             <div className="flex relative">
                 <div className="flex">
                     {submenu ? <h1 className=" cursor-pointer">{label}</h1> : <Link to={directPath || '#'}>{label}</Link>}
@@ -22,14 +26,15 @@ function NavElements({ label, submenu, directPath }: navProps) {
                             <div className="w-7 h-3 rounded-full bg-green-600 ml-3 absolute "></div>
                         </div>
                         <div>
-                            {submenu.map((menu, ind) => {
-                                return (
-                                    <div className="pl-6 mb-2  text-zinc-700x    hover:text-sky-700 hover:font-medium" key={ind} >
-                                        <Link onClick={toggleAnimation} to={menu.link}>{menu.text} </Link>
-                                    </div>
-                                )
-                            })}
-
+                            <ul>
+                                {submenu.map((menu, ind) => {
+                                    return (
+                                        <li className="pl-6 mb-2  text-zinc-700x    hover:text-sky-700 hover:font-medium" key={ind} >
+                                            <Link onClick={toggleAnimation} to={menu.link}>{menu.text} </Link>
+                                        </li>
+                                    )
+                                })}
+                            </ul>
                         </div>
                     </div>
                 }

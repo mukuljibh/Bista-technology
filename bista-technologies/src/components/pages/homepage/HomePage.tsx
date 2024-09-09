@@ -13,7 +13,7 @@ export default function HomePage() {
     const { isCardVisible: HiringMetricsVisible } = useObserver("hiringMetrics", 0.5, ['opacity-100'])
 
     return (
-        <motion.div
+        <motion.main
             initial={{ translateX: '-100vw' }}
             animate={{ translateX: '0vh', }}
             exit={{ transition: { duration: 0.2 } }}
@@ -25,16 +25,16 @@ export default function HomePage() {
             <MsmeBanner />
             <OurServices />
 
-            <div className="hiringMetrics z-30 relative lg:py-20 px-5 my-10 lg:flex lg:space-y-0 justify-center gap-10 space-y-10">
+            <section className="hiringMetrics z-30 relative lg:py-20 px-5 my-10 lg:flex lg:space-y-0 justify-center gap-10 space-y-10">
                 {HiringMetricsVisible && hiringData.map((item, index) => {
                     return (
                         <HiringMetrics item={item} key={index} />
                     )
                 })}
-            </div>
+            </section>
             <TeamBuildingBanner />
             <CoreValuesBanner />
             <NewsLetter />
-        </motion.div >
+        </motion.main >
     )
 }

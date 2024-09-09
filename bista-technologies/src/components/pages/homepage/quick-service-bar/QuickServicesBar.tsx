@@ -9,13 +9,17 @@ export default function QuickServicesBar() {
         { label: "Connected you with Talented WorldWide", image: { imageSrc: "./homepage/globe.svg", alt: "connect with talent logo" }, animationTime: 1000 }]
 
     return (
-        <div className={`quickServicesBarLogo xl:flex md:flex pointer-events-none select-none lg:text-lg text-sm justify-evenly  lg:space-y-0 space-y-5 text-white font-bold lg:h-32 items-center pl-5 py-8  gap-8 lg:text-center bg-gradient-to-r from-sky-700 via-teal-600 to-green-600`}>
+        <section
+            aria-labelledby="quick-services-heading"
+            className={`quickServicesBarLogo xl:flex md:flex pointer-events-none select-none lg:text-lg text-sm justify-evenly  lg:space-y-0 space-y-5 text-white font-bold lg:h-32 items-center pl-5 py-8  gap-8 lg:text-center bg-gradient-to-r from-sky-700 via-teal-600 to-green-600`}>
             {isCardVisible && data.map((item, index) => {
                 return (
-                    <ServicesItems key={index} item={item} />
+                    <article key={index} role="contentinfo">
+                        <ServicesItems key={index} item={item} />
+                    </article>
                 )
             })}
-        </div>
+        </section>
 
 
     )

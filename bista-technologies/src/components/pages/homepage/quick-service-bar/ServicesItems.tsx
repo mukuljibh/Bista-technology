@@ -12,12 +12,16 @@ type ServicesItemsProps = {
 export default function ServicesItems({ item }: ServicesItemsProps) {
     const [animating, isAnimating] = useState(false)
     useEffect(() => {
-        setTimeout(() => {
+        const timer = setTimeout(() => {
             isAnimating(() => true)
         }, 200 + item.animationTime)
+        return () => clearTimeout(timer)
     }, [item])
     return (
-        <div className={`flex flex-col  ${animating ? ' scale-100 ' : 'scale-0 '} items-center gap-2 pr-3 transition-all duration-700`}>
+        <div
+            role="listitem"
+            aria-label={item.label}
+            className={`flex flex-col  ${animating ? ' scale-100 ' : 'scale-0 '} items-center gap-2 pr-3 transition-all duration-700`}>
             <img
                 className="lg:w-10 w-8"
                 src={item.image.imageSrc}
@@ -25,7 +29,7 @@ export default function ServicesItems({ item }: ServicesItemsProps) {
                 width="40"
                 height="40"
             />
-            <h1 className="text-sm">{item.label}</h1>
+            <h2 className="text-sm">{item.label}</h2>
         </div>
     )
 }
