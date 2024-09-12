@@ -1,5 +1,6 @@
 import otpGenerator from 'otp-generator';
 import Employer from '../models/Employer.model.js';
+import User from '../models/User.model.js'
 import sendMail from '../services/sendMail.js';
 import Mailgen from 'mailgen';
 
@@ -21,7 +22,14 @@ export async function generateOTP(req, res) {
         req.app.locals.otpTimestamp = Date.now();
 
         const id = req.user.id;
-        const user = await Employer.findById(id);
+        const role= req.user.role;
+        let user;
+        if(role==="Employer"){
+            user = await Employer.findById(id);
+        }
+        else if(role==="user"){
+            user = await User.findById(id);
+        }
         if (!user) {
             return res.status(404).send({ message: "User not found" });
         }
@@ -37,7 +45,14 @@ export async function verifyOTP(req, res) {
     try {
         const { code } = req.query;
         const id = req.user.id;
-        const user = await Employer.findById(id);
+        const role= req.user.role;
+        let user;
+        if(role==="Employer"){
+            user = await Employer.findById(id);
+        }
+        else if(role==="user"){
+            user = await User.findById(id);
+        }
         if (!user) {
             return res.status(404).send({ message: "User not found" });
         }
