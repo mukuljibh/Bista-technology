@@ -40,9 +40,9 @@ export default function LeadGeneration() {
           width="1920"
           height="600"
         />
-        <div className="bg-white mt-10 text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center">
+         <div className="bg-white  text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center">
                 <h1 className="text-center font-sans text-5xl font-semibold leading-tight tracking-normal text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text fade-in-up">
-                    Our Lead Genaration Solutions
+                    Our Lead Generation Solutions
                 </h1>
             </div>
       </div>
@@ -70,7 +70,7 @@ export default function LeadGeneration() {
           </div>
         </motion.div>
       ))}
-       <img className="lg:h-[32rem] w-full" src="/banner.gif" />
+      <img className="lg:h-[32rem] w-full" src="/banner.gif" />
 
     </motion.div>
   );
