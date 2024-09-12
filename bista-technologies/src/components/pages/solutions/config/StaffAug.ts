@@ -17,7 +17,7 @@ const StaffAug = [
         title: "Operational Staff Augmentation",
         imgSrc: "https://www.bistatechnologies.com/static/staffaug(4).jpeg",
         description: "We offer operational staff augmentation services to help businesses enhance their day-to-day operations. From administrative support to customer service, our professionals are ready to step in and ensure your operations run smoothly.",
-        cardCss: 'lg:flex flex-row-reverse bg-white-50',
+        cardCss: 'bg-white-50',
         headingCss: "text-sky-700"
     },
     {
