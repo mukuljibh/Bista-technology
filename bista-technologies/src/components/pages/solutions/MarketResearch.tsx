@@ -48,7 +48,7 @@ export default function MarketResearchComponent() {
       {MarketResearch.map(({ heading1, description, image, cardCss, headingCss }, index) => (
         <motion.div
           key={index}
-          className={`main-card ${cardCss} mx-auto my-8 lg:flex lg:max-w-5xl bg-white shadow-md rounded-lg overflow-hidden`}
+          className={`main-card ${cardCss} mx-auto my-8 lg:flex  hover:bg-sky-50 lg:max-w-5xl bg-white shadow-md rounded-lg overflow-hidden`}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.9 }}
           transition={{ duration: 0.4 }}
