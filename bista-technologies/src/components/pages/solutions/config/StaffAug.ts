@@ -24,7 +24,7 @@ const StaffAug = [
         title: "Strategic Staff Augmentation",
         imgSrc: "https://www.bistatechnologies.com/static/staffaug(5).jpeg",
         description: "Our strategic staff augmentation solutions are designed to provide senior-level professionals and consultants who can offer strategic insights and drive business initiatives. These experts can help with strategic planning, change management, and other high-level functions.",
-        cardCss: "bg-white-50",
+        cardCss: 'lg:flex flex-row-reverse bg-white-50',
         headingCss: "text-sky-700"
     }
 ];

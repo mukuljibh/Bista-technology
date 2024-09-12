@@ -40,9 +40,11 @@ export default function MarketResearchComponent() {
           width="1920"
           height="600"
         />
-        <h1 className="lg:text-4xl text-2xl font-semibold text-center text-gray-700">
-          Our Market Research Services
-        </h1>
+        <div className="bg-white  text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center">
+                <h1 className="text-center font-sans text-5xl font-semibold leading-tight tracking-normal text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text fade-in-up">
+                    Our Market Research Services
+                </h1>
+            </div>
       </div>
 
       {MarketResearch.map(({ heading1, description, image, cardCss, headingCss }, index) => (
