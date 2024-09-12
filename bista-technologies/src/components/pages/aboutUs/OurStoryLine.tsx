@@ -139,6 +139,7 @@ export default function OurStoryLine() {
         </a>
     </div>
 </motion.div>
+<img className="lg:h-[32rem] w-full" src="/banner.gif" />
 
         </motion.div>
     );
