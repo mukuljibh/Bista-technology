@@ -54,7 +54,7 @@ export default function ContactForm() {
     return (
         <form onSubmit={formik.handleSubmit} >
             <div className="mt-10 mb-10 p-2">
-                <img className="xl:float-right xl:ml-10 m-auto rounded-lg" src="form.jpg" />
+                <img className="xl:float-right xl:ml-10 m-auto rounded-lg" src="https://www.simpleimageresizer.com/_uploads/photos/190020c6/pexels-karolina-grabowska-4476618_600x600.jpg" />
                 <div className="xl:ml-32 ml-0  space-y-8 ">
                     <h1 className="text-3xl font-semibold">Leave A Message </h1>
                     <div className=" flex flex-col 2xl:w-2/4  space-y-6  ">
