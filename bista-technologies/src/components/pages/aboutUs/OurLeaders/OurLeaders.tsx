@@ -58,10 +58,6 @@ export default function OurLeaders() {
                     <h2 className=' text-zinc-600 font-semibold'>Co-founder & Managing Director</h2>
                 </div>
             </div>
-
-
-            <img className="lg:h-[32rem] w-full" src="/banner.gif" />
-
-        </motion.div >
+        </motion.div>
     );
 }

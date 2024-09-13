@@ -1,53 +1,77 @@
 import { motion } from 'framer-motion';
-import { MarketReasearch } from './config/marketResearch';
-export default function MarketResearch() {
+import { useEffect, useState } from 'react';
+import { MarketResearch } from './config/marketResearch';
+
+export default function MarketResearchComponent() {
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const marketResearchElement = document.getElementById('market-research-trigger');
+      if (marketResearchElement) {
+        const position = window.scrollY + window.innerHeight;
+        const triggerPosition = marketResearchElement.offsetTop;
+        setInView(position > triggerPosition);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
+      id="market-research-trigger"
+      initial={{ translateX: '-100vw' }}
+      animate={{ translateX: '0vw' }}
       transition={{ duration: 0.6 }}
-      className="lead-generation-container"
+      className="bg-slate-50"
     >
-      <div>
+      <div className="space-y-10 lg:mb-16">
         <motion.img
           initial={{ opacity: 0, y: '-50px' }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="w-full mt-5 fade-in-up"
-          src="https://www.bistatechnologies.com/static/leadgen(1).jpg"
-          alt="Lead Generation Banner"
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="w-full mt-5"
+          src="https://www.bistatechnologies.com/static/leadgen%281%29.jpg"
+          alt="Market Research Banner"
+          width="1920"
+          height="600"
         />
-      </div>
-      <motion.div
-        initial={{ scale: 0, rotate: 90, opacity: 0 }}
-        animate={{ scale: 1, rotate: 0, opacity: 1 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="bg-white mt-10 text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center"
-      >
-        <h1 className="text-center font-sans text-5xl font-semibold leading-tight tracking-normal text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text fade-in-up">
-          Market Research
-        </h1>
-      </motion.div>
-
-      <div className="flex flex-wrap justify-center gap-8">
-        {MarketReasearch.map((card, index) => (
-          <motion.div
-            key={index}
-            initial={{ scale: 1, opacity: 1 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }} 
-            transition={{ duration: 0.2 }}
-            className="max-w-md rounded overflow-hidden shadow-lg card hover:bg-sky-50 hover:shadow-xl transition-shadow duration-300 hover:scale-105 hover:shadow-xl border-b-2 border-transparent hover:border-sky-900"
-          >
-            <img className="w-full" src={card.img} alt={card.title} />
-            <div className="px-6 py-4 bg-white">
-              <div className="font-bold text-xl mb-2">{card.title}</div>
-              <p className="text-gray-700 text-base">{card.description}</p>
+        <div className="bg-white  text-white p-6 rounded-lg shadow-md mb-4 flex items-center justify-center">
+                <h1 className="text-center font-sans text-5xl font-semibold leading-tight tracking-normal text-transparent bg-gradient-to-tr from-blue-600 to-blue-400 bg-clip-text fade-in-up">
+                    Our Market Research Services
+                </h1>
             </div>
-          </motion.div>
-        ))}
       </div>
+
+      {MarketResearch.map(({ heading1, description, image, cardCss, headingCss }, index) => (
+        <motion.div
+          key={index}
+          className={`main-card ${cardCss} mx-auto my-8 lg:flex  hover:bg-sky-50 lg:max-w-5xl bg-white shadow-md rounded-lg overflow-hidden`}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: inView ? 1 : 0, scale: inView ? 1 : 0.9 }}
+          transition={{ duration: 0.4 }}
+        >
+          <img
+            className="lg:w-1/3 w-full object-cover h-64" 
+            src={image}
+            alt={heading1}
+            style={{ objectFit: 'cover' }} 
+          />
+
+          <div className="p-6 flex flex-col justify-between h-full">
+            <h2 className={`text-3xl font-semibold ${headingCss} mb-4`}>
+              {heading1}
+            </h2>
+            <p className="text-gray-600 text-lg flex-grow">{description}</p>
+          </div>
+        </motion.div>
+      ))}
+       <img className="lg:h-[32rem] w-full" src="/banner.gif" />
+
     </motion.div>
   );
 }

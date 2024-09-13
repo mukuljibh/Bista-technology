@@ -3,6 +3,8 @@ import { checkPasswordStrength } from "../services/authServices.js";
 import jwt from "jsonwebtoken";
 import {jwtDecode} from 'jwt-decode';
 import bcrypt from "bcryptjs";
+import fs from "fs";
+import path from "path";
 
 export const register = async (req, res) => {
     try{
@@ -16,13 +18,13 @@ export const register = async (req, res) => {
             return res.status(400).send({message: messages});
         }
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({
+        const newUser = await User.create({
             fullName,
             email,
             password: hashedPassword
         });
-        await newUser.save();   
-        return res.status(201).send({message: "User registered successfully"});
+        const token= jwt.sign({id: newUser._id,role:"user"}, process.env.REACT_APP_JWT_SECRET, {expiresIn: "24h"});
+        return res.status(201).send({message: "User registered successfully",token});
     }
     catch(err){
         return res.status(500).send({message: "Internal Server Error"});
@@ -37,7 +39,7 @@ export const oauthRegister = async (req, res) => {
             return res.status(400).send({message: "User already exists"});
         }
         const decoded = jwtDecode(credential);
-        const newUser = new User({
+        const newUser = await User.create({
             fullName: decoded.given_name+" "+decoded.family_name,
             email: decoded.email,
             provider,
@@ -45,8 +47,8 @@ export const oauthRegister = async (req, res) => {
             profilePicture: decoded.picture,
             emailVerified: true
         });
-        await newUser.save();
-        return res.status(201).send({message: "User registered successfully"});
+        const token= jwt.sign({id: newUser._id,role:"user"}, process.env.REACT_APP_JWT_SECRET, {expiresIn: "24h"});
+        return res.status(201).send({message: "User registered successfully",token});
     }
     catch(err){
         return res.status(500).send({message: "Internal Server Error"});
@@ -58,13 +60,13 @@ export const login = async (req, res) => {
        const {email, password} = req.body;
        const user = await User.findOne({email});
         if(!user){
-              return res.status(400).send({message: "Invalid credentials"});
+              return res.status(400).send({message: "User not found"});
         }
         const isMatch = bcrypt.compare(password, user.password);
         if(!isMatch){
             return res.status(400).send({message: "Invalid credentials"});
         }
-        const token = jwt.sign({id: user._id}, process.env.JWT_SECRET, {expiresIn: "24h"});
+        const token = jwt.sign({id: user._id,role:"user"}, process.env.REACT_APP_JWT_SECRET, {expiresIn: "24h"});
         return res.status(200).send({message: "Login successful", token});
     }
     catch(err){
@@ -79,7 +81,7 @@ export const oauthlogin = async (req, res) =>{
         if(!user){
             return res.status(400).send({message: "User not found"});
         }
-        const token = jwt.sign({id: user._id}, process.env.JWT_SECRET, {expiresIn: "24h"});
+        const token = jwt.sign({id: user._id,role:"user"}, process.env.REACT_APP_JWT_SECRET, {expiresIn: "24h"});
         return res.status(200).send({message: "Login successful", token});
     }
     catch(err){
@@ -95,6 +97,52 @@ export const getUserById = async (req, res) => {
             return res.status(404).send({message: "User not found"});
         }
         return res.status(200).send(user);
+    }
+    catch(err){
+        return res.status(500).send({message: "Internal Server Error"});
+    }
+}
+
+export const uploadProfilePicture = async (req, res) => {
+    try{
+       const id= req.user.id;
+       const user= await User.findById(id);
+       if (user.profilePicture) {
+        const oldProfilePicPath = path.resolve(user.profilePicture);
+        if (fs.existsSync(oldProfilePicPath)) {
+            fs.unlink(oldProfilePicPath, (err) => {
+                if (err) {
+                    console.error("Error deleting old profile picture:", err);
+                }
+            });
+        }
+    }
+       user.profilePicture = req.files['profilePicture'][0].path;
+       await user.save();
+       return res.status(200).send({message: "Profile picture uploaded successfully"});
+    }
+    catch(err){
+        return res.status(500).send({message: "Internal Server Error"});
+    }
+}
+
+export const uploadResume = async (req, res) => {
+    try{
+        const id= req.user.id;
+        const user= await User.findById(id);  
+        if (user.resume!=null) {
+            const oldResumePath = path.resolve(user.resume);
+            if (fs.existsSync(oldResumePath)) {
+                fs.unlink(oldResumePath, (err) => {
+                    if (err) {
+                        console.error("Error deleting old resume:", err);
+                    }
+                });
+            }
+        }  
+        user.resume = req.files['resume'][0].path;
+        await user.save();
+        return res.status(200).send({message: "Resume uploaded successfully"});
     }
     catch(err){
         return res.status(500).send({message: "Internal Server Error"});
