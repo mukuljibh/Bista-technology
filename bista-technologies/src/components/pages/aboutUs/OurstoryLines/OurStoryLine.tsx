@@ -35,9 +35,7 @@ export default function OurStoryLine() {
             </div>
             <div className="w-full flex items-center justify-center bg-gradient-to-r from-white-50 to-sky-100 text-sky-700 border border-sky-600 rounded-lg shadow-lg p-6 md:p-10 my-10">
                 <p className="text-lg md:text-xl leading-relaxed max-w-4xl text-center font-semibold">
-                    Bista Technologies is working with Fortune 2000 companies in UAE, US, and UK 
-                    and has become the primary go-to vendor for all our clients for Contract and 
-                    Fulltime Professional services, Offshore Staffing & SOW-based project work.
+                    {Keyheighlights.description1}
                 </p>
             </div>
 

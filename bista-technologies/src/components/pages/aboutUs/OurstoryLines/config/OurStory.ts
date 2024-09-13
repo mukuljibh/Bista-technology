@@ -46,7 +46,8 @@ const Storydetail = {
 
 const Keyheighlights = {
     heading: "Key Highlights",
-    description: "Bista Technologies Inc. is a dynamic global staffing organization, founded in 2023, committed to delivering exceptional staffing solutions worldwide. As a 100% global staffing entity, we specialize in providing comprehensive staffing solutions tailored to the unique needs of businesses across various industries and geographies. Our experienced specialists serve as your strategic talent partner, driving enhanced operational effectiveness and increased productivity. Today, Bista Technologies stands as a testament to the power of perseverance and vision. From its humble beginnings with one team member, the company has grown to over 100 dedicated professionals, spanning multiple continents and serving clients globally."
+    description: "Bista Technologies Inc. is a dynamic global staffing organization, founded in 2023, committed to delivering exceptional staffing solutions worldwide. As a 100% global staffing entity, we specialize in providing comprehensive staffing solutions tailored to the unique needs of businesses across various industries and geographies. Our experienced specialists serve as your strategic talent partner, driving enhanced operational effectiveness and increased productivity. Today, Bista Technologies stands as a testament to the power of perseverance and vision. From its humble beginnings with one team member, the company has grown to over 100 dedicated professionals, spanning multiple continents and serving clients globally.",
+    description1:"Bista Technologies is working with Fortune 2000 companies in UAE, US, and UK and has become the primary go-to vendor for all our clients for Contract and Fulltime Professional services, Offshore Staffing & SOW-based project work."
 };
 
 export { OurStory, Storydetail, Keyheighlights };
