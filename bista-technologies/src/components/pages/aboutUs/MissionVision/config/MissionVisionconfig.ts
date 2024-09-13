@@ -4,51 +4,45 @@ const MissionVisionconfig = [
         heading2: "Connecting Talent and Opportunity with Expertise and Integrity",
         image: { imageSrc: "https://www.bistatechnologies.com/static/whoweare.jpg", alt: "" },
         description: "At Bista Technologies Inc., we are a forward-thinking global staffing organization that is dedicated to bridging the gap between businesses and top-tier talent. Established in 2023 and headquartered in Dubai, UAE, we specialize in delivering tailored staffing solutions across industries such as IT, healthcare, engineering, and more.Our dynamic team of industry experts is committed to understanding the unique needs of our clients, providing personalized services that drive business success. We believe in building strong, long-lasting relationships based on excellence, integrity, and innovation. With a remote-friendly workplace and a culture of flexibility, we empower our employees and clients alike to achieve their goals in an ever-evolving marketplace.",
-        cardCss: "lg:flex bg-slate-50 ", headingCss: "text-sky-600 bg-sky-100 ",
+        cardCss: "lg:flex  ", headingCss: "text-sky-600 bg-sky-100 ",
     },
     {
-        heading1: "Mission & Vision",
-        heading2: "Leading Workforce Solutions with Purpose and Excellence",
+        heading1: "What We Deliver and Our Strategy ",
+        heading2: "Strategic Hiring Approach",
         image: { imageSrc: "https://www.bistatechnologies.com/static/whatwedo.jpg", alt: "" },
-        description: "At Bista Technologies Inc., we stand as a leading workforce solutions provider with a clear and impactful mission and vision. Our mission is to deliver dynamic and tailored staffing solutions that empower businesses worldwide to achieve their goals and drive success. We are committed to providing exceptional service, fostering strong partnerships, and upholding the highest standards of professionalism and integrity.Our vision is to be recognized globally as the premier provider of staffing solutions, renowned for our ability to connect businesses with top-tier talent in an ever-changing marketplace. We aspire to create a work environment that champions innovation, flexibility, and inclusivity, enabling both our clients and employees to reach their fullest potential and thrive.",
-        cardCss: "lg:flex flex-row-reverse bg-purple-50", headingCss: "text-orange-500 bg-orange-200",
+        description: "Bista Technologies Inc. provides specialized staffing solutions for a wide range of industries, including IT, healthcare, engineering, and finance. We tailor our services to meet the unique needs of businesses, from temporary staffing to full-time placements, helping companies scale efficiently.With a focus on building strong client relationships, we ensure our staffing solutions not only fill roles but drive long-term success. Our expert team, advanced recruitment tools, and industry insights allow us to connect top talent with organizations, empowering businesses to thrive in a competitive market",
+        cardCss: "lg:flex flex-row-reverse  ", headingCss: "text-orange-500 bg-orange-200",
     },
 ];
 
-const Missionandvision = [
-    {
-        heading: "PURPOSE",
-        image: { imageSrc: "https://www.opusing.com/images/icons/Purpose.png", alt: "" },
-        description: "Providing clients with superior services and solutions in a way that generates extraordinary business value."
-    },
-    {
-        heading: "BUSINESS",
-        image: { imageSrc: "https://www.opusing.com/images/icons/Business.png", alt: "" },
-        description: "Staffing in IT and non-IT, Technology consulting, product development, training, integration, staff augmentation, and HR outsourcing."
-    },
-    {
-        heading: "VALUE",
-        image: { imageSrc: "https://www.opusing.com/images/icons/Value.png", alt: "" },
-        description: "Establish everlasting partnerships with employees and clientele that stands on the pillar of trust, honesty, professionalism, respect and moral grounds."
-    }
-];
-
-const WhyChooseUs = [
+const offeringsAndStrategy = [
     {
         heading: "Global Reach",
-        description: "With a presence in key markets around the world, we have the capacity to source talent internationally, ensuring our clients access the best candidates no matter where they are located.",
-        color: "bg-blue-400 hover:border-2 hover:border-blue-400 ease-in-out transition-colors hover:bg-blue-200 hover:text-blue-800 duration-300"
+        image: { imageSrc: "https://www.opusing.com/images/icons/Purpose.png", alt: "" },
+        description: "With a presence in key markets around the world, we have the capacity to source talent internationally, ensuring our clients access the best candidates no matter where they are located."
     },
     {
         heading: "Industry Expertise",
-        description: "Our team comprises seasoned professionals with deep industry knowledge and expertise, allowing us to provide insightful guidance and tailored solutions to our clients across various sectors.",
-        color: "bg-red-400 hover:text-red-800 hover:border-2 hover:border-red-400 ease-in-out transition-colors hover:bg-red-200 duration-300"
+        image: { imageSrc: "https://www.opusing.com/images/icons/Business.png", alt: "" },
+        description: "Our team comprises seasoned professionals with deep industry knowledge and expertise, allowing us to provide insightful guidance and tailored solutions to our clients across various sectors."
     },
     {
         heading: "Commitment to Quality",
-        description: "We are committed to excellence in everything we do, from candidate sourcing to client service. Our dedication to quality ensures that our clients receive the highest standard of staffing solutions, every time.",
-        color: "bg-yellow-400 hover:text-yellow-800 hover:border-2 hover:border-yellow-400 ease-in-out transition-colors hover:bg-yellow-200 duration-300"
+        image: { imageSrc: "https://www.opusing.com/images/icons/Value.png", alt: "" },
+        description: "We are committed to excellence in everything we do, from candidate sourcing to client service. Our dedication to quality ensures that our clients receive the highest standard of staffing solutions, every time."
     }
 ];
+const missionStatement = [
+    {
+        heading: "Mission",
+        image: { imageSrc: "https://www.bistatechnologies.com/static/mission.png", alt: "" },
+        description: "At Bista Technologies Inc., our mission is to be the premier global partner for workforce solutions, empowering businesses across borders with top-tier talent. Through our commitment to excellence, innovation, and cultural sensitivity, we aim to connect organizations with the right people, at the right time, to drive sustainable growth and success in a dynamic world"
+    },
+    {
+        heading: "Vision",
+        image: { imageSrc: "https://www.bistatechnologies.com/static/company-vision-icon-T.png", alt: "" },
+        description: "At Bista Technologies Inc., our mission is to be the premier global partner for workforce solutions, empowering businesses across borders with top-tier talent. Through our commitment to excellence, innovation, and cultural sensitivity, we aim to connect organizations with the right people, at the right time, to drive sustainable growth and success in a dynamic world"
+    }
+]
+export { MissionVisionconfig, offeringsAndStrategy, missionStatement };
 
-export { MissionVisionconfig, Missionandvision, WhyChooseUs };

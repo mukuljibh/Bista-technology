@@ -24,6 +24,7 @@ export default function VisionStatementVideo() {
             </div>
             {/* Background Video */}
             <video
+
                 className="absolute w-full h-full object-cover contrast-75"
                 poster='/homepage/vision-statement-video/poster.jpg'
                 autoPlay

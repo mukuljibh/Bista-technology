@@ -1,63 +1,67 @@
 import { motion } from 'framer-motion';
-import { OurLeadersAchivement, OurLeader } from './config/OurLeaders';
-
+import { ourLeadersAchivement } from './config/ourLeaders';
+import MainCard from '../../../../ui/merged_components/service-cards/mainCard/MainCard';
+import useObserver from '../../../../shared/hooks/useObserver';
+import { useState } from 'react';
 export default function OurLeaders() {
+    const [hover, setHover] = useState(false)
+    useObserver('our-leaders', 0.4, ['opacity-100', 'gap-x-0'])
     return (
         <motion.div
             initial={{ translateX: '-100vw' }}
-            animate={{ translateX: '0vw' }}
+            animate={{ translateX: '0vh', }}
             exit={{ transition: { duration: 0.2 } }}
             transition={{ duration: 0.6 }}
-            className="flex flex-col items-center"
+            className='bg-slate-50'
         >
-            <div className="bg-white mt-10  p-6 rounded-lg shadow-md mb-4 w-full flex items-center justify-center">
-            <h1 className="text-center text-sky-600 font-sans text-5xl font-semibold leading-tight tracking-normal">
-            {OurLeadersAchivement[0].title}
-                </h1>
+            <div className="space-y-10 lg:mb-16">
+                <img className="w-full " src="/about-us/our-leaders/1.jpg" />
             </div>
 
-            <div className="max-w-screen-xl mx-auto p-5 sm:p-10 md:p-16">
-                <div className="rounded overflow-hidden flex flex-col max-w-xl mx-auto">
-                    <a href="#" className="block">
-                        <img
-                            className="w-full object-cover h-64 md:h-80 lg:h-96 rounded-lg shadow-lg transform transition-transform duration-300 hover:scale-105"
-                            src={OurLeadersAchivement[0].imgsrc}
-                            alt="Leadership"
-                        />
-                    </a>
-                    <div className="relative -mt-16 px-10 pt-5 pb-16 bg-white m-10 rounded-lg shadow-lg">
-                        <a
-                            href="#"
-                            className="font-semibold text-lg inline-block text-sky-600 hover:text-sky-400 transition duration-500 ease-in-out inline-block mb-2"
-                        >
-                            {OurLeadersAchivement[0].heading}
-                        </a>
-                        <p className="text-gray-500 text-sm">
-                            {OurLeadersAchivement[0].description}
-                        </p>
+            {ourLeadersAchivement.map(({ heading1, heading2, image, description, cardCss, headingCss }, index) => {
+                return (
+                    <MainCard
+                        key={index}
+                        heading1={heading1}
+                        heading2={heading2}
+                        image={image}
+                        description={description}
+                        cardCss={cardCss}
+                        headingCss={headingCss}
+                        observingClass={"our-leaders"}
+                    />
+                )
+            })}
+            <div className='lg:w-1/5 mx-auto my-20 lg:px-0 px-5 shadow-xl'>
+                <div className='relative overflow-hidden flex justify-center ' onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+                    <img src="https://www.bistatechnologies.com/static/LEADER-PIC-WITH%20LIGHT-BLUE.png" className={`transition-transform duration-300 ease-linear ${hover && 'scale-110'}`} />
+                    <div style={{ backgroundColor: 'rgba(2, 132, 199, 0.7)' }} className={`absolute bottom-0  text-white  ${hover ? 'h-full' : 'h-0'} transition-all ease-in-out  duration-500`}>
+                        <div className='p-4'>
+                            <p className='text-sm tracking-wide text-justify'>
+                                He is the Co-Founder and Managing Director of Bista Technologies Inc.
+                                he brings over 9 years of experience in team building, recruitment and staffing,
+                                and training and development. His expertise in these areas ensures the development
+                                of high-performing teams and the effective implementation of HR strategies.
+                            </p>
+                            <a
+                                href="https://www.linkedin.com/in/vipul-bhatia/"
+                                target="_blank"
+                                aria-label="Co-founder & Managing Director picture"
+                            >
+                                <svg className='fill-sky-700  m-auto rounded-md hover:bg-black bg-white p-1' stroke="#FF69B4" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 448 512"><path d="M100.3 448H7.4V148.9h92.9zM53.8 108.1C24.1 108.1 0 83.5 0 53.8a53.8 53.8 0 0 1 107.6 0c0 29.7-24.1 54.3-53.8 54.3zM447.9 448h-92.7V302.4c0-34.7-.7-79.2-48.3-79.2-48.3 0-55.7 37.7-55.7 76.7V448h-92.8V148.9h89.1v40.8h1.3c12.4-23.5 42.7-48.3 87.9-48.3 94 0 111.3 61.9 111.3 142.3V448z" /></svg>
+                            </a>
+                        </div>
                     </div>
+                </div>
+                <div className='text-center'>
+                    <h1 className='font-bold text-2xl text-slate-800 '>Vipul Bhatia</h1>
+                    <h2 className=' text-zinc-600 font-semibold'>Co-founder & Managing Director</h2>
                 </div>
             </div>
 
-            <div className="flex justify-center my-10">
-                <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg transition-transform transform hover:scale-105">
-                    <div className="flex justify-end px-4 pt-4">
-                    </div>
-                    <div className="flex flex-col items-center p-5 pb-10">
-                        <img
-                            className="w-32 h-32  rounded-full"
-                            src={OurLeader[0].imgsrc}
-                            alt={OurLeader[0].leadername}
-                        />
-                        <h5 className="mb-1 text-xl font-medium text-sky-600">
-                            {OurLeader[0].leadername}
-                        </h5>
-                        <span className="text-sm text-gray-500">
-                            {OurLeader[0].description}
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </motion.div>
+
+            <img className="lg:h-[32rem] w-full" src="/banner.gif" />
+
+        </motion.div >
     );
 }

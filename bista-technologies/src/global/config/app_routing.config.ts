@@ -23,7 +23,7 @@ const ContactUs = lazy(() => import('../../components/pages/contactUs/ContactUs'
 
 const EmployerRegister = lazy(() => import("../../components/pages/career/Employer/EmployerRegister"))
 
-export const routes = [
+export const lazyRoutes = [
     { path: "/", component: HomePage },
     { path: "aboutUs/mission-vision", component: MissionVision },
     { path: "aboutUs/our-storyline", component: OurStoryLine },
