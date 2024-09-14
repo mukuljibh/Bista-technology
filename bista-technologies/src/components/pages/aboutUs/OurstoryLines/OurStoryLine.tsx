@@ -74,7 +74,6 @@ export default function OurStoryLine() {
                 </div>
             </div>
 
-            <img className="lg:h-[32rem] w-full" src="/banner.gif" alt="Banner" />
         </div>
     );
 }

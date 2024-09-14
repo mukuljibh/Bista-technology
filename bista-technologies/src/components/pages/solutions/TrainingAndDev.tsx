@@ -69,7 +69,6 @@ export default function TrainingAndDev() {
           </div>
         </motion.div>
       ))}
-        <img className="lg:h-[32rem] w-full" src="/banner.gif" />
     </motion.div>
   );
 }
