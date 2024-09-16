@@ -1,4 +1,3 @@
-import NewsLetter from "./newsletter/NewsLetter"
 import useObserver from "../../../shared/hooks/useObserver"
 import VisionStatementVideo from "./vision-statement-video/VisionStatementVideo"
 import MsmeBanner from "./msme-banner/MsmeBanner"
@@ -34,7 +33,6 @@ export default function HomePage() {
             </section>
             <TeamBuildingBanner />
             <CoreValuesBanner />
-            <NewsLetter />
         </motion.main >
     )
 }

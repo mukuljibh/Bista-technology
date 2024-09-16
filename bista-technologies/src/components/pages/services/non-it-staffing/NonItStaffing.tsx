@@ -74,7 +74,6 @@ export default function NonItStaffing() {
                     />
                 )
             })}
-            <img className="lg:h-[32rem] w-full" src="/banner.gif" />
         </motion.div>
     )
 }

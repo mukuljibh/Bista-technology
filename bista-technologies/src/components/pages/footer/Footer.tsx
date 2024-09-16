@@ -2,7 +2,7 @@ import FooterElement from "./FooterElement";
 import { submenuData } from "../navigation-bar/config/nav_bar.config";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+function Footer() {
     return (
         <footer className="space-y-8">
 
@@ -57,4 +57,4 @@ export default function Footer() {
         </footer >
     );
 }
-
+export default Footer

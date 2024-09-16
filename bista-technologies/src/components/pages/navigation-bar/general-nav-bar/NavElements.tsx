@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 import useAnimation from "../../../../shared/hooks/useAnimation"
 import { navProps } from "../config/nav_bar_types";
-import { memo } from "react";
 
 function NavElements({ label, submenu, directPath }: navProps) {
     const { isOpen, isAnimating, handleAnimationOff, handleAnimationOn, toggleAnimation } = useAnimation();
@@ -45,4 +44,4 @@ function NavElements({ label, submenu, directPath }: navProps) {
     )
 }
 
-export default memo(NavElements)
+export default NavElements

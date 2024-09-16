@@ -16,8 +16,6 @@ export default function ContactUs() {
             <img className="w-full" src="contact-us.jpg" alt="contact"></img>
             <Cards data={data} />
             <ContactForm />
-            <img className="lg:h-[32rem] w-full" src="/banner.gif" />
-
         </motion.div>
     )
 }

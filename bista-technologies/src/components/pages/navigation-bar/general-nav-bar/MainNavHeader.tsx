@@ -5,6 +5,8 @@ import TopNavHeader from "./TopNavHeader";
 
 
 export default function MainNavHeader() {
+    console.log("main nav  render")
+
     return (
         <>
             <TopNavHeader />

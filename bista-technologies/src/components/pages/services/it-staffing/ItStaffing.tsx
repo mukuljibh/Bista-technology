@@ -52,7 +52,6 @@ export default function ItStaffing() {
                     })}
                 </div>
             </div>
-            <img className="lg:h-[32rem] w-full" src="/banner.gif" />
         </motion.div>
     )
 }
