@@ -1,9 +1,14 @@
-import { useScreenSize } from "../../../../contexts/ScreenSizeProvider"
-import LoginForm from "./login-form/LoginForm"
-import { motion } from 'framer-motion'
+//import { useScreenSize } from "../../../../contexts/ScreenSizeProvider"
+import CommingSoon from "../../../../global/components/CommingSoon"
+//import LoginForm from "./login-form/LoginForm"
+//import { motion } from 'framer-motion'
 export default function EmployerLogin() {
-    const screenSize = useScreenSize()
+    // const screenSize = useScreenSize()
     return (
+        < CommingSoon />
+    )
+}
+{/*
         <motion.div
             initial={{ translateX: '-100vw' }}
             animate={{ translateX: '0vh', }}
@@ -27,6 +32,4 @@ export default function EmployerLogin() {
             <div className="border rounded-lg lg:w-1/4 ">
                 <LoginForm />
             </div>
-        </motion.div>
-    )
-}
+        </motion.div> */}

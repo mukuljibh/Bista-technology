@@ -14,11 +14,12 @@ export default function MissionVision() {
             exit={{ transition: { duration: 0.2 } }}
             transition={{ duration: 0.6 }}
         >
-            <div className="space-y-10 lg:mb-16">
-                <img className="w-full" src="/about-us/mission-vision/1.webp" />
-                <h1 className="lg:text-4xl text-2xl font-semibold text-center text-gray-700">About Bista Technologies Inc</h1>
-            </div>
-            <div className="bg-red-50 py-1">
+            <div className="bg-red-50  pb-10">
+                <div className="space-y-10 lg:mb-16">
+                    <img className="w-full" src="/about-us/mission-vision/1.webp" />
+                    <h1 className="lg:text-4xl text-2xl font-semibold text-center text-gray-700">About Bista Technologies Inc</h1>
+                </div>
+
                 {MissionVisionconfig.map(({ heading1, heading2, image, description, cardCss, headingCss }, index) => {
                     return (
                         <MainCard
@@ -33,7 +34,8 @@ export default function MissionVision() {
                         />
                     )
                 })}
-                <div className="lg:flex gap-16 lg:mx-24 mx-5 lg:space-y-0 space-y-10 my-20 justify-evenly text-justify ">
+                <div className="lg:flex gap-16 lg:mx-24 mx-5 lg:space-y-0 space-y-10 my-20 justify-evenly  ">
+
                     {missionStatement.map((item, index) => {
                         return (
                             <MissionStatement key={index} heading={item.heading} description={item.description} image={item.image} />

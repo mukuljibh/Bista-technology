@@ -12,13 +12,13 @@ export default function OurStoryLine() {
             <div className="max-w-screen-lg mx-auto shadow-lg p-5 sm:p-8 bg-white">
                 <div className="rounded-lg overflow-hidden shadow-md flex flex-col max-w-xl mx-auto transition-transform duration-300 transform hover:scale-105 hover:shadow-lg">
                     <a href="#">
-                        <img 
-                            className="w-full h-72 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-105" 
-                            src="https://www.bistatechnologies.com/static/ourstory.jpg" 
+                        <img
+                            className="w-full h-72 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-105"
+                            src="https://www.bistatechnologies.com/static/ourstory.jpg"
                             alt="Bista Technologies Image"
                         />
                     </a>
-                    
+
                     <div className="relative px-6 py-4 bg-white shadow-md -mt-4 mx-4 rounded-lg transition-transform duration-300 transform hover:scale-105">
                         <a href="#" className="font-semibold text-lg inline-block hover:text-sky-500 transition-colors duration-300 ease-in-out text-sky-600 mb-2">
                             Bista Technologies
@@ -45,9 +45,8 @@ export default function OurStoryLine() {
                 {OurStory.map((item, index) => (
                     <div
                         key={index}
-                        className={`container1 relative w-full md:w-[48%] bg-white border-t-2 border-t-sky-600 border border-gray-200 mb-10 rounded-lg shadow-lg p-6 transition-transform duration-300 transform hover:scale-110 hover:shadow-2xl ${
-                            index % 2 === 0 ? 'ml-0' : 'ml-auto'
-                        }`}
+                        className={`container1 relative w-full md:w-[48%] bg-white border-t-2 border-t-sky-600 border border-gray-200 mb-10 rounded-lg shadow-lg p-6 transition-transform duration-300 transform hover:scale-110 hover:shadow-2xl ${index % 2 === 0 ? 'ml-0' : 'ml-auto'
+                            }`}
                     >
                         <div className="text-box">
                             <h2 className="text-sky-600 text-xl font-bold">{item.month}</h2>

@@ -36,12 +36,12 @@ const missionStatement = [
     {
         heading: "Mission",
         image: { imageSrc: "https://www.bistatechnologies.com/static/mission.png", alt: "" },
-        description: "At Bista Technologies Inc., our mission is to be the premier global partner for workforce solutions, empowering businesses across borders with top-tier talent. Through our commitment to excellence, innovation, and cultural sensitivity, we aim to connect organizations with the right people, at the right time, to drive sustainable growth and success in a dynamic world"
+        description: "At Bista Technologies Inc., our mission is to be the premier global partner for workforce solutions, empowering businesses across borders with top-tier talent. Through our commitment to excellence, innovation, and cultural sensitivity, we aim to connect organizations with the right people, at the right time, to drive sustainable growth and success in a dynamic world."
     },
     {
         heading: "Vision",
         image: { imageSrc: "https://www.bistatechnologies.com/static/company-vision-icon-T.png", alt: "" },
-        description: "At Bista Technologies Inc., our mission is to be the premier global partner for workforce solutions, empowering businesses across borders with top-tier talent. Through our commitment to excellence, innovation, and cultural sensitivity, we aim to connect organizations with the right people, at the right time, to drive sustainable growth and success in a dynamic world"
+        description: "Bista Technologies Inc. envisions a world where talent knows no boundaries and opportunities abound for individuals and organizations alike. As a leading global staffing organization, we strive to break down barriers, transcend borders, and foster meaningful connections that transcend geographical limitations. By leveraging our international expertise."
     }
 ]
 export { MissionVisionconfig, offeringsAndStrategy, missionStatement };

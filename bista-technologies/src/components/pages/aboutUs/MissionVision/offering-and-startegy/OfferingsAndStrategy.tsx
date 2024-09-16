@@ -13,7 +13,7 @@ export default function OfferingsAndStrategy({ description, heading, image }: Of
             </div>
 
             <h1 className="font-bold  text-lg text-blue-950 tracking-wider">{heading}</h1>
-            <p className="text-xs tracking-wider text-justify">{description}</p>
+            <p className="text-xs tracking-wider text-justify  " >{description}</p>
         </div>
     )
 }

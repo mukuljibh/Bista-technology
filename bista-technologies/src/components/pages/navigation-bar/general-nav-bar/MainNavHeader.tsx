@@ -5,7 +5,6 @@ import TopNavHeader from "./TopNavHeader";
 
 
 export default function MainNavHeader() {
-    console.log("main nav  render")
 
     return (
         <>
@@ -27,6 +26,7 @@ export default function MainNavHeader() {
                                     label={menu.label}
                                     directPath={menu.directPath}
                                     submenu={menu.submenu}
+
                                 />
                             )
                         })}

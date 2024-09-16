@@ -1,7 +1,6 @@
+import CommingSoon from "../../../global/components/CommingSoon"
 export default function EmployeeLogin() {
     return (
-        <div>
-            hello from employee login
-        </div>
+        <CommingSoon />
     )
 }
