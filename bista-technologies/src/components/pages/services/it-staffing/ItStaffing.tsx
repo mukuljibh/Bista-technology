@@ -3,7 +3,6 @@ import useObserver from "../../../../shared/hooks/useObserver"
 import Card from "../../../../ui/merged_components/service-cards/Card"
 import MainCard from "../../../../ui/merged_components/service-cards/mainCard/MainCard"
 import { motion } from 'framer-motion'
-import { Helmet } from "react-helmet";
 
 export default function ItStaffing() {
     useObserver('ITStaffingCards', 0.4, ['opacity-100', 'gap-x-0'])
@@ -15,9 +14,7 @@ export default function ItStaffing() {
             exit={{ transition: { duration: 0.2 } }}
             transition={{ duration: 0.6 }}
             className="bg-slate-50 ">
-            <Helmet>
-                <title>IT Staffing Solution</title>
-            </Helmet>
+
             <div className="space-y-10 lg:mb-16">
                 <img className="w-full " src="https://www.bistatechnologies.com/static/banner-it-staffing.jpg" />
                 <h1 className="text-4xl  font-semibold text-center text-gray-700">IT Resource Augmentation</h1>

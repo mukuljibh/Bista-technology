@@ -3,7 +3,6 @@ import useObserver from "../../../../shared/hooks/useObserver"
 import Card from "../../../../ui/merged_components/service-cards/Card"
 import MainCard from "../../../../ui/merged_components/service-cards/mainCard/MainCard"
 import { motion } from 'framer-motion'
-import { Helmet } from "react-helmet";
 
 export default function NonItStaffing() {
     useObserver('ITStaffingCards', 0.4, ['opacity-100', 'gap-x-0'])
@@ -15,11 +14,6 @@ export default function NonItStaffing() {
             exit={{ transition: { duration: 0.2 } }}
             transition={{ duration: 0.6 }}
             className="bg-slate-50 ">
-            <Helmet>
-                <title>
-                    Non-IT Staffing Solution
-                </title>
-            </Helmet>
             <div className="space-y-10 lg:mb-16">
                 <img className="w-full " src="https://www.bistatechnologies.com/static/12.jpg" />
                 <h1 className="lg:text-4xl text-2xl font-semibold text-center text-gray-700">Innovative Staffing for the Future of Your Business
@@ -53,7 +47,6 @@ export default function NonItStaffing() {
                             description={item.description}
                             imgSrc={item.imageSrc}
                             alt="non IT staffing logo"
-
                             css={item.css}
                             animationTime={item.animationTime} />
                     })}
