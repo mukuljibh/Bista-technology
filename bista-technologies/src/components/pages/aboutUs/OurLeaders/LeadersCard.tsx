@@ -4,7 +4,7 @@ export default function LeadersCard() {
     return (
         <div className='lg:w-1/5 mx-auto my-20 lg:px-0 px-5 shadow-xl'>
             <div className='relative overflow-hidden flex justify-center ' onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
-                <img src="https://www.bistatechnologies.com/static/LEADER-PIC-WITH%20LIGHT-BLUE.png" className={`transition-transform duration-300 ease-linear ${hover && 'scale-110'}`} />
+                <img src="/about-us/our-leaders/3.png" className={`transition-transform duration-300 ease-linear ${hover && 'scale-110'}`} />
                 <div style={{ backgroundColor: 'rgba(2, 132, 199, 0.7)' }} className={`absolute bottom-0  text-white  ${hover ? 'h-full' : 'h-0'} transition-all ease-in-out  duration-500`}>
                     <div className='p-4'>
                         <p className='text-sm tracking-wide text-justify'>

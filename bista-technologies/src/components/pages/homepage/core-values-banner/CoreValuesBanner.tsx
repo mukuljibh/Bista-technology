@@ -8,7 +8,7 @@ export default function CoreValuesBanner() {
                 >
                     CULTURE | INNOVATION | OPPORTUNITY | TRUST
                 </h2>
-                <img src="https://www.bistatechnologies.com/static/1.webp"
+                <img src="/homepage/core-values-banner/1.webp"
                     className="rounded-lg object-cover lg:h-96 h-42 w-full"
                     width="1200"
                     height="800"

@@ -14,7 +14,7 @@ export default function OurStoryLine() {
                     <a href="#">
                         <img
                             className="w-full h-72 object-cover rounded-t-lg transition-transform duration-300 transform hover:scale-105"
-                            src="https://www.bistatechnologies.com/static/ourstory.jpg"
+                            src="/about-us/our-storyline/1.jpg"
                             alt="Bista Technologies Image"
                         />
                     </a>
@@ -60,7 +60,7 @@ export default function OurStoryLine() {
             <div className="flex flex-col md:flex-row items-center rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 w-full mb-10">
                 <img
                     className="object-cover w-full h-64 md:w-64 md:h-full transition-transform duration-300 transform hover:scale-105"
-                    src="https://www.bistatechnologies.com/static/key%20highlights.jpg"
+                    src="/about-us/our-storyline/2.jpg"
                     alt="Key Highlights"
                 />
                 <div className="flex flex-1 flex-col justify-between p-8 text-gray-800">
